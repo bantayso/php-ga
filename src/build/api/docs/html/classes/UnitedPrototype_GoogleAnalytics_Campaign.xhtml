@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - UnitedPrototype\GoogleAnalytics\Campaign</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#UnitedPrototype_GoogleAnalytics">UnitedPrototype\GoogleAnalytics</a>
+          </li>
+          <li class="separator">Campaign</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/GoogleAnalytics/Campaign.php.xhtml#line41">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>UnitedPrototype\GoogleAnalytics\</small>Campaign</h1>
+        <h4>You should serialize this object and store it in e.g. the user database to keep it persistent for the same user permanently (similar to the "__umtz" cookie of the GA Javascript client).</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Campaign
+            {<br/><ul class="none"><li>// constants</li><li>const TYPE_DIRECT = 'direct';</li><li>const TYPE_ORGANIC = 'organic';</li><li>const TYPE_REFERRAL = 'referral';</li></ul><ul class="none"><li>// members</li><li>protected string <a href="#members">$type</a>;
+                    </li><li>protected <span title="DateTime">DateTime</span> <a href="#members">$creationTime</a>;
+                    </li><li>protected integer <a href="#members">$responseCount</a>;
+                    </li><li>protected int <a href="#members">$id</a>;
+                    </li><li>protected string <a href="#members">$source</a>;
+                    </li><li>protected string <a href="#members">$gClickId</a>;
+                    </li><li>protected string <a href="#members">$dClickId</a>;
+                    </li><li>protected string <a href="#members">$name</a>;
+                    </li><li>protected string <a href="#members">$medium</a>;
+                    </li><li>protected string <a href="#members">$term</a>;
+                    </li><li>protected string <a href="#members">$content</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/__construct.xhtml">__construct</a>()
+                    </li><li>public $this <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/fromUtmz.xhtml">fromUtmz</a>()
+                    </li><li>public static Campaign <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/createFromReferrer.xhtml">createFromReferrer</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/validate.xhtml">validate</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setType.xhtml">setType</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getType.xhtml">getType</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setCreationTime.xhtml">setCreationTime</a>()
+                    </li><li>public DateTime <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getCreationTime.xhtml">getCreationTime</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setResponseCount.xhtml">setResponseCount</a>()
+                    </li><li>public int <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getResponseCount.xhtml">getResponseCount</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/increaseResponseCount.xhtml">increaseResponseCount</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setId.xhtml">setId</a>()
+                    </li><li>public int <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getId.xhtml">getId</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setSource.xhtml">setSource</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getSource.xhtml">getSource</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setGClickId.xhtml">setGClickId</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getGClickId.xhtml">getGClickId</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setDClickId.xhtml">setDClickId</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getDClickId.xhtml">getDClickId</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setName.xhtml">setName</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getName.xhtml">getName</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setMedium.xhtml">setMedium</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getMedium.xhtml">getMedium</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setTerm.xhtml">setTerm</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getTerm.xhtml">getTerm</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setContent.xhtml">setContent</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getContent.xhtml">getContent</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="TYPE_DIRECT">TYPE_DIRECT</td>
+              <td>'direct'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_ORGANIC">TYPE_ORGANIC</td>
+              <td>'organic'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_REFERRAL">TYPE_REFERRAL</td>
+              <td>'referral'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="content"><strong>$content</strong>
+                —
+                string<br/><span class="indent">Ad Content Description, a.k.a. "utm_content" query parameter for ga.js.</span></li>
+            <li id="creationTime"><strong>$creationTime</strong>
+                —
+                <a title="DateTime" href="../classes/DateTime.xhtml">DateTime</a><br/><span class="indent">Time of the creation of this campaign, will be mapped to "__utmz" parameter.</span></li>
+            <li id="dClickId"><strong>$dClickId</strong>
+                —
+                string<br/><span class="indent">DoubleClick (?) Click ID. Will be mapped to "utmdclid" key in "__utmz" parameter.</span></li>
+            <li id="gClickId"><strong>$gClickId</strong>
+                —
+                string<br/><span class="indent">Google AdWords Click ID, a.k.a. "gclid" query parameter for ga.js.</span></li>
+            <li id="id"><strong>$id</strong>
+                —
+                int<br/><span class="indent">Campaign ID, a.k.a. "utm_id" query parameter for ga.js Will be mapped to "__utmz" parameter.</span></li>
+            <li id="medium"><strong>$medium</strong>
+                —
+                string<br/><span class="indent">Medium, a.k.a. "utm_medium" query parameter for ga.js.</span></li>
+            <li id="name"><strong>$name</strong>
+                —
+                string<br/><span class="indent">Name, a.k.a. "utm_campaign" query parameter for ga.js.</span></li>
+            <li id="responseCount"><strong>$responseCount</strong>
+                —
+                int<br/><span class="indent">Response Count, will be mapped to "__utmz" parameter.</span></li>
+            <li id="source"><strong>$source</strong>
+                —
+                string<br/><span class="indent">Source, a.k.a. "utm_source" query parameter for ga.js.</span></li>
+            <li id="term"><strong>$term</strong>
+                —
+                string<br/><span class="indent">Terms/Keywords, a.k.a. "utm_term" query parameter for ga.js.</span></li>
+            <li id="type"><strong>$type</strong>
+                —
+                string<br/><span class="indent">See self::TYPE_* constants, will be mapped to "__utmz" parameter.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="createFromReferrer">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/createFromReferrer.xhtml">createFromReferrer()</a>
+            </li>
+            <li id="fromUtmz"><a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/fromUtmz.xhtml">fromUtmz()</a>
+                — Will extract information for the "trackCount" and "startTime" properties from the given "__utmz" cookie value.</li>
+            <li id="getContent">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getContent.xhtml">getContent()</a>
+            </li>
+            <li id="getCreationTime">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getCreationTime.xhtml">getCreationTime()</a>
+            </li>
+            <li id="getDClickId">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getDClickId.xhtml">getDClickId()</a>
+            </li>
+            <li id="getGClickId">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getGClickId.xhtml">getGClickId()</a>
+            </li>
+            <li id="getId">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getId.xhtml">getId()</a>
+            </li>
+            <li id="getMedium">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getMedium.xhtml">getMedium()</a>
+            </li>
+            <li id="getName">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getName.xhtml">getName()</a>
+            </li>
+            <li id="getResponseCount">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getResponseCount.xhtml">getResponseCount()</a>
+            </li>
+            <li id="getSource">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getSource.xhtml">getSource()</a>
+            </li>
+            <li id="getTerm">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getTerm.xhtml">getTerm()</a>
+            </li>
+            <li id="getType">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/getType.xhtml">getType()</a>
+            </li>
+            <li id="increaseResponseCount">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/increaseResponseCount.xhtml">increaseResponseCount()</a>
+            </li>
+            <li id="setContent">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setContent.xhtml">setContent()</a>
+            </li>
+            <li id="setCreationTime">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setCreationTime.xhtml">setCreationTime()</a>
+            </li>
+            <li id="setDClickId">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setDClickId.xhtml">setDClickId()</a>
+            </li>
+            <li id="setGClickId">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setGClickId.xhtml">setGClickId()</a>
+            </li>
+            <li id="setId">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setId.xhtml">setId()</a>
+            </li>
+            <li id="setMedium">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setMedium.xhtml">setMedium()</a>
+            </li>
+            <li id="setName">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setName.xhtml">setName()</a>
+            </li>
+            <li id="setResponseCount">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setResponseCount.xhtml">setResponseCount()</a>
+            </li>
+            <li id="setSource">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setSource.xhtml">setSource()</a>
+            </li>
+            <li id="setTerm">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setTerm.xhtml">setTerm()</a>
+            </li>
+            <li id="setType">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/setType.xhtml">setType()</a>
+            </li>
+            <li id="validate">
+              <a title="UnitedPrototype\GoogleAnalytics\Campaign" href="../classes/UnitedPrototype_GoogleAnalytics_Campaign/validate.xhtml">validate()</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2012-04-03T00:12:24+00:00 (commit #<span title="da71b8da302dcf990ed2370bd1e8a7ef484599b7">da71b8d</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Added Campaign::fromUtmz()</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-15T17:14:23+00:00 (commit #<span title="a7438e6c326486b3cbbe69ec1e3663f7c8218b73">a7438e6</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented campaign tracking</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

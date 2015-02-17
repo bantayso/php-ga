@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Event" namespace="UnitedPrototype\GoogleAnalytics" name="Event" abstract="false" final="false" start="35" end="167">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics" file="Event.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Event.php" size="4163" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="a5206ccd0981b5ac93f193200ff0a8154c52f645" relative="GoogleAnalytics/Event.php"/>
+  <docblock>
+    <description/>
+    <link value="http://code.google.com/apis/analytics/docs/tracking/eventTrackerOverview.html"/>
+    <link value="http://code.google.com/apis/analytics/docs/gaJS/gaJSApiEventTracking.html"/>
+  </docblock>
+  <member name="category" type="{unknown}" visibility="protected" line="42">
+    <docblock>
+      <description compact="The general event category (e.g. &quot;Videos&quot;)."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="action" type="{unknown}" visibility="protected" line="49">
+    <docblock>
+      <description compact="The action for the event (e.g. &quot;Play&quot;)."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="label" type="{unknown}" visibility="protected" line="56">
+    <docblock>
+      <description compact="An optional descriptor for the event (e.g. the video's title)."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="value" type="{unknown}" visibility="protected" line="65">
+    <docblock>
+      <description compact="An optional value associated with the event. You can see your event values in the Overview, Categories, and Actions reports, where they are listed by event or aggregated across events, depending upon your report view."/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="noninteraction" type="{unknown}" default="false" visibility="protected" line="73">
+    <docblock>
+      <description compact="Default value is false. By default, event hits will impact a visitor's bounce rate.">By setting this parameter to true, this event hit will not be used in bounce rate calculations.</description>
+      <var type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\bool" namespace="UnitedPrototype\GoogleAnalytics" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="83" end="89" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$category"/>
+      <param type="string" variable="$action"/>
+      <param type="string" variable="$label"/>
+      <param type="int" variable="$value"/>
+      <param type="object" variable="$noninteraction">
+        <type full="UnitedPrototype\GoogleAnalytics\bool" namespace="UnitedPrototype\GoogleAnalytics" name="bool"/>
+      </param>
+    </docblock>
+    <parameter name="category" byreference="false" type="{unknown}" default="null"/>
+    <parameter name="action" byreference="false" type="{unknown}" default="null"/>
+    <parameter name="label" byreference="false" type="{unknown}" default="null"/>
+    <parameter name="value" byreference="false" type="{unknown}" default="null"/>
+    <parameter name="noninteraction" byreference="false" type="{unknown}" default="null"/>
+  </constructor>
+  <method name="validate" start="91" end="95" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="getCategory" start="100" end="102" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setCategory" start="107" end="109" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$category"/>
+    </docblock>
+    <parameter name="category" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getAction" start="114" end="116" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setAction" start="121" end="123" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$action"/>
+    </docblock>
+    <parameter name="action" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getLabel" start="128" end="130" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setLabel" start="135" end="137" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$label"/>
+    </docblock>
+    <parameter name="label" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getValue" start="142" end="144" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setValue" start="149" end="151" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getNoninteraction" start="156" end="158" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\bool" namespace="UnitedPrototype\GoogleAnalytics" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setNoninteraction" start="163" end="165" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$value">
+        <type full="UnitedPrototype\GoogleAnalytics\bool" namespace="UnitedPrototype\GoogleAnalytics" name="bool"/>
+      </param>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+</class>

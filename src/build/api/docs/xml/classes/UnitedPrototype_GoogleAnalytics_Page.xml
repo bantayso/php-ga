@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Page" namespace="UnitedPrototype\GoogleAnalytics" name="Page" abstract="false" final="false" start="31" end="170">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics" file="Page.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Page.php" size="3750" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="2848f4011ad2d625f031bc7c9c590d11c1effb0e" relative="GoogleAnalytics/Page.php"/>
+  <member name="path" type="{unknown}" visibility="protected" line="40">
+    <docblock>
+      <description compact="Page request URI, e.g. &quot;/path/page.html&quot;, will be mapped to &quot;utmp&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmp"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="title" type="{unknown}" visibility="protected" line="48">
+    <docblock>
+      <description compact="Page title, will be mapped to &quot;utmdt&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmdt"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="charset" type="{unknown}" visibility="protected" line="56">
+    <docblock>
+      <description compact="Charset encoding (e.g. &quot;UTF-8&quot;), will be mapped to &quot;utmcs&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmcs"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="referrer" type="{unknown}" visibility="protected" line="65">
+    <docblock>
+      <description compact="Referer URL, e.g. &quot;http://www.example.com/path/page.html&quot;,  will be mapped to &quot;utmr&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmr"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="loadTime" type="{unknown}" visibility="protected" line="73">
+    <docblock>
+      <description compact="Page load time in milliseconds, will be encoded into &quot;utme&quot; parameter."/>
+      <see value="Internals\ParameterHolder::$utme"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <constant name="REFERRER_INTERNAL" value="'0'">
+    <docblock>
+      <description compact="Constant to mark referrer as a site-internal one."/>
+      <see value="Page::$referrer"/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <constructor name="__construct" start="88" end="90" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$path"/>
+    </docblock>
+    <parameter name="path" byreference="false" type="{unknown}"/>
+  </constructor>
+  <method name="setPath" start="95" end="101" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$path"/>
+    </docblock>
+    <parameter name="path" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getPath" start="106" end="108" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setTitle" start="113" end="115" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$title"/>
+    </docblock>
+    <parameter name="title" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTitle" start="120" end="122" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setCharset" start="127" end="129" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$charset"/>
+    </docblock>
+    <parameter name="encoding" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCharset" start="134" end="136" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setReferrer" start="141" end="143" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$referrer"/>
+    </docblock>
+    <parameter name="referrer" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getReferrer" start="148" end="150" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setLoadTime" start="155" end="161" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$loadTime"/>
+    </docblock>
+    <parameter name="loadTime" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getLoadTime" start="166" end="168" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+<enrichments><enrichment type="build"><date unix="1424206050" date="17-02-2015" time="20:47:30" iso="2015-02-17T20:47:30+00:00" rfc="Tue, 17 Feb 2015 20:47:30 +0000"/><phpdox xmlns="http://xml.phpdox.net/src" version="" info="phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts" generated="Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts" phar="no"><enricher type="build"/><enricher type="git"/></phpdox><php xmlns="http://xml.phpdox.net/src" version="5.6.5" os="WINNT"><extension name="Core"/><extension name="bcmath"/><extension name="calendar"/><extension name="ctype"/><extension name="date"/><extension name="ereg"/><extension name="filter"/><extension name="ftp"/><extension name="hash"/><extension name="iconv"/><extension name="json"/><extension name="mcrypt"/><extension name="SPL"/><extension name="odbc"/><extension name="pcre"/><extension name="Reflection"/><extension name="session"/><extension name="standard"/><extension name="mysqlnd"/><extension name="tokenizer"/><extension name="zip"/><extension name="zlib"/><extension name="libxml"/><extension name="dom"/><extension name="PDO"/><extension name="openssl"/><extension name="SimpleXML"/><extension name="wddx"/><extension name="xml"/><extension name="xmlreader"/><extension name="xmlwriter"/><extension name="fileinfo"/><extension name="mbstring"/><extension name="Phar"/><extension name="xsl"/><extension name="mhash"/></php></enrichment><enrichment type="git"><commit xmlns="http://xml.phpdox.net/gitlog" sha1="002d6b8496bdb0c005cdfe65b3140cb1280403da"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-27T16:43:25+00:00" unixtime="1322412205"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-27T16:43:25+00:00" unixtime="1322412205"/><message>Fixed error handling in Page::setLoadTime() and Config::setSitespeedSampleRate()</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="5fca7d38d105bd6be4f6cc6cbc0d69c730e975a7"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-27T04:08:26+00:00" unixtime="1322366906"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-27T04:08:26+00:00" unixtime="1322366906"/><message>Implemented site speed tracking</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="8a9744ac4b6493b5175804360a9965c3808016aa"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-03T16:25:40+00:00" unixtime="1320337540"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-03T16:25:40+00:00" unixtime="1320337540"/><message>Implemented error severity levels (silence, warnings, exceptions), had to make config static across all tracker instances for that</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="dc0ce2ab16f50cf77663c991e5494c454758421f"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2010-10-07T17:56:52+00:00" unixtime="1286474212"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2010-10-07T17:56:52+00:00" unixtime="1286474212"/><message>Initial codebase import</message></commit></enrichment></enrichments></class>

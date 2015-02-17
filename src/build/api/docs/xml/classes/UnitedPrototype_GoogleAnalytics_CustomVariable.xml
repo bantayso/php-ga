@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\CustomVariable" namespace="UnitedPrototype\GoogleAnalytics" name="CustomVariable" abstract="false" final="false" start="36" end="178">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics" file="CustomVariable.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/CustomVariable.php" size="5079" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="f89cdfec32f6869e45208e54154c9dc7512520f9" relative="GoogleAnalytics/CustomVariable.php"/>
+  <docblock>
+    <description/>
+    <link value="http://code.google.com/apis/analytics/docs/tracking/gaTrackingCustomVariables.html"/>
+  </docblock>
+  <member name="index" type="{unknown}" visibility="protected" line="41">
+    <docblock>
+      <description/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="name" type="{unknown}" visibility="protected" line="51">
+    <docblock>
+      <description compact="WATCH OUT: It's a known issue that GA will not decode URL-encoded characters in custom variable names and values properly, so spaces will show up as &quot;%20&quot; in the interface etc."/>
+      <link value="http://www.google.com/support/forum/p/Google%20Analytics/thread?tid=2cdb3ec0be32e078"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="value" type="{unknown}" visibility="protected" line="61">
+    <docblock>
+      <description compact="WATCH OUT: It's a known issue that GA will not decode URL-encoded characters in custom variable names and values properly, so spaces will show up as &quot;%20&quot; in the interface etc."/>
+      <link value="http://www.google.com/support/forum/p/Google%20Analytics/thread?tid=2cdb3ec0be32e078"/>
+      <var type="mixed"/>
+    </docblock>
+  </member>
+  <member name="scope" type="{unknown}" default="self::SCOPE_PAGE" visibility="protected" line="68">
+    <docblock>
+      <description compact="See SCOPE_* constants"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <constant name="SCOPE_VISITOR" value="1">
+    <docblock>
+      <description/>
+      <const value="int"/>
+    </docblock>
+  </constant>
+  <constant name="SCOPE_SESSION" value="2">
+    <docblock>
+      <description/>
+      <const value="int"/>
+    </docblock>
+  </constant>
+  <constant name="SCOPE_PAGE" value="3">
+    <docblock>
+      <description/>
+      <const value="int"/>
+    </docblock>
+  </constant>
+  <constructor name="__construct" start="91" end="96" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$index"/>
+      <param type="string" variable="$name"/>
+      <param type="mixed" variable="$value"/>
+      <param description="See SCOPE_* constants" type="int" variable="$scope"/>
+    </docblock>
+    <parameter name="index" byreference="false" type="{unknown}" default="null"/>
+    <parameter name="name" byreference="false" type="{unknown}" default="null"/>
+    <parameter name="value" byreference="false" type="{unknown}" default="null"/>
+    <parameter name="scope" byreference="false" type="{unknown}" default="null"/>
+  </constructor>
+  <method name="validate" start="98" end="108" abstract="false" final="false" static="false" visibility="public">
+    <inline>
+      <comment value="According to the GA documentation, there is a limit to the combined size of" line="99"/>
+      <comment value="name and value of 64 bytes after URL encoding," line="100"/>
+      <comment value="see http://code.google.com/apis/analytics/docs/tracking/gaTrackingCustomVariables.html#varTypes" line="101"/>
+      <comment value="and http://xahlee.org/js/google_analytics_tracker_2010-07-01_expanded.js line 563" line="102"/>
+      <comment value="This limit was increased to 128 bytes BEFORE encoding with the 2012-01 release of ga.js however," line="103"/>
+      <comment value="see http://code.google.com/apis/analytics/community/gajs_changelog.html" line="104"/>
+    </inline>
+  </method>
+  <method name="getIndex" start="113" end="115" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setIndex" start="121" end="130" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <link value="http://code.google.com/intl/de-DE/apis/analytics/docs/tracking/gaTrackingCustomVariables.html#usage"/>
+      <param type="int" variable="$index"/>
+    </docblock>
+    <parameter name="index" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Custom Variables are limited to five slots officially, but there seems to be a" line="122"/>
+      <comment value="trick to allow for more of them which we could investigate at a later time (see" line="123"/>
+      <comment value="http://analyticsimpact.com/2010/05/24/get-more-than-5-custom-variables-in-google-analytics/)" line="124"/>
+    </inline>
+  </method>
+  <method name="getName" start="135" end="137" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setName" start="142" end="144" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$name"/>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getValue" start="149" end="151" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setValue" start="156" end="158" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getScope" start="163" end="165" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setScope" start="170" end="176" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$scope"/>
+    </docblock>
+    <parameter name="scope" byreference="false" type="{unknown}"/>
+  </method>
+<enrichments><enrichment type="build"><date unix="1424206050" date="17-02-2015" time="20:47:30" iso="2015-02-17T20:47:30+00:00" rfc="Tue, 17 Feb 2015 20:47:30 +0000"/><phpdox xmlns="http://xml.phpdox.net/src" version="" info="phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts" generated="Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts" phar="no"><enricher type="build"/><enricher type="git"/></phpdox><php xmlns="http://xml.phpdox.net/src" version="5.6.5" os="WINNT"><extension name="Core"/><extension name="bcmath"/><extension name="calendar"/><extension name="ctype"/><extension name="date"/><extension name="ereg"/><extension name="filter"/><extension name="ftp"/><extension name="hash"/><extension name="iconv"/><extension name="json"/><extension name="mcrypt"/><extension name="SPL"/><extension name="odbc"/><extension name="pcre"/><extension name="Reflection"/><extension name="session"/><extension name="standard"/><extension name="mysqlnd"/><extension name="tokenizer"/><extension name="zip"/><extension name="zlib"/><extension name="libxml"/><extension name="dom"/><extension name="PDO"/><extension name="openssl"/><extension name="SimpleXML"/><extension name="wddx"/><extension name="xml"/><extension name="xmlreader"/><extension name="xmlwriter"/><extension name="fileinfo"/><extension name="mbstring"/><extension name="Phar"/><extension name="xsl"/><extension name="mhash"/></php></enrichment><enrichment type="git"><commit xmlns="http://xml.phpdox.net/gitlog" sha1="e89dda73bec16996582be577d842de2664217efd"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2012-02-25T17:01:24+00:00" unixtime="1330189284"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2012-02-25T17:01:24+00:00" unixtime="1330189284"/><message>Updated client version to 5.2.5, increased custom variable length from 64 bytes after encoding to 128 bytes before encoding like the ga.js release 2012-01 did</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="8a9744ac4b6493b5175804360a9965c3808016aa"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-03T16:25:40+00:00" unixtime="1320337540"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-03T16:25:40+00:00" unixtime="1320337540"/><message>Implemented error severity levels (silence, warnings, exceptions), had to make config static across all tracker instances for that</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="cab1187022e95119b3d971914a0b8007900f2254"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T21:27:19+00:00" unixtime="1320096439"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T21:27:19+00:00" unixtime="1320096439"/><message>Added some documentation details to CustomVariable</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="dc0ce2ab16f50cf77663c991e5494c454758421f"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2010-10-07T17:56:52+00:00" unixtime="1286474212"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2010-10-07T17:56:52+00:00" unixtime="1286474212"/><message>Initial codebase import</message></commit></enrichment></enrichments></class>

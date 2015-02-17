@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Visitor" namespace="UnitedPrototype\GoogleAnalytics" name="Visitor" abstract="false" final="false" start="40" end="463">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics" file="Visitor.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Visitor.php" size="11770" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="3a4ca35312c74a487bd11aba8ba164fdc9add04f" relative="GoogleAnalytics/Visitor.php"/>
+  <docblock>
+    <description compact="You should serialize this object and store it in the user database to keep it persistent for the same user permanently (similar to the &quot;__umta&quot; cookie of the GA Javascript client)."/>
+  </docblock>
+  <member name="uniqueId" type="{unknown}" visibility="protected" line="48">
+    <docblock>
+      <description compact="Unique user ID, will be part of the &quot;__utma&quot; cookie parameter"/>
+      <see value="Internals\ParameterHolder::$__utma"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="firstVisitTime" type="{unknown}" visibility="protected" line="57">
+    <docblock>
+      <description compact="Time of the very first visit of this user, will be part of the &quot;__utma&quot; cookie parameter"/>
+      <see value="Internals\ParameterHolder::$__utma"/>
+      <var type="object">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="previousVisitTime" type="{unknown}" visibility="protected" line="67">
+    <docblock>
+      <description compact="Time of the previous visit of this user, will be part of the &quot;__utma&quot; cookie parameter"/>
+      <see value="Internals\ParameterHolder::$__utma"/>
+      <see value="addSession"/>
+      <var type="object">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="currentVisitTime" type="{unknown}" visibility="protected" line="77">
+    <docblock>
+      <description compact="Time of the current visit of this user, will be part of the &quot;__utma&quot; cookie parameter"/>
+      <see value="Internals\ParameterHolder::$__utma"/>
+      <see value="addSession"/>
+      <var type="object">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="visitCount" type="{unknown}" visibility="protected" line="86">
+    <docblock>
+      <description compact="Amount of total visits by this user, will be part of the &quot;__utma&quot; cookie parameter"/>
+      <see value="Internals\ParameterHolder::$__utma"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="ipAddress" type="{unknown}" visibility="protected" line="96">
+    <docblock>
+      <description compact="IP Address of the end user, e.g. &quot;123.123.123.123&quot;, will be mapped to &quot;utmip&quot; parameter and &quot;X-Forwarded-For&quot; request header"/>
+      <see value="Internals\ParameterHolder::$utmip"/>
+      <see value="Internals\Request\HttpRequest::$xForwardedFor"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="userAgent" type="{unknown}" visibility="protected" line="104">
+    <docblock>
+      <description compact="User agent string of the end user, will be mapped to &quot;User-Agent&quot; request header"/>
+      <see value="Internals\Request\HttpRequest::$userAgent"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="locale" type="{unknown}" visibility="protected" line="112">
+    <docblock>
+      <description compact="Locale string (country part optional), e.g. &quot;de-DE&quot;, will be mapped to &quot;utmul&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmul"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="flashVersion" type="{unknown}" visibility="protected" line="120">
+    <docblock>
+      <description compact="Visitor's Flash version, e.g. &quot;9.0 r28&quot;, will be maped to &quot;utmfl&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmfl"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="javaEnabled" type="{unknown}" visibility="protected" line="128">
+    <docblock>
+      <description compact="Visitor's Java support, will be mapped to &quot;utmje&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmje"/>
+      <var type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\bool" namespace="UnitedPrototype\GoogleAnalytics" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="screenColorDepth" type="{unknown}" visibility="protected" line="136">
+    <docblock>
+      <description compact="Visitor's screen color depth, e.g. 32, will be mapped to &quot;utmsc&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmsc"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="screenResolution" type="{unknown}" visibility="protected" line="144">
+    <docblock>
+      <description compact="Visitor's screen resolution, e.g. &quot;1024x768&quot;, will be mapped to &quot;utmsr&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmsr"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="150" end="158" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Creates a new visitor without any previous visit information."/>
+    </docblock>
+    <inline>
+      <comment value="ga.js sets all three timestamps to now for new visitors, so we do the same" line="151"/>
+    </inline>
+  </constructor>
+  <method name="fromUtma" start="170" end="185" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Will extract information for the &quot;uniqueId&quot;, &quot;firstVisitTime&quot;, &quot;previousVisitTime&quot;, &quot;currentVisitTime&quot; and &quot;visitCount&quot; properties from the given &quot;__utma&quot; cookie value."/>
+      <see value="Internals\ParameterHolder::$__utma"/>
+      <see value="Internals\Request\Request::buildCookieParameters()"/>
+      <param type="string" variable="$value"/>
+      <return type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\$this" namespace="UnitedPrototype\GoogleAnalytics" name="$this"/>
+      </return>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Allow chaining" line="183"/>
+    </inline>
+  </method>
+  <method name="fromServerVar" start="194" end="241" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Will extract information for the &quot;ipAddress&quot;, &quot;userAgent&quot; and &quot;locale&quot; properties from the given $_SERVER variable."/>
+      <param type="array" variable="$value"/>
+      <return type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\$this" namespace="UnitedPrototype\GoogleAnalytics" name="$this"/>
+      </return>
+    </docblock>
+    <parameter name="value" byreference="false" type="array"/>
+    <inline>
+      <comment value="First IP address is the one of the client," line="199"/>
+      <comment value="see http://en.wikipedia.org/wiki/X-Forwarded-For" line="200"/>
+      <comment value="Double-check if the address has a valid format" line="204"/>
+      <comment value="Exclude private IP address ranges" line="208"/>
+      <comment value="Allow chaining" line="239"/>
+    </inline>
+  </method>
+  <method name="generateHash" start="249" end="254" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Generates a hashed value from user-specific properties."/>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/v4/Tracker.as#542"/>
+      <return type="int"/>
+    </docblock>
+    <inline>
+      <todo value="Emulate orginal Google Analytics client library generation more closely" line="250"/>
+    </inline>
+  </method>
+  <method name="generateUniqueId" start="262" end="267" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Generates a unique user ID from the current user-specific properties."/>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/v4/Tracker.as#563"/>
+      <return type="int"/>
+    </docblock>
+    <inline>
+      <comment value="There seems to be an error in the gaforflash code, so we take the formula" line="263"/>
+      <comment value="from http://xahlee.org/js/google_analytics_tracker_2010-07-01_expanded.js line 711" line="264"/>
+      <comment value="instead (&quot;&amp;&quot; instead of &quot;*&quot;)" line="265"/>
+    </inline>
+  </method>
+  <method name="setUniqueId" start="273" end="279" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <see value="generateUniqueId"/>
+      <param type="int" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getUniqueId" start="287" end="292" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Will be generated on first call (if not set already) to include as much user-specific information as possible."/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="addSession" start="300" end="307" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Updates the &quot;previousVisitTime&quot;, &quot;currentVisitTime&quot; and &quot;visitCount&quot; fields based on the given session object."/>
+      <param type="object" variable="$session">
+        <type full="UnitedPrototype\GoogleAnalytics\Session" namespace="UnitedPrototype\GoogleAnalytics" name="Session"/>
+      </param>
+    </docblock>
+    <parameter name="session" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Session" namespace="UnitedPrototype\GoogleAnalytics" name="Session"/>
+    </parameter>
+  </method>
+  <method name="setFirstVisitTime" start="312" end="314" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$value">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </param>
+    </docblock>
+    <parameter name="value" byreference="false" type="object">
+      <type full="DateTime" namespace="" name="DateTime"/>
+    </parameter>
+  </method>
+  <method name="getFirstVisitTime" start="319" end="321" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setPreviousVisitTime" start="326" end="328" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$value">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </param>
+    </docblock>
+    <parameter name="value" byreference="false" type="object">
+      <type full="DateTime" namespace="" name="DateTime"/>
+    </parameter>
+  </method>
+  <method name="getPreviousVisitTime" start="333" end="335" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setCurrentVisitTime" start="340" end="342" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$value">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </param>
+    </docblock>
+    <parameter name="value" byreference="false" type="object">
+      <type full="DateTime" namespace="" name="DateTime"/>
+    </parameter>
+  </method>
+  <method name="getCurrentVisitTime" start="347" end="349" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setVisitCount" start="354" end="356" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getVisitCount" start="361" end="363" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setIpAddress" start="368" end="370" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getIpAddress" start="375" end="377" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setUserAgent" start="382" end="384" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getUserAgent" start="389" end="391" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setLocale" start="396" end="398" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getLocale" start="403" end="405" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setFlashVersion" start="410" end="412" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getFlashVersion" start="417" end="419" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setJavaEnabled" start="424" end="426" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$value">
+        <type full="UnitedPrototype\GoogleAnalytics\bool" namespace="UnitedPrototype\GoogleAnalytics" name="bool"/>
+      </param>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getJavaEnabled" start="431" end="433" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\bool" namespace="UnitedPrototype\GoogleAnalytics" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setScreenColorDepth" start="438" end="440" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getScreenColorDepth" start="445" end="447" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setScreenResolution" start="452" end="454" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getScreenResolution" start="459" end="461" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+</class>

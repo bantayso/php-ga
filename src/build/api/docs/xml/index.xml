@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="C:/Development/Personal/github/php-ga.git/src">
+  <namespace name="UnitedPrototype\GoogleAnalytics">
+    <class name="Campaign" src="GoogleAnalytics/Campaign.php" description="You should serialize this object and store it in e.g. the user database to keep it persistent for the same user permanently (similar to the &quot;__umtz&quot; cookie of the GA Javascript client)." xml="classes/UnitedPrototype_GoogleAnalytics_Campaign.xml"/>
+    <class name="Config" src="GoogleAnalytics/Config.php" description="Note: Doesn't necessarily have to be consistent across requests, as it doesn't alter the actual tracking result." xml="classes/UnitedPrototype_GoogleAnalytics_Config.xml"/>
+    <class name="CustomVariable" src="GoogleAnalytics/CustomVariable.php" xml="classes/UnitedPrototype_GoogleAnalytics_CustomVariable.xml"/>
+    <class name="Event" src="GoogleAnalytics/Event.php" xml="classes/UnitedPrototype_GoogleAnalytics_Event.xml"/>
+    <class name="Exception" src="GoogleAnalytics/Exception.php" xml="classes/UnitedPrototype_GoogleAnalytics_Exception.xml"/>
+    <class name="Item" src="GoogleAnalytics/Item.php" xml="classes/UnitedPrototype_GoogleAnalytics_Item.xml"/>
+    <class name="Page" src="GoogleAnalytics/Page.php" xml="classes/UnitedPrototype_GoogleAnalytics_Page.xml"/>
+    <class name="Session" src="GoogleAnalytics/Session.php" description="You should serialize this object and store it in the user session to keep it persistent between requests (similar to the &quot;__umtb&quot; cookie of the GA Javascript client)." xml="classes/UnitedPrototype_GoogleAnalytics_Session.xml"/>
+    <class name="SocialInteraction" src="GoogleAnalytics/SocialInteraction.php" xml="classes/UnitedPrototype_GoogleAnalytics_SocialInteraction.xml"/>
+    <class name="Tracker" src="GoogleAnalytics/Tracker.php" xml="classes/UnitedPrototype_GoogleAnalytics_Tracker.xml"/>
+    <class name="Transaction" src="GoogleAnalytics/Transaction.php" xml="classes/UnitedPrototype_GoogleAnalytics_Transaction.xml"/>
+    <class name="Visitor" src="GoogleAnalytics/Visitor.php" description="You should serialize this object and store it in the user database to keep it persistent for the same user permanently (similar to the &quot;__umta&quot; cookie of the GA Javascript client)." xml="classes/UnitedPrototype_GoogleAnalytics_Visitor.xml"/>
+  </namespace>
+  <namespace name="UnitedPrototype\GoogleAnalytics\Internals">
+    <class name="ParameterHolder" src="GoogleAnalytics/Internals/ParameterHolder.php" description="This simple class is mainly meant to be a well-documented overview of all possible GA tracking parameters." xml="classes/UnitedPrototype_GoogleAnalytics_Internals_ParameterHolder.xml"/>
+    <class name="Util" src="GoogleAnalytics/Internals/Util.php" xml="classes/UnitedPrototype_GoogleAnalytics_Internals_Util.xml"/>
+    <class name="X10" src="GoogleAnalytics/Internals/X10.php" description="This is nearly a 1:1 PHP port of the gaforflash X10 class code." xml="classes/UnitedPrototype_GoogleAnalytics_Internals_X10.xml"/>
+  </namespace>
+  <namespace name="UnitedPrototype\GoogleAnalytics\Internals\Request">
+    <class name="EventRequest" src="GoogleAnalytics/Internals/Request/EventRequest.php" xml="classes/UnitedPrototype_GoogleAnalytics_Internals_Request_EventRequest.xml"/>
+    <class name="HttpRequest" src="GoogleAnalytics/Internals/Request/HttpRequest.php" xml="classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest.xml"/>
+    <class name="ItemRequest" src="GoogleAnalytics/Internals/Request/ItemRequest.php" xml="classes/UnitedPrototype_GoogleAnalytics_Internals_Request_ItemRequest.xml"/>
+    <class name="PageviewRequest" src="GoogleAnalytics/Internals/Request/PageviewRequest.php" xml="classes/UnitedPrototype_GoogleAnalytics_Internals_Request_PageviewRequest.xml"/>
+    <class name="Request" src="GoogleAnalytics/Internals/Request/Request.php" xml="classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request.xml"/>
+    <class name="SocialinteractionRequest" src="GoogleAnalytics/Internals/Request/SocialInteractionRequest.php" xml="classes/UnitedPrototype_GoogleAnalytics_Internals_Request_SocialinteractionRequest.xml"/>
+    <class name="TransactionRequest" src="GoogleAnalytics/Internals/Request/TransactionRequest.php" xml="classes/UnitedPrototype_GoogleAnalytics_Internals_Request_TransactionRequest.xml"/>
+  </namespace>
+  <namespace name="">
+    <class name="Exception" xml="classes/Exception.xml"/>
+  </namespace>
+<enrichments><enrichment type="build"><date unix="1424206050" date="17-02-2015" time="20:47:30" iso="2015-02-17T20:47:30+00:00" rfc="Tue, 17 Feb 2015 20:47:30 +0000"/><phpdox xmlns="http://xml.phpdox.net/src" version="" info="phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts" generated="Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts" phar="no"><enricher type="build"/><enricher type="git"/></phpdox><php xmlns="http://xml.phpdox.net/src" version="5.6.5" os="WINNT"><extension name="Core"/><extension name="bcmath"/><extension name="calendar"/><extension name="ctype"/><extension name="date"/><extension name="ereg"/><extension name="filter"/><extension name="ftp"/><extension name="hash"/><extension name="iconv"/><extension name="json"/><extension name="mcrypt"/><extension name="SPL"/><extension name="odbc"/><extension name="pcre"/><extension name="Reflection"/><extension name="session"/><extension name="standard"/><extension name="mysqlnd"/><extension name="tokenizer"/><extension name="zip"/><extension name="zlib"/><extension name="libxml"/><extension name="dom"/><extension name="PDO"/><extension name="openssl"/><extension name="SimpleXML"/><extension name="wddx"/><extension name="xml"/><extension name="xmlreader"/><extension name="xmlwriter"/><extension name="fileinfo"/><extension name="mbstring"/><extension name="Phar"/><extension name="xsl"/><extension name="mhash"/></php></enrichment><enrichment type="git"><tags xmlns="http://xml.phpdox.net/gitlog"><tag name="v0.9"/><tag name="v1.0"/><tag name="v1.1"/><tag name="v1.1.1"/><tag name="v1.2"/></tags><branches xmlns="http://xml.phpdox.net/gitlog"><branch name="master"/></branches><current xmlns="http://xml.phpdox.net/gitlog" describe="v1.2-3-g3a93d0c" branch="master" commit="3a93d0c7e8aace4a13d13d1b16bdf49d18ab3f2f"/></enrichment></enrichments></index>

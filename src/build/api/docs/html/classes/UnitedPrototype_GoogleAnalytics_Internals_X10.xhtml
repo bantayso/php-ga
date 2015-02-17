@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - UnitedPrototype\GoogleAnalytics\Internals\X10</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#UnitedPrototype_GoogleAnalytics_Internals">UnitedPrototype\GoogleAnalytics\Internals</a>
+          </li>
+          <li class="separator">X10</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/GoogleAnalytics/Internals/X10.php.xhtml#line36">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>UnitedPrototype\GoogleAnalytics\Internals\</small>X10</h1>
+        <h4>This is nearly a 1:1 PHP port of the gaforflash X10 class code.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class X10
+            {<br/><ul class="none"><li>// constants</li><li>const OBJECT_KEY_NUM = 1;</li><li>const TYPE_KEY_NUM = 2;</li><li>const LABEL_KEY_NUM = 3;</li><li>const VALUE_VALUE_NUM = 1;</li></ul><ul class="none"><li>// members</li><li>protected array <a href="#members">$projectData</a>;
+                    </li><li>protected string <a href="#members">$KEY</a>;
+                    </li><li>protected string <a href="#members">$VALUE</a>;
+                    </li><li>protected array <a href="#members">$SET</a>;
+                    </li><li>protected string <a href="#members">$DELIM_BEGIN</a>;
+                    </li><li>protected string <a href="#members">$DELIM_END</a>;
+                    </li><li>protected string <a href="#members">$DELIM_SET</a>;
+                    </li><li>protected string <a href="#members">$DELIM_NUM_VALUE</a>;
+                    </li><li>protected array <a href="#members">$ESCAPE_CHAR_MAP</a>;
+                    </li><li>protected integer <a href="#members">$MINIMUM</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>protected bool <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/hasProject.xhtml">hasProject</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/setKey.xhtml">setKey</a>()
+                    </li><li>public mixed <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/getKey.xhtml">getKey</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/clearKey.xhtml">clearKey</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/setValue.xhtml">setValue</a>()
+                    </li><li>public mixed <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/getValue.xhtml">getValue</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/clearValue.xhtml">clearValue</a>()
+                    </li><li>protected void <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/setInternal.xhtml">setInternal</a>()
+                    </li><li>protected mixed <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/getInternal.xhtml">getInternal</a>()
+                    </li><li>protected void <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/clearInternal.xhtml">clearInternal</a>()
+                    </li><li>protected string <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/escapeExtensibleValue.xhtml">escapeExtensibleValue</a>()
+                    </li><li>protected string <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/renderDataType.xhtml">renderDataType</a>()
+                    </li><li>protected string <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/renderProject.xhtml">renderProject</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/renderUrlString.xhtml">renderUrlString</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="OBJECT_KEY_NUM">OBJECT_KEY_NUM</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="TYPE_KEY_NUM">TYPE_KEY_NUM</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td id="LABEL_KEY_NUM">LABEL_KEY_NUM</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td id="VALUE_VALUE_NUM">VALUE_VALUE_NUM</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="DELIM_BEGIN"><strong>$DELIM_BEGIN</strong>
+                —
+                string<br/><span class="indent">Opening delimiter for wrapping a set of values belonging to the same type.</span></li>
+            <li id="DELIM_END"><strong>$DELIM_END</strong>
+                —
+                string<br/><span class="indent">Closing delimiter for wrapping a set of values belonging to the same type.</span></li>
+            <li id="DELIM_NUM_VALUE"><strong>$DELIM_NUM_VALUE</strong>
+                —
+                string<br/><span class="indent">Delimiter between a num and its corresponding value.</span></li>
+            <li id="DELIM_SET"><strong>$DELIM_SET</strong>
+                —
+                string<br/><span class="indent">Delimiter between two consecutive num/value pairs.</span></li>
+            <li id="ESCAPE_CHAR_MAP"><strong>$ESCAPE_CHAR_MAP</strong>
+                —
+                array<br/><span class="indent">Mapping of escapable characters to their escaped forms.</span></li>
+            <li id="KEY"><strong>$KEY</strong>
+                —
+                string</li>
+            <li id="MINIMUM"><strong>$MINIMUM</strong>
+                —
+                int</li>
+            <li id="SET"><strong>$SET</strong>
+                —
+                array</li>
+            <li id="VALUE"><strong>$VALUE</strong>
+                —
+                string</li>
+            <li id="projectData"><strong>$projectData</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="clearInternal"><a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/clearInternal.xhtml">clearInternal()</a>
+                — Shared internal implementation for clearing all X10 data of a type from a certain project.</li>
+            <li id="escapeExtensibleValue"><a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/escapeExtensibleValue.xhtml">escapeExtensibleValue()</a>
+                — Escape X10 string values to remove ambiguity for special characters.</li>
+            <li id="getInternal"><a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/getInternal.xhtml">getInternal()</a>
+                — Shared internal implementation for getting an X10 data type.</li>
+            <li id="hasProject">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/hasProject.xhtml">hasProject()</a>
+            </li>
+            <li id="renderDataType"><a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/renderDataType.xhtml">renderDataType()</a>
+                — Given a data array for a certain type, render its string encoding.</li>
+            <li id="renderProject"><a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/renderProject.xhtml">renderProject()</a>
+                — Given a project array, render its string encoding.</li>
+            <li id="setInternal"><a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/setInternal.xhtml">setInternal()</a>
+                — Shared internal implementation for setting an X10 data type.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="clearKey">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/clearKey.xhtml">clearKey()</a>
+            </li>
+            <li id="clearValue">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/clearValue.xhtml">clearValue()</a>
+            </li>
+            <li id="getKey">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/getKey.xhtml">getKey()</a>
+            </li>
+            <li id="getValue">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/getValue.xhtml">getValue()</a>
+            </li>
+            <li id="renderUrlString"><a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/renderUrlString.xhtml">renderUrlString()</a>
+                — Generates the URL parameter string for the current internal extensible data state.</li>
+            <li id="setKey">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/setKey.xhtml">setKey()</a>
+            </li>
+            <li id="setValue">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\X10" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_X10/setValue.xhtml">setValue()</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2011-11-27T04:08:26+00:00 (commit #<span title="5fca7d38d105bd6be4f6cc6cbc0d69c730e975a7">5fca7d3</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented site speed tracking</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-03T17:44:55+00:00 (commit #<span title="ffaab69d7d83dae12b1ab57029d6b9c28542fadc">ffaab69</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Made some minor documentation improvements to X10 class</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-10-31T16:23:50+00:00 (commit #<span title="c3e7e2af5c43b4ddd010a3d0b57c7e0981b1cd47">c3e7e2a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Improved X10::renderDataType() (fixes issue #6)</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-04-05T19:11:24+00:00 (commit #<span title="795f22a8a56163ec65437ece4da730005efbc30b">795f22a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Fixed encoding of numeric values in X10::escapeExtensibleValue()</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2010-10-07T17:56:52+00:00 (commit #<span title="dc0ce2ab16f50cf77663c991e5494c454758421f">dc0ce2a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Initial codebase import</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

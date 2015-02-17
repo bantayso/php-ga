@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="HttpRequest" abstract="true" final="false" start="38" end="237">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Internals/Request" file="HttpRequest.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Internals/Request/HttpRequest.php" size="7392" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="e94ee655fc21513f1f4bfeeab492dee75b8795d3" relative="GoogleAnalytics/Internals/Request/HttpRequest.php"/>
+  <docblock>
+    <description/>
+    <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/core/GIFRequest.as"/>
+  </docblock>
+  <member name="type" type="{unknown}" visibility="protected" line="46">
+    <docblock>
+      <description compact="Indicates the type of request, will be mapped to &quot;utmt&quot; parameter"/>
+      <see value="ParameterHolder::$utmt"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="config" type="{unknown}" visibility="protected" line="51">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="xForwardedFor" type="{unknown}" visibility="protected" line="56">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="userAgent" type="{unknown}" visibility="protected" line="61">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="67" end="69" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$config">
+        <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </param>
+    </docblock>
+    <parameter name="config" byreference="false" type="object" default="null">
+      <type full="UnitedPrototype\GoogleAnalytics\Config" namespace="UnitedPrototype\GoogleAnalytics" name="Config"/>
+    </parameter>
+  </constructor>
+  <method name="getConfig" start="74" end="76" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setConfig" start="81" end="83" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$config">
+        <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </param>
+    </docblock>
+    <parameter name="config" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Config" namespace="UnitedPrototype\GoogleAnalytics" name="Config"/>
+    </parameter>
+  </method>
+  <method name="setXForwardedFor" start="88" end="90" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setUserAgent" start="95" end="97" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="buildHttpRequest" start="102" end="156" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+    <inline>
+      <comment value="This constant is supported as the 4th argument of http_build_query()" line="105"/>
+      <comment value="from PHP 5.3.6 on and will tell it to use rawurlencode() instead of urlencode()" line="106"/>
+      <comment value="internally, see http://code.google.com/p/php-ga/issues/detail?id=3" line="107"/>
+      <comment value="http_build_query() does automatically skip all array entries" line="109"/>
+      <comment value="with null values, exactly what we want here" line="110"/>
+      <comment value="Mimic Javascript's encodeURIComponent() encoding for the query" line="116"/>
+      <comment value="string just to be sure we are 100% consistent with GA's Javascript client" line="117"/>
+      <comment value="Recent versions of ga.js use HTTP POST requests if the query string is too long" line="120"/>
+      <comment value="Sadly &quot;X-Fowarded-For&quot; is not supported by GA so far," line="136"/>
+      <comment value="see e.g. http://www.google.com/support/forum/p/Google+Analytics/thread?tid=017691c9e71d4b24," line="137"/>
+      <comment value="but we include it nonetheless for the pure sake of correctness (and hope)" line="138"/>
+      <comment value="Don't ask me why &quot;text/plain&quot;, but ga.js says so :)" line="143"/>
+    </inline>
+  </method>
+  <method name="buildParameters" start="161" end="161" abstract="true" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="\UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="_send" start="175" end="215" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="This method should only be called directly or indirectly by fire(), but must remain public as it can be called by a closure function.">Sends either a normal HTTP request with response or an asynchronous request
+to Google Analytics without waiting for the response. Will always return
+null in the latter case, or false if any connection problems arise.</description>
+      <see value="HttpRequest::fire()"/>
+      <param type="string" variable="$request"/>
+      <return type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\Internals\Request\null|string|bool" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="null|string|bool"/>
+      </return>
+    </docblock>
+    <inline>
+      <comment value="Do not actually send the request if endpoint host is set to null" line="179"/>
+      <comment value="Ensure that the full request is sent (see http://code.google.com/p/php-ga/issues/detail?id=11)" line="194"/>
+    </inline>
+  </method>
+  <method name="fire" start="221" end="235" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Simply delegates to send() if config option &quot;sendOnShutdown&quot; is disabled or enqueues the request by registering a PHP shutdown function."/>
+    </docblock>
+    <inline>
+      <comment value="This dumb variable assignment is needed as PHP prohibits using" line="223"/>
+      <comment value="$this in closure use statements" line="224"/>
+      <comment value="We use a closure here to retain the current values/states of" line="226"/>
+      <comment value="this instance and $request (as the use statement will copy them" line="227"/>
+      <comment value="into its own scope)" line="228"/>
+    </inline>
+  </method>
+  <extenders>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\EventRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="EventRequest"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\ItemRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="ItemRequest"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\PageviewRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="PageviewRequest"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="Request"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\SocialinteractionRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="SocialinteractionRequest"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\TransactionRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="TransactionRequest"/>
+  </extenders>
+<enrichments><enrichment type="build"><date unix="1424206050" date="17-02-2015" time="20:47:30" iso="2015-02-17T20:47:30+00:00" rfc="Tue, 17 Feb 2015 20:47:30 +0000"/><phpdox xmlns="http://xml.phpdox.net/src" version="" info="phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts" generated="Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts" phar="no"><enricher type="build"/><enricher type="git"/></phpdox><php xmlns="http://xml.phpdox.net/src" version="5.6.5" os="WINNT"><extension name="Core"/><extension name="bcmath"/><extension name="calendar"/><extension name="ctype"/><extension name="date"/><extension name="ereg"/><extension name="filter"/><extension name="ftp"/><extension name="hash"/><extension name="iconv"/><extension name="json"/><extension name="mcrypt"/><extension name="SPL"/><extension name="odbc"/><extension name="pcre"/><extension name="Reflection"/><extension name="session"/><extension name="standard"/><extension name="mysqlnd"/><extension name="tokenizer"/><extension name="zip"/><extension name="zlib"/><extension name="libxml"/><extension name="dom"/><extension name="PDO"/><extension name="openssl"/><extension name="SimpleXML"/><extension name="wddx"/><extension name="xml"/><extension name="xmlreader"/><extension name="xmlwriter"/><extension name="fileinfo"/><extension name="mbstring"/><extension name="Phar"/><extension name="xsl"/><extension name="mhash"/></php></enrichment><enrichment type="git"><commit xmlns="http://xml.phpdox.net/gitlog" sha1="38aad1ef551338b1d05025aed46f9a263f0d7532"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2012-02-21T17:53:01+00:00" unixtime="1329846781"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2012-02-21T17:53:01+00:00" unixtime="1329846781"/><message>Fixed HttpRequest::_send() in "fireAndForget" mode to ensure the full request is always sent, fixes issue #11</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="9043581fa8ca2a29907c4b3a34c662500679aed7"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-15T17:01:11+00:00" unixtime="1321376471"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-15T17:01:11+00:00" unixtime="1321376471"/><message>Improved HttpRequest::buildHttpRequest() to skip empty userAgent and xForwardedFor values</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="d479189243e04acf6336347349edd15b8713e53f"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T22:02:03+00:00" unixtime="1320098523"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T22:02:03+00:00" unixtime="1320098523"/><message>Updated to client version 4.9.2: Implemented "utms" parameter and HTTP POST support for large requests</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="f1e2b83b258bd059275615db6deb256de9c61486"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T21:56:00+00:00" unixtime="1320098160"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T21:56:00+00:00" unixtime="1320098160"/><message>Improved Config::$sendOnShutdown functionality to assemble the final HTTP request just before sending it, so custom variables that were set later on will be included automatically</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="9fe53fba2c7cc4f375c982cac03be8cecda95aae"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T21:50:36+00:00" unixtime="1320097836"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T21:50:36+00:00" unixtime="1320097836"/><message>Implemented Config::$loggingCallback and ability to set the GA endpoint to null to simulate requests without actually sending them</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="88eb9569080374130bc1f492a6828955e65abdef"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T21:41:42+00:00" unixtime="1320097302"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T21:41:42+00:00" unixtime="1320097302"/><message>Added proper escaping for "User-Agent" and "X-Forwarded-For" headers in HttpRequest::buildHttpRequest()</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="652546e5393f17785ce129a792542e9c23c99755"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-04-05T19:05:31+00:00" unixtime="1302030331"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-04-05T19:05:31+00:00" unixtime="1302030331"/><message>Many minor docblock and documentation fixes and improvements</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="e8ec1433c43bff26e2231b1a83e9fef63793ca7f"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-04-05T18:46:46+00:00" unixtime="1302029206"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-04-05T18:46:46+00:00" unixtime="1302029206"/><message>Fixed encoding of spaces in HttpRequest::buildHttpRequest(), fixes issue #3</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="dc0ce2ab16f50cf77663c991e5494c454758421f"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2010-10-07T17:56:52+00:00" unixtime="1286474212"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2010-10-07T17:56:52+00:00" unixtime="1286474212"/><message>Initial codebase import</message></commit></enrichment></enrichments></class>

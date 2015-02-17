@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#UnitedPrototype_GoogleAnalytics_Internals">UnitedPrototype\GoogleAnalytics\Internals</a>
+          </li>
+          <li class="separator">ParameterHolder</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/GoogleAnalytics/Internals/ParameterHolder.php.xhtml#line39">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>UnitedPrototype\GoogleAnalytics\Internals\</small>ParameterHolder</h1>
+        <h4>This simple class is mainly meant to be a well-documented overview of all possible GA tracking parameters.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ParameterHolder
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$utmwv</a>;
+                    </li><li>public string <a href="#members">$utmac</a>;
+                    </li><li>public string <a href="#members">$utmhn</a>;
+                    </li><li>public string <a href="#members">$utmt</a>;
+                    </li><li>public int <a href="#members">$utms</a>;
+                    </li><li>public int <a href="#members">$utmn</a>;
+                    </li><li>public string <a href="#members">$utmcc</a>;
+                    </li><li>public string <a href="#members">$utme</a>;
+                    </li><li>public int <a href="#members">$utmni</a>;
+                    </li><li>public int <a href="#members">$aip</a>;
+                    </li><li>public string <a href="#members">$utmu</a>;
+                    </li><li>public string <a href="#members">$utmp</a>;
+                    </li><li>public string <a href="#members">$utmdt</a>;
+                    </li><li>public string <a href="#members">$utmcs</a>;
+                    </li><li>public string <a href="#members">$utmr</a>;
+                    </li><li>public string <a href="#members">$utmip</a>;
+                    </li><li>public string <a href="#members">$utmul</a>;
+                    </li><li>public string <a href="#members">$utmfl</a>;
+                    </li><li>public <span title="UnitedPrototype\GoogleAnalytics\Internals\int|string">int|string</span> <a href="#members">$utmje</a>;
+                    </li><li>public string <a href="#members">$utmsc</a>;
+                    </li><li>public string <a href="#members">$utmsr</a>;
+                    </li><li>public int <a href="#members">$__utma</a>;
+                    </li><li>public int <a href="#members">$utmhid</a>;
+                    </li><li>public string <a href="#members">$__utmb</a>;
+                    </li><li>public string <a href="#members">$__utmc</a>;
+                    </li><li>public string <a href="#members">$utmipc</a>;
+                    </li><li>public string <a href="#members">$utmipn</a>;
+                    </li><li>public float <a href="#members">$utmipr</a>;
+                    </li><li>public int <a href="#members">$utmiqt</a>;
+                    </li><li>public string <a href="#members">$utmiva</a>;
+                    </li><li>public string <a href="#members">$utmtid</a>;
+                    </li><li>public string <a href="#members">$utmtst</a>;
+                    </li><li>public float <a href="#members">$utmtto</a>;
+                    </li><li>public float <a href="#members">$utmttx</a>;
+                    </li><li>public float <a href="#members">$utmtsp</a>;
+                    </li><li>public string <a href="#members">$utmtci</a>;
+                    </li><li>public string <a href="#members">$utmtrg</a>;
+                    </li><li>public string <a href="#members">$utmtco</a>;
+                    </li><li>public int <a href="#members">$utmcn</a>;
+                    </li><li>public int <a href="#members">$utmcr</a>;
+                    </li><li>public string <a href="#members">$utmcid</a>;
+                    </li><li>public string <a href="#members">$utmcsr</a>;
+                    </li><li>public string <a href="#members">$utmgclid</a>;
+                    </li><li>public string <a href="#members">$utmdclid</a>;
+                    </li><li>public string <a href="#members">$utmccn</a>;
+                    </li><li>public string <a href="#members">$utmcmd</a>;
+                    </li><li>public string <a href="#members">$utmctr</a>;
+                    </li><li>public string <a href="#members">$utmcct</a>;
+                    </li><li>public int <a href="#members">$utmcvr</a>;
+                    </li><li>public string <a href="#members">$__utmz</a>;
+                    </li><li>public string <a href="#members">$utmsn</a>;
+                    </li><li>public string <a href="#members">$utmsa</a>;
+                    </li><li>public string <a href="#members">$utmsid</a>;
+                    </li><li>public string <a href="#members">$__utmx</a>;
+                    </li><li>public string <a href="#members">$__utmv</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public array <a title="UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_ParameterHolder/toArray.xhtml">toArray</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="__utma"><strong>$__utma</strong>
+                —
+                int<br/><span class="indent">Visitor tracking cookie parameter.</span></li>
+            <li id="__utmb"><strong>$__utmb</strong>
+                —
+                string<br/><span class="indent">Session timeout cookie parameter.</span></li>
+            <li id="__utmc"><strong>$__utmc</strong>
+                —
+                string<br/><span class="indent">Session tracking cookie parameter.</span></li>
+            <li id="__utmv"><strong>$__utmv</strong>
+                —
+                string<br/><span class="indent">Deprecated custom variables cookie parameter.</span></li>
+            <li id="__utmx"><strong>$__utmx</strong>
+                —
+                string<br/><span class="indent">Website Optimizer cookie parameter.</span></li>
+            <li id="__utmz"><strong>$__utmz</strong>
+                —
+                string<br/><span class="indent">Campaign tracking cookie parameter.</span></li>
+            <li id="aip"><strong>$aip</strong>
+                —
+                int<br/><span class="indent">Whether to anonymize IP addresses within Google Analytics by stripping the last IP address block, either null or 1</span></li>
+            <li id="utmac"><strong>$utmac</strong>
+                —
+                string<br/><span class="indent">Google Analytics account ID, e.g. "UA-1234567-8"</span></li>
+            <li id="utmcc"><strong>$utmcc</strong>
+                —
+                string<br/><span class="indent">Contains all cookie values, see below</span></li>
+            <li id="utmccn"><strong>$utmccn</strong>
+                —
+                string<br/><span class="indent">Name, a.k.a. "utm_campaign" query parameter for ga.js</span></li>
+            <li id="utmcct"><strong>$utmcct</strong>
+                —
+                string<br/><span class="indent">Ad Content Description, a.k.a. "utm_content" query parameter for ga.js</span></li>
+            <li id="utmcid"><strong>$utmcid</strong>
+                —
+                string<br/><span class="indent">Campaign ID, a.k.a. "utm_id" query parameter for ga.js</span></li>
+            <li id="utmcmd"><strong>$utmcmd</strong>
+                —
+                string<br/><span class="indent">Medium, a.k.a. "utm_medium" query parameter for ga.js</span></li>
+            <li id="utmcn"><strong>$utmcn</strong>
+                —
+                int<br/><span class="indent">Starts a new campaign session. Either utmcn or utmcr is present on any given request, but never both at the same time. Changes the campaign tracking data; but does not start a new session. Either 1 or not set.</span></li>
+            <li id="utmcr"><strong>$utmcr</strong>
+                —
+                int<br/><span class="indent">Indicates a repeat campaign visit. This is set when any subsequent clicks occur on the same link. Either utmcn or utmcr is present on any given request, but never both at the same time. Either 1 or not set.</span></li>
+            <li id="utmcs"><strong>$utmcs</strong>
+                —
+                string<br/><span class="indent">Charset encoding (e.g. "UTF-8") or "-" as default</span></li>
+            <li id="utmcsr"><strong>$utmcsr</strong>
+                —
+                string<br/><span class="indent">Source, a.k.a. "utm_source" query parameter for ga.js</span></li>
+            <li id="utmctr"><strong>$utmctr</strong>
+                —
+                string<br/><span class="indent">Terms/Keywords, a.k.a. "utm_term" query parameter for ga.js</span></li>
+            <li id="utmcvr"><strong>$utmcvr</strong>
+                —
+                int<br/><span class="indent">Unknown so far. Found in ga.js.</span></li>
+            <li id="utmdclid"><strong>$utmdclid</strong>
+                —
+                string<br/><span class="indent">Not known for sure, but expected to be a DoubleClick Ad Click ID.</span></li>
+            <li id="utmdt"><strong>$utmdt</strong>
+                —
+                string<br/><span class="indent">Page title</span></li>
+            <li id="utme"><strong>$utme</strong>
+                —
+                string<br/><span class="indent">Extensible Parameter, used for events and custom variables</span></li>
+            <li id="utmfl"><strong>$utmfl</strong>
+                —
+                string<br/><span class="indent">Visitor's Flash version, e.g. "9.0 r28" or "-" as default</span></li>
+            <li id="utmgclid"><strong>$utmgclid</strong>
+                —
+                string<br/><span class="indent">Google AdWords Click ID, a.k.a. "gclid" query parameter for ga.js</span></li>
+            <li id="utmhid"><strong>$utmhid</strong>
+                —
+                int<br/><span class="indent">Hit id for revenue per page tracking for AdSense, a random per-session ID</span></li>
+            <li id="utmhn"><strong>$utmhn</strong>
+                —
+                string<br/><span class="indent">Host Name, e.g. "www.example.com"</span></li>
+            <li id="utmip"><strong>$utmip</strong>
+                —
+                string<br/><span class="indent">IP Address of the end user, e.g. "123.123.123.123", found in GA for Mobile examples, but sadly seems to be ignored in normal GA use</span></li>
+            <li id="utmipc"><strong>$utmipc</strong>
+                —
+                string<br/><span class="indent">Product Code. This is the sku code for a given product, e.g. "989898ajssi"</span></li>
+            <li id="utmipn"><strong>$utmipn</strong>
+                —
+                string<br/><span class="indent">Product Name, e.g. "T-Shirt"</span></li>
+            <li id="utmipr"><strong>$utmipr</strong>
+                —
+                float<br/><span class="indent">Unit Price. Value is set to numbers only, e.g. 19.95</span></li>
+            <li id="utmiqt"><strong>$utmiqt</strong>
+                —
+                int<br/><span class="indent">Unit Quantity, e.g. 4</span></li>
+            <li id="utmiva"><strong>$utmiva</strong>
+                —
+                string<br/><span class="indent">Variations on an item, e.g. "white", "black", "green" etc.</span></li>
+            <li id="utmje"><strong>$utmje</strong>
+                —
+                <a title="UnitedPrototype\GoogleAnalytics\Internals\int|string" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_int|string.xhtml">UnitedPrototype\GoogleAnalytics\Internals\int|string</a><br/><span class="indent">Visitor's Java support, either 0 or 1 or "-" as default</span></li>
+            <li id="utmn"><strong>$utmn</strong>
+                —
+                int<br/><span class="indent">Unique ID (random number) generated for each GIF request</span></li>
+            <li id="utmni"><strong>$utmni</strong>
+                —
+                int<br/><span class="indent">Event "non-interaction" parameter. By default, the event hit will impact a visitor's bounce rate.</span></li>
+            <li id="utmp"><strong>$utmp</strong>
+                —
+                string<br/><span class="indent">Page request URI, e.g. "/path/page.html"</span></li>
+            <li id="utmr"><strong>$utmr</strong>
+                —
+                string<br/><span class="indent">Referer URL, e.g. "http://www.example.com/path/page.html", "-" as default or "0" for internal referers</span></li>
+            <li id="utms"><strong>$utms</strong>
+                —
+                int<br/><span class="indent">Contains the amount of requests done in this session. Added in ga.js v4.9.2.</span></li>
+            <li id="utmsa"><strong>$utmsa</strong>
+                —
+                string<br/><span class="indent">The type of action that happens (e.g. Like, Send, Tweet).</span></li>
+            <li id="utmsc"><strong>$utmsc</strong>
+                —
+                string<br/><span class="indent">Visitor's screen color depth, e.g. "32-bit"</span></li>
+            <li id="utmsid"><strong>$utmsid</strong>
+                —
+                string<br/><span class="indent">The page URL from which the action occurred.</span></li>
+            <li id="utmsn"><strong>$utmsn</strong>
+                —
+                string<br/><span class="indent">The network on which the action occurs (e.g. Facebook, Twitter).</span></li>
+            <li id="utmsr"><strong>$utmsr</strong>
+                —
+                string<br/><span class="indent">Visitor's screen resolution, e.g. "1024x768"</span></li>
+            <li id="utmt"><strong>$utmt</strong>
+                —
+                string<br/><span class="indent">Indicates the type of request, which is one of null (for page), "event", "tran", "item", "social", "var" (deprecated) or "error" (used by ga.js for internal client error logging).</span></li>
+            <li id="utmtci"><strong>$utmtci</strong>
+                —
+                string<br/><span class="indent">Billing City, e.g. "Cologne"</span></li>
+            <li id="utmtco"><strong>$utmtco</strong>
+                —
+                string<br/><span class="indent">Billing Country, e.g. "Germany"</span></li>
+            <li id="utmtid"><strong>$utmtid</strong>
+                —
+                string<br/><span class="indent">Order ID, e.g. "a2343898"</span></li>
+            <li id="utmtrg"><strong>$utmtrg</strong>
+                —
+                string<br/><span class="indent">Billing Region, e.g. "North Rhine-Westphalia"</span></li>
+            <li id="utmtsp"><strong>$utmtsp</strong>
+                —
+                float<br/><span class="indent">Shipping Cost, e.g. 3.95</span></li>
+            <li id="utmtst"><strong>$utmtst</strong>
+                —
+                string<br/><span class="indent">Affiliation</span></li>
+            <li id="utmtto"><strong>$utmtto</strong>
+                —
+                float<br/><span class="indent">Total Cost, e.g. 20.00</span></li>
+            <li id="utmttx"><strong>$utmttx</strong>
+                —
+                float<br/><span class="indent">Tax Cost, e.g. 4.23</span></li>
+            <li id="utmu"><strong>$utmu</strong>
+                —
+                string<br/><span class="indent">Used for GA-internal statistical client function usage and error tracking, not implemented in php-ga as of now, but here for documentation completeness.</span></li>
+            <li id="utmul"><strong>$utmul</strong>
+                —
+                string<br/><span class="indent">Visitor's locale string (all lower-case, country part optional), e.g. "de-de"</span></li>
+            <li id="utmwv"><strong>$utmwv</strong>
+                —
+                string<br/><span class="indent">Google Analytics client version, e.g. "4.7.2"</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="toArray"><a title="UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_ParameterHolder/toArray.xhtml">toArray()</a>
+                — Converts this parameter holder to a pure PHP array, filtering out all properties prefixed with an underscore ("_").</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2011-11-15T19:26:16+00:00 (commit #<span title="2397e79d103997742eeccd9fcf0abcfa948d0253">2397e79</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Minor docblock whitespace fix for ParameterHolder::$__utmv property</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-15T19:25:19+00:00 (commit #<span title="0b14c9c13ce76cc45aa68922b80e67f417c70907">0b14c9c</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented social interaction tracking</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-15T17:14:23+00:00 (commit #<span title="a7438e6c326486b3cbbe69ec1e3663f7c8218b73">a7438e6</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented campaign tracking</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-15T16:14:28+00:00 (commit #<span title="13219981c8599807c8d64942678ac000e40c5a31">1321998</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented "non-interaction" parameter for event tracking, updated tracker version to 5.2.2</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-10-31T22:02:03+00:00 (commit #<span title="d479189243e04acf6336347349edd15b8713e53f">d479189</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Updated to client version 4.9.2: Implemented "utms" parameter and HTTP POST support for large requests</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-04-05T18:17:55+00:00 (commit #<span title="6a9f3bb692993ce0b41518ad83c40d2e7f8efaad">6a9f3bb</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Added ParameterHolder::$utmu property for completeness/documentation reasons</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2010-10-07T17:56:52+00:00 (commit #<span title="dc0ce2ab16f50cf77663c991e5494c454758421f">dc0ce2a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Initial codebase import</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

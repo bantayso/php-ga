@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - UnitedPrototype\GoogleAnalytics\Page</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#UnitedPrototype_GoogleAnalytics">UnitedPrototype\GoogleAnalytics</a>
+          </li>
+          <li class="separator">Page</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/GoogleAnalytics/Page.php.xhtml#line31">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>UnitedPrototype\GoogleAnalytics\</small>Page</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Page
+            {<br/><ul class="none"><li>// constants</li><li>const REFERRER_INTERNAL = '0';</li></ul><ul class="none"><li>// members</li><li>protected string <a href="#members">$path</a>;
+                    </li><li>protected string <a href="#members">$title</a>;
+                    </li><li>protected string <a href="#members">$charset</a>;
+                    </li><li>protected string <a href="#members">$referrer</a>;
+                    </li><li>protected int <a href="#members">$loadTime</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/setPath.xhtml">setPath</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/getPath.xhtml">getPath</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/setTitle.xhtml">setTitle</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/getTitle.xhtml">getTitle</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/setCharset.xhtml">setCharset</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/getCharset.xhtml">getCharset</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/setReferrer.xhtml">setReferrer</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/getReferrer.xhtml">getReferrer</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/setLoadTime.xhtml">setLoadTime</a>()
+                    </li><li>public int <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/getLoadTime.xhtml">getLoadTime</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="REFERRER_INTERNAL">REFERRER_INTERNAL</td>
+              <td>'0'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="charset"><strong>$charset</strong>
+                —
+                string<br/><span class="indent">Charset encoding (e.g. "UTF-8"), will be mapped to "utmcs" parameter</span></li>
+            <li id="loadTime"><strong>$loadTime</strong>
+                —
+                int<br/><span class="indent">Page load time in milliseconds, will be encoded into "utme" parameter.</span></li>
+            <li id="path"><strong>$path</strong>
+                —
+                string<br/><span class="indent">Page request URI, e.g. "/path/page.html", will be mapped to "utmp" parameter</span></li>
+            <li id="referrer"><strong>$referrer</strong>
+                —
+                string<br/><span class="indent">Referer URL, e.g. "http://www.example.com/path/page.html",  will be mapped to "utmr" parameter</span></li>
+            <li id="title"><strong>$title</strong>
+                —
+                string<br/><span class="indent">Page title, will be mapped to "utmdt" parameter</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="getCharset">
+              <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/getCharset.xhtml">getCharset()</a>
+            </li>
+            <li id="getLoadTime">
+              <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/getLoadTime.xhtml">getLoadTime()</a>
+            </li>
+            <li id="getPath">
+              <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/getPath.xhtml">getPath()</a>
+            </li>
+            <li id="getReferrer">
+              <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/getReferrer.xhtml">getReferrer()</a>
+            </li>
+            <li id="getTitle">
+              <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/getTitle.xhtml">getTitle()</a>
+            </li>
+            <li id="setCharset">
+              <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/setCharset.xhtml">setCharset()</a>
+            </li>
+            <li id="setLoadTime">
+              <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/setLoadTime.xhtml">setLoadTime()</a>
+            </li>
+            <li id="setPath">
+              <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/setPath.xhtml">setPath()</a>
+            </li>
+            <li id="setReferrer">
+              <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/setReferrer.xhtml">setReferrer()</a>
+            </li>
+            <li id="setTitle">
+              <a title="UnitedPrototype\GoogleAnalytics\Page" href="../classes/UnitedPrototype_GoogleAnalytics_Page/setTitle.xhtml">setTitle()</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2011-11-27T16:43:25+00:00 (commit #<span title="002d6b8496bdb0c005cdfe65b3140cb1280403da">002d6b8</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Fixed error handling in Page::setLoadTime() and Config::setSitespeedSampleRate()</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-27T04:08:26+00:00 (commit #<span title="5fca7d38d105bd6be4f6cc6cbc0d69c730e975a7">5fca7d3</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented site speed tracking</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-03T16:25:40+00:00 (commit #<span title="8a9744ac4b6493b5175804360a9965c3808016aa">8a9744a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented error severity levels (silence, warnings, exceptions), had to make config static across all tracker instances for that</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2010-10-07T17:56:52+00:00 (commit #<span title="dc0ce2ab16f50cf77663c991e5494c454758421f">dc0ce2a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Initial codebase import</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

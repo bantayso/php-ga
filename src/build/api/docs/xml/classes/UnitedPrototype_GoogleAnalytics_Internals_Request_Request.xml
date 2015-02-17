@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="Request" abstract="true" final="false" start="40" end="361">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Internals/Request" file="Request.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Internals/Request/Request.php" size="11502" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="a84c6e5fca1b19235ddea0abbf4cffaf682b7e85" relative="GoogleAnalytics/Internals/Request/Request.php"/>
+  <extends full="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="HttpRequest"/>
+  <member name="tracker" type="{unknown}" visibility="protected" line="45">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Tracker" namespace="\UnitedPrototype\GoogleAnalytics" name="Tracker"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="visitor" type="{unknown}" visibility="protected" line="50">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Visitor" namespace="\UnitedPrototype\GoogleAnalytics" name="Visitor"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="session" type="{unknown}" visibility="protected" line="55">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Session" namespace="\UnitedPrototype\GoogleAnalytics" name="Session"/>
+      </var>
+    </docblock>
+  </member>
+  <constant name="TYPE_PAGE" value="">
+    <docblock>
+      <description/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <constant name="TYPE_EVENT" value="'event'">
+    <docblock>
+      <description/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <constant name="TYPE_TRANSACTION" value="'tran'">
+    <docblock>
+      <description/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <constant name="TYPE_ITEM" value="'item'">
+    <docblock>
+      <description/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <constant name="TYPE_SOCIAL" value="'social'">
+    <docblock>
+      <description/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <constant name="TYPE_CUSTOMVARIABLE" value="'var'">
+    <docblock>
+      <description compact="This type of request is deprecated in favor of encoding custom variables within the &quot;utme&quot; parameter, but we include it here for completeness"/>
+      <see value="ParameterHolder::$__utmv"/>
+      <link value="http://code.google.com/apis/analytics/docs/gaJS/gaJSApiBasicConfiguration.html#_gat.GA_Tracker_._setVar"/>
+      <deprecated/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <constant name="X10_CUSTOMVAR_NAME_PROJECT_ID" value="8">
+    <docblock>
+      <description/>
+      <const value="int"/>
+    </docblock>
+  </constant>
+  <constant name="X10_CUSTOMVAR_VALUE_PROJECT_ID" value="9">
+    <docblock>
+      <description/>
+      <const value="int"/>
+    </docblock>
+  </constant>
+  <constant name="X10_CUSTOMVAR_SCOPE_PROJECT_ID" value="11">
+    <docblock>
+      <description/>
+      <const value="int"/>
+    </docblock>
+  </constant>
+  <constant name="CAMPAIGN_DELIMITER" value="'|'">
+    <docblock>
+      <description/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <method name="getType" start="114" end="114" abstract="true" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Indicates the type of request, will be mapped to &quot;utmt&quot; parameter"/>
+      <see value="ParameterHolder::$utmt"/>
+      <return description="See Request::TYPE_* constants" type="string"/>
+    </docblock>
+  </method>
+  <method name="buildHttpRequest" start="119" end="137" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+    <inline>
+      <comment value="Increment session track counter for each request" line="123"/>
+      <comment value="See http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/v4/Configuration.as?r=237#48" line="126"/>
+      <comment value="and http://code.google.com/intl/de-DE/apis/analytics/docs/tracking/eventTrackerGuide.html#implementationConsiderations" line="127"/>
+    </inline>
+  </method>
+  <method name="buildParameters" start="142" end="171" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="\UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+      </return>
+    </docblock>
+    <inline>
+      <comment value="The &quot;utmip&quot; parameter is only relevant if a mobile analytics" line="151"/>
+      <comment value="ID (MO-123456-7) was given," line="152"/>
+      <comment value="see http://code.google.com/p/php-ga/issues/detail?id=9" line="153"/>
+      <comment value="Anonymize last IP block" line="158"/>
+    </inline>
+  </method>
+  <method name="buildVisitorParameters" start="177" end="193" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <param type="object" variable="$p">
+        <type full="\UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="\UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+      </param>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="\UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+      </return>
+    </docblock>
+    <parameter name="p" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+    </parameter>
+    <inline>
+      <comment value="Ensure correct locale format, see https://developer.mozilla.org/en/navigator.language" line="178"/>
+    </inline>
+  </method>
+  <method name="buildCustomVariablesParameter" start="200" end="231" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <link value="http://xahlee.org/js/google_analytics_tracker_2010-07-01_expanded.js line 575"/>
+      <param type="object" variable="$p">
+        <type full="\UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="\UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+      </param>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="\UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+      </return>
+    </docblock>
+    <parameter name="p" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+    </parameter>
+    <inline>
+      <comment value="See http://code.google.com/intl/de-DE/apis/analytics/docs/tracking/gaTrackingCustomVariables.html#usage" line="204"/>
+      <comment value="Name and value get encoded here," line="215"/>
+      <comment value="see http://xahlee.org/js/google_analytics_tracker_2010-07-01_expanded.js line 563" line="216"/>
+    </inline>
+  </method>
+  <method name="buildCookieParameters" start="238" end="268" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/core/GIFRequest.as#123"/>
+      <param type="object" variable="$p">
+        <type full="\UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="\UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+      </param>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="\UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+      </return>
+    </docblock>
+    <parameter name="p" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+    </parameter>
+    <inline>
+      <fixme value="What does &quot;token&quot; mean? I only encountered a value of 10 in my tests." line="250"/>
+    </inline>
+  </method>
+  <method name="buildCampaignParameters" start="274" end="303" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <param type="object" variable="$p">
+        <type full="\UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="\UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+      </param>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="\UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+      </return>
+    </docblock>
+    <parameter name="p" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+    </parameter>
+    <inline>
+      <comment value="See http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/campaign/CampaignTracker.as#236" line="282"/>
+      <comment value="Only spaces and pluses get escaped in gaforflash and ga.js, so we do the same" line="295"/>
+    </inline>
+  </method>
+  <method name="generateDomainHash" start="309" end="317" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/v4/Tracker.as#585"/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="getTracker" start="322" end="324" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Tracker" namespace="\UnitedPrototype\GoogleAnalytics" name="Tracker"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setTracker" start="329" end="331" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$tracker">
+        <type full="\UnitedPrototype\GoogleAnalytics\Tracker" namespace="\UnitedPrototype\GoogleAnalytics" name="Tracker"/>
+      </param>
+    </docblock>
+    <parameter name="tracker" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Tracker" namespace="UnitedPrototype\GoogleAnalytics" name="Tracker"/>
+    </parameter>
+  </method>
+  <method name="getVisitor" start="336" end="338" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Visitor" namespace="\UnitedPrototype\GoogleAnalytics" name="Visitor"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setVisitor" start="343" end="345" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$visitor">
+        <type full="\UnitedPrototype\GoogleAnalytics\Visitor" namespace="\UnitedPrototype\GoogleAnalytics" name="Visitor"/>
+      </param>
+    </docblock>
+    <parameter name="visitor" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Visitor" namespace="UnitedPrototype\GoogleAnalytics" name="Visitor"/>
+    </parameter>
+  </method>
+  <method name="getSession" start="350" end="352" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Session" namespace="\UnitedPrototype\GoogleAnalytics" name="Session"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setSession" start="357" end="359" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$session">
+        <type full="\UnitedPrototype\GoogleAnalytics\Session" namespace="\UnitedPrototype\GoogleAnalytics" name="Session"/>
+      </param>
+    </docblock>
+    <parameter name="session" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Session" namespace="UnitedPrototype\GoogleAnalytics" name="Session"/>
+    </parameter>
+  </method>
+  <extenders>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\EventRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="EventRequest"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\ItemRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="ItemRequest"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\PageviewRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="PageviewRequest"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\SocialinteractionRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="SocialinteractionRequest"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\TransactionRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="TransactionRequest"/>
+  </extenders>
+  <parent full="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="HttpRequest">
+    <member name="type" type="{unknown}" visibility="protected" line="46">
+      <docblock>
+        <description compact="Indicates the type of request, will be mapped to &quot;utmt&quot; parameter"/>
+        <see value="ParameterHolder::$utmt"/>
+        <var type="string"/>
+      </docblock>
+    </member>
+    <member name="config" type="{unknown}" visibility="protected" line="51">
+      <docblock>
+        <description/>
+        <var type="object">
+          <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+        </var>
+      </docblock>
+    </member>
+    <member name="xForwardedFor" type="{unknown}" visibility="protected" line="56">
+      <docblock>
+        <description/>
+        <var type="string"/>
+      </docblock>
+    </member>
+    <member name="userAgent" type="{unknown}" visibility="protected" line="61">
+      <docblock>
+        <description/>
+        <var type="string"/>
+      </docblock>
+    </member>
+    <constructor name="__construct" start="67" end="69" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="object" variable="$config">
+          <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+        </param>
+      </docblock>
+      <parameter name="config" byreference="false" type="object" default="null">
+        <type full="UnitedPrototype\GoogleAnalytics\Config" namespace="UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </parameter>
+    </constructor>
+    <method name="getConfig" start="74" end="76" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <return type="object">
+          <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="setConfig" start="81" end="83" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="object" variable="$config">
+          <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+        </param>
+      </docblock>
+      <parameter name="config" byreference="false" type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\Config" namespace="UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </parameter>
+    </method>
+    <method name="setXForwardedFor" start="88" end="90" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description/>
+        <param type="string" variable="$value"/>
+      </docblock>
+      <parameter name="value" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="setUserAgent" start="95" end="97" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description/>
+        <param type="string" variable="$value"/>
+      </docblock>
+      <parameter name="value" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="buildHttpRequest" start="102" end="156" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description/>
+        <return type="string"/>
+      </docblock>
+      <inline>
+        <comment value="This constant is supported as the 4th argument of http_build_query()" line="105"/>
+        <comment value="from PHP 5.3.6 on and will tell it to use rawurlencode() instead of urlencode()" line="106"/>
+        <comment value="internally, see http://code.google.com/p/php-ga/issues/detail?id=3" line="107"/>
+        <comment value="http_build_query() does automatically skip all array entries" line="109"/>
+        <comment value="with null values, exactly what we want here" line="110"/>
+        <comment value="Mimic Javascript's encodeURIComponent() encoding for the query" line="116"/>
+        <comment value="string just to be sure we are 100% consistent with GA's Javascript client" line="117"/>
+        <comment value="Recent versions of ga.js use HTTP POST requests if the query string is too long" line="120"/>
+        <comment value="Sadly &quot;X-Fowarded-For&quot; is not supported by GA so far," line="136"/>
+        <comment value="see e.g. http://www.google.com/support/forum/p/Google+Analytics/thread?tid=017691c9e71d4b24," line="137"/>
+        <comment value="but we include it nonetheless for the pure sake of correctness (and hope)" line="138"/>
+        <comment value="Don't ask me why &quot;text/plain&quot;, but ga.js says so :)" line="143"/>
+      </inline>
+    </method>
+    <method name="buildParameters" start="161" end="161" abstract="true" final="false" static="false" visibility="protected">
+      <docblock>
+        <description/>
+        <return type="object">
+          <type full="\UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="\UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="_send" start="175" end="215" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="This method should only be called directly or indirectly by fire(), but must remain public as it can be called by a closure function.">Sends either a normal HTTP request with response or an asynchronous request
+to Google Analytics without waiting for the response. Will always return
+null in the latter case, or false if any connection problems arise.</description>
+        <see value="HttpRequest::fire()"/>
+        <param type="string" variable="$request"/>
+        <return type="object">
+          <type full="UnitedPrototype\GoogleAnalytics\Internals\Request\null|string|bool" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="null|string|bool"/>
+        </return>
+      </docblock>
+      <inline>
+        <comment value="Do not actually send the request if endpoint host is set to null" line="179"/>
+        <comment value="Ensure that the full request is sent (see http://code.google.com/p/php-ga/issues/detail?id=11)" line="194"/>
+      </inline>
+    </method>
+    <method name="fire" start="221" end="235" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Simply delegates to send() if config option &quot;sendOnShutdown&quot; is disabled or enqueues the request by registering a PHP shutdown function."/>
+      </docblock>
+      <inline>
+        <comment value="This dumb variable assignment is needed as PHP prohibits using" line="223"/>
+        <comment value="$this in closure use statements" line="224"/>
+        <comment value="We use a closure here to retain the current values/states of" line="226"/>
+        <comment value="this instance and $request (as the use statement will copy them" line="227"/>
+        <comment value="into its own scope)" line="228"/>
+      </inline>
+    </method>
+  </parent>
+<enrichments><enrichment type="build"><date unix="1424206050" date="17-02-2015" time="20:47:30" iso="2015-02-17T20:47:30+00:00" rfc="Tue, 17 Feb 2015 20:47:30 +0000"/><phpdox xmlns="http://xml.phpdox.net/src" version="" info="phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts" generated="Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts" phar="no"><enricher type="build"/><enricher type="git"/></phpdox><php xmlns="http://xml.phpdox.net/src" version="5.6.5" os="WINNT"><extension name="Core"/><extension name="bcmath"/><extension name="calendar"/><extension name="ctype"/><extension name="date"/><extension name="ereg"/><extension name="filter"/><extension name="ftp"/><extension name="hash"/><extension name="iconv"/><extension name="json"/><extension name="mcrypt"/><extension name="SPL"/><extension name="odbc"/><extension name="pcre"/><extension name="Reflection"/><extension name="session"/><extension name="standard"/><extension name="mysqlnd"/><extension name="tokenizer"/><extension name="zip"/><extension name="zlib"/><extension name="libxml"/><extension name="dom"/><extension name="PDO"/><extension name="openssl"/><extension name="SimpleXML"/><extension name="wddx"/><extension name="xml"/><extension name="xmlreader"/><extension name="xmlwriter"/><extension name="fileinfo"/><extension name="mbstring"/><extension name="Phar"/><extension name="xsl"/><extension name="mhash"/></php></enrichment><enrichment type="git"><commit xmlns="http://xml.phpdox.net/gitlog" sha1="0c3bd939cbe34e8774757643443c01433b24d695"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2012-02-21T18:25:26+00:00" unixtime="1329848726"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2012-02-21T18:25:26+00:00" unixtime="1329848726"/><message>Added support for mobile tracking IDs (e.g. MO-123456-7), implemented "utmip" parameter and IP anonymization, closes issue #9</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="0b14c9c13ce76cc45aa68922b80e67f417c70907"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-15T19:25:19+00:00" unixtime="1321385119"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-15T19:25:19+00:00" unixtime="1321385119"/><message>Implemented social interaction tracking</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="a7438e6c326486b3cbbe69ec1e3663f7c8218b73"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-15T17:14:23+00:00" unixtime="1321377263"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-15T17:14:23+00:00" unixtime="1321377263"/><message>Implemented campaign tracking</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="8a9744ac4b6493b5175804360a9965c3808016aa"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-03T16:25:40+00:00" unixtime="1320337540"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-03T16:25:40+00:00" unixtime="1320337540"/><message>Implemented error severity levels (silence, warnings, exceptions), had to make config static across all tracker instances for that</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="f56117d9b3530f70d0c04b6c297fd96d6db17cd1"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-01T07:35:52+00:00" unixtime="1320132952"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-11-01T07:35:52+00:00" unixtime="1320132952"/><message>Implemented Visitor::$currentVisitTime together with ::addSession() method for easier visitor/session handling</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="e732dc814a2f72ca6498305166125aa0af57a71f"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T22:11:45+00:00" unixtime="1320099105"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T22:11:45+00:00" unixtime="1320099105"/><message>Added building of client-side "__utmb" and "__utmc" cookie parameters to Request for the pure sake of completeness :)</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="38b163a69206781ab82684d4196414813f8cb344"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T22:04:36+00:00" unixtime="1320098676"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T22:04:36+00:00" unixtime="1320098676"/><message>Ensured correct locale format for "utmul" parameter</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="d479189243e04acf6336347349edd15b8713e53f"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T22:02:03+00:00" unixtime="1320098523"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T22:02:03+00:00" unixtime="1320098523"/><message>Updated to client version 4.9.2: Implemented "utms" parameter and HTTP POST support for large requests</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="f6cfadae2e5bb1ed96c9ef1958128290413f85a3"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T21:32:44+00:00" unixtime="1320096764"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-10-31T21:32:44+00:00" unixtime="1320096764"/><message>Added sanity check for a maximum of 5 custom variables in any given request</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="652546e5393f17785ce129a792542e9c23c99755"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-04-05T19:05:31+00:00" unixtime="1302030331"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2011-04-05T19:05:31+00:00" unixtime="1302030331"/><message>Many minor docblock and documentation fixes and improvements</message></commit><commit xmlns="http://xml.phpdox.net/gitlog" sha1="dc0ce2ab16f50cf77663c991e5494c454758421f"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2010-10-07T17:56:52+00:00" unixtime="1286474212"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2010-10-07T17:56:52+00:00" unixtime="1286474212"/><message>Initial codebase import</message></commit></enrichment></enrichments></class>

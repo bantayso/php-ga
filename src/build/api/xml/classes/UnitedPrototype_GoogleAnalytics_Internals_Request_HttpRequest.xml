@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="HttpRequest" abstract="true" final="false" start="38" end="237">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Internals/Request" file="HttpRequest.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Internals/Request/HttpRequest.php" size="7392" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="e94ee655fc21513f1f4bfeeab492dee75b8795d3" relative="GoogleAnalytics/Internals/Request/HttpRequest.php"/>
+  <docblock>
+    <description/>
+    <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/core/GIFRequest.as"/>
+  </docblock>
+  <member name="type" type="{unknown}" visibility="protected" line="46">
+    <docblock>
+      <description compact="Indicates the type of request, will be mapped to &quot;utmt&quot; parameter"/>
+      <see value="ParameterHolder::$utmt"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="config" type="{unknown}" visibility="protected" line="51">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="xForwardedFor" type="{unknown}" visibility="protected" line="56">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="userAgent" type="{unknown}" visibility="protected" line="61">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="67" end="69" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$config">
+        <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </param>
+    </docblock>
+    <parameter name="config" byreference="false" type="object" default="null">
+      <type full="UnitedPrototype\GoogleAnalytics\Config" namespace="UnitedPrototype\GoogleAnalytics" name="Config"/>
+    </parameter>
+  </constructor>
+  <method name="getConfig" start="74" end="76" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setConfig" start="81" end="83" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$config">
+        <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </param>
+    </docblock>
+    <parameter name="config" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Config" namespace="UnitedPrototype\GoogleAnalytics" name="Config"/>
+    </parameter>
+  </method>
+  <method name="setXForwardedFor" start="88" end="90" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setUserAgent" start="95" end="97" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="buildHttpRequest" start="102" end="156" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+    <inline>
+      <comment value="This constant is supported as the 4th argument of http_build_query()" line="105"/>
+      <comment value="from PHP 5.3.6 on and will tell it to use rawurlencode() instead of urlencode()" line="106"/>
+      <comment value="internally, see http://code.google.com/p/php-ga/issues/detail?id=3" line="107"/>
+      <comment value="http_build_query() does automatically skip all array entries" line="109"/>
+      <comment value="with null values, exactly what we want here" line="110"/>
+      <comment value="Mimic Javascript's encodeURIComponent() encoding for the query" line="116"/>
+      <comment value="string just to be sure we are 100% consistent with GA's Javascript client" line="117"/>
+      <comment value="Recent versions of ga.js use HTTP POST requests if the query string is too long" line="120"/>
+      <comment value="Sadly &quot;X-Fowarded-For&quot; is not supported by GA so far," line="136"/>
+      <comment value="see e.g. http://www.google.com/support/forum/p/Google+Analytics/thread?tid=017691c9e71d4b24," line="137"/>
+      <comment value="but we include it nonetheless for the pure sake of correctness (and hope)" line="138"/>
+      <comment value="Don't ask me why &quot;text/plain&quot;, but ga.js says so :)" line="143"/>
+    </inline>
+  </method>
+  <method name="buildParameters" start="161" end="161" abstract="true" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="\UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="_send" start="175" end="215" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="This method should only be called directly or indirectly by fire(), but must remain public as it can be called by a closure function.">Sends either a normal HTTP request with response or an asynchronous request
+to Google Analytics without waiting for the response. Will always return
+null in the latter case, or false if any connection problems arise.</description>
+      <see value="HttpRequest::fire()"/>
+      <param type="string" variable="$request"/>
+      <return type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\Internals\Request\null|string|bool" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="null|string|bool"/>
+      </return>
+    </docblock>
+    <inline>
+      <comment value="Do not actually send the request if endpoint host is set to null" line="179"/>
+      <comment value="Ensure that the full request is sent (see http://code.google.com/p/php-ga/issues/detail?id=11)" line="194"/>
+    </inline>
+  </method>
+  <method name="fire" start="221" end="235" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Simply delegates to send() if config option &quot;sendOnShutdown&quot; is disabled or enqueues the request by registering a PHP shutdown function."/>
+    </docblock>
+    <inline>
+      <comment value="This dumb variable assignment is needed as PHP prohibits using" line="223"/>
+      <comment value="$this in closure use statements" line="224"/>
+      <comment value="We use a closure here to retain the current values/states of" line="226"/>
+      <comment value="this instance and $request (as the use statement will copy them" line="227"/>
+      <comment value="into its own scope)" line="228"/>
+    </inline>
+  </method>
+  <extenders>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\EventRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="EventRequest"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\ItemRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="ItemRequest"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\PageviewRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="PageviewRequest"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="Request"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\SocialinteractionRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="SocialinteractionRequest"/>
+    <extender full="UnitedPrototype\GoogleAnalytics\Internals\Request\TransactionRequest" namespace="UnitedPrototype\GoogleAnalytics\Internals\Request" name="TransactionRequest"/>
+  </extenders>
+</class>

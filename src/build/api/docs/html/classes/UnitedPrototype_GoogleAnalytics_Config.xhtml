@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - UnitedPrototype\GoogleAnalytics\Config</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#UnitedPrototype_GoogleAnalytics">UnitedPrototype\GoogleAnalytics</a>
+          </li>
+          <li class="separator">Config</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/GoogleAnalytics/Config.php.xhtml#line37">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>UnitedPrototype\GoogleAnalytics\</small>Config</h1>
+        <h4>Note: Doesn't necessarily have to be consistent across requests, as it doesn't alter the actual tracking result.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Config
+            {<br/><ul class="none"><li>// constants</li><li>const ERROR_SEVERITY_SILENCE = 0;</li><li>const ERROR_SEVERITY_WARNINGS = 1;</li><li>const ERROR_SEVERITY_EXCEPTIONS = 2;</li></ul><ul class="none"><li>// members</li><li>protected int <a href="#members">$errorSeverity</a>;
+                    </li><li>protected <span title="UnitedPrototype\GoogleAnalytics\bool">bool</span> <a href="#members">$sendOnShutdown</a>;
+                    </li><li>protected <span title="UnitedPrototype\GoogleAnalytics\bool">bool</span> <a href="#members">$fireAndForget</a>;
+                    </li><li>protected <span title="\Closure">Closure</span> <a href="#members">$loggingCallback</a>;
+                    </li><li>protected integer <a href="#members">$requestTimeout</a>;
+                    </li><li>protected string <a href="#members">$endPointHost</a>;
+                    </li><li>protected string <a href="#members">$endPointPath</a>;
+                    </li><li>protected <span title="UnitedPrototype\GoogleAnalytics\bool">bool</span> <a href="#members">$anonymizeIpAddresses</a>;
+                    </li><li>protected integer <a href="#members">$sitespeedSampleRate</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/__construct.xhtml">__construct</a>()
+                    </li><li>public int <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getErrorSeverity.xhtml">getErrorSeverity</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setErrorSeverity.xhtml">setErrorSeverity</a>()
+                    </li><li>public bool <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getSendOnShutdown.xhtml">getSendOnShutdown</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setSendOnShutdown.xhtml">setSendOnShutdown</a>()
+                    </li><li>public bool <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getFireAndForget.xhtml">getFireAndForget</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setFireAndForget.xhtml">setFireAndForget</a>()
+                    </li><li>public Closure|null <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getLoggingCallback.xhtml">getLoggingCallback</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setLoggingCallback.xhtml">setLoggingCallback</a>()
+                    </li><li>public float <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getRequestTimeout.xhtml">getRequestTimeout</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setRequestTimeout.xhtml">setRequestTimeout</a>()
+                    </li><li>public string|null <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getEndPointHost.xhtml">getEndPointHost</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setEndPointHost.xhtml">setEndPointHost</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getEndPointPath.xhtml">getEndPointPath</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setEndPointPath.xhtml">setEndPointPath</a>()
+                    </li><li>public bool <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getAnonymizeIpAddresses.xhtml">getAnonymizeIpAddresses</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setAnonymizeIpAddresses.xhtml">setAnonymizeIpAddresses</a>()
+                    </li><li>public int <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getSitespeedSampleRate.xhtml">getSitespeedSampleRate</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setSitespeedSampleRate.xhtml">setSitespeedSampleRate</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="ERROR_SEVERITY_SILENCE">ERROR_SEVERITY_SILENCE</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td id="ERROR_SEVERITY_WARNINGS">ERROR_SEVERITY_WARNINGS</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="ERROR_SEVERITY_EXCEPTIONS">ERROR_SEVERITY_EXCEPTIONS</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="anonymizeIpAddresses"><strong>$anonymizeIpAddresses</strong>
+                —
+                <a title="UnitedPrototype\GoogleAnalytics\bool" href="../classes/UnitedPrototype_GoogleAnalytics_bool.xhtml">UnitedPrototype\GoogleAnalytics\bool</a><br/><span class="indent">Whether to anonymize IP addresses within Google Analytics by stripping the last IP address block, will be mapped to "aip" parameter</span></li>
+            <li id="endPointHost"><strong>$endPointHost</strong>
+                —
+                string<br/><span class="indent">Google Analytics tracking request endpoint host. Can be set to null to silently simulate (and log) requests without actually sending them.</span></li>
+            <li id="endPointPath"><strong>$endPointPath</strong>
+                —
+                string<br/><span class="indent">Google Analytics tracking request endpoint path</span></li>
+            <li id="errorSeverity"><strong>$errorSeverity</strong>
+                —
+                int<br/><span class="indent">How strict should errors get handled? After all, we do just do some tracking stuff here, and errors shouldn't break an application's functionality in production.</span></li>
+            <li id="fireAndForget"><strong>$fireAndForget</strong>
+                —
+                <a title="UnitedPrototype\GoogleAnalytics\bool" href="../classes/UnitedPrototype_GoogleAnalytics_bool.xhtml">UnitedPrototype\GoogleAnalytics\bool</a><br/><span class="indent">Whether to make asynchronous requests to GA without waiting for any response (speeds up doing requests).</span></li>
+            <li id="loggingCallback"><strong>$loggingCallback</strong>
+                —
+                <a title="\Closure" href="../classes/_Closure.xhtml">\Closure</a><br/><span class="indent">Logging callback, registered via setLoggingCallback(). Will be fired whenever a request gets sent out and receives the full HTTP request as the first and the full HTTP response (or null if the "fireAndForget" option or simulation mode are used) as the second argument.</span></li>
+            <li id="requestTimeout"><strong>$requestTimeout</strong>
+                —
+                float<br/><span class="indent">Seconds (float allowed) to wait until timeout when connecting to the Google analytics endpoint host</span></li>
+            <li id="sendOnShutdown"><strong>$sendOnShutdown</strong>
+                —
+                <a title="UnitedPrototype\GoogleAnalytics\bool" href="../classes/UnitedPrototype_GoogleAnalytics_bool.xhtml">UnitedPrototype\GoogleAnalytics\bool</a><br/><span class="indent">Whether to just queue all requests on HttpRequest::fire() and actually send them on PHP script shutdown after all other tasks are done.</span></li>
+            <li id="sitespeedSampleRate"><strong>$sitespeedSampleRate</strong>
+                —
+                int<br/><span class="indent">Defines a new sample set size (0-100) for Site Speed data collection.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="getAnonymizeIpAddresses">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getAnonymizeIpAddresses.xhtml">getAnonymizeIpAddresses()</a>
+            </li>
+            <li id="getEndPointHost">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getEndPointHost.xhtml">getEndPointHost()</a>
+            </li>
+            <li id="getEndPointPath">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getEndPointPath.xhtml">getEndPointPath()</a>
+            </li>
+            <li id="getErrorSeverity">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getErrorSeverity.xhtml">getErrorSeverity()</a>
+            </li>
+            <li id="getFireAndForget">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getFireAndForget.xhtml">getFireAndForget()</a>
+            </li>
+            <li id="getLoggingCallback">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getLoggingCallback.xhtml">getLoggingCallback()</a>
+            </li>
+            <li id="getRequestTimeout">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getRequestTimeout.xhtml">getRequestTimeout()</a>
+            </li>
+            <li id="getSendOnShutdown">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getSendOnShutdown.xhtml">getSendOnShutdown()</a>
+            </li>
+            <li id="getSitespeedSampleRate">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/getSitespeedSampleRate.xhtml">getSitespeedSampleRate()</a>
+            </li>
+            <li id="setAnonymizeIpAddresses">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setAnonymizeIpAddresses.xhtml">setAnonymizeIpAddresses()</a>
+            </li>
+            <li id="setEndPointHost">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setEndPointHost.xhtml">setEndPointHost()</a>
+            </li>
+            <li id="setEndPointPath">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setEndPointPath.xhtml">setEndPointPath()</a>
+            </li>
+            <li id="setErrorSeverity">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setErrorSeverity.xhtml">setErrorSeverity()</a>
+            </li>
+            <li id="setFireAndForget">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setFireAndForget.xhtml">setFireAndForget()</a>
+            </li>
+            <li id="setLoggingCallback">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setLoggingCallback.xhtml">setLoggingCallback()</a>
+            </li>
+            <li id="setRequestTimeout">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setRequestTimeout.xhtml">setRequestTimeout()</a>
+            </li>
+            <li id="setSendOnShutdown">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setSendOnShutdown.xhtml">setSendOnShutdown()</a>
+            </li>
+            <li id="setSitespeedSampleRate">
+              <a title="UnitedPrototype\GoogleAnalytics\Config" href="../classes/UnitedPrototype_GoogleAnalytics_Config/setSitespeedSampleRate.xhtml">setSitespeedSampleRate()</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2011-11-27T16:43:25+00:00 (commit #<span title="002d6b8496bdb0c005cdfe65b3140cb1280403da">002d6b8</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Fixed error handling in Page::setLoadTime() and Config::setSitespeedSampleRate()</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-27T04:08:26+00:00 (commit #<span title="5fca7d38d105bd6be4f6cc6cbc0d69c730e975a7">5fca7d3</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented site speed tracking</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-03T16:33:17+00:00 (commit #<span title="2d4159e674e602ad0a28fde9d20914c078f82281">2d4159e</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Added Config::__construct() for convenience</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-03T16:25:40+00:00 (commit #<span title="8a9744ac4b6493b5175804360a9965c3808016aa">8a9744a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented error severity levels (silence, warnings, exceptions), had to make config static across all tracker instances for that</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-10-31T21:56:00+00:00 (commit #<span title="f1e2b83b258bd059275615db6deb256de9c61486">f1e2b83</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Improved Config::$sendOnShutdown functionality to assemble the final HTTP request just before sending it, so custom variables that were set later on will be included automatically</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-10-31T21:50:36+00:00 (commit #<span title="9fe53fba2c7cc4f375c982cac03be8cecda95aae">9fe53fb</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented Config::$loggingCallback and ability to set the GA endpoint to null to simulate requests without actually sending them</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2010-10-07T17:56:52+00:00 (commit #<span title="dc0ce2ab16f50cf77663c991e5494c454758421f">dc0ce2a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Initial codebase import</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

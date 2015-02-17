@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - UnitedPrototype\GoogleAnalytics\Session</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#UnitedPrototype_GoogleAnalytics">UnitedPrototype\GoogleAnalytics</a>
+          </li>
+          <li class="separator">Session</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/GoogleAnalytics/Session.php.xhtml#line40">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>UnitedPrototype\GoogleAnalytics\</small>Session</h1>
+        <h4>You should serialize this object and store it in the user session to keep it persistent between requests (similar to the "__umtb" cookie of the GA Javascript client).</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Session
+            {<br/><ul class="none"><li>// members</li><li>protected int <a href="#members">$sessionId</a>;
+                    </li><li>protected int <a href="#members">$trackCount</a>;
+                    </li><li>protected <span title="DateTime">DateTime</span> <a href="#members">$startTime</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/__construct.xhtml">__construct</a>()
+                    </li><li>public $this <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/fromUtmb.xhtml">fromUtmb</a>()
+                    </li><li>protected int <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/generateSessionId.xhtml">generateSessionId</a>()
+                    </li><li>public int <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/getSessionId.xhtml">getSessionId</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/setSessionId.xhtml">setSessionId</a>()
+                    </li><li>public int <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/getTrackCount.xhtml">getTrackCount</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/setTrackCount.xhtml">setTrackCount</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/increaseTrackCount.xhtml">increaseTrackCount</a>()
+                    </li><li>public DateTime <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/getStartTime.xhtml">getStartTime</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/setStartTime.xhtml">setStartTime</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">106</td>
+            <td>Integrate AdSense support</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="sessionId"><strong>$sessionId</strong>
+                —
+                int<br/><span class="indent">A unique per-session ID, will be mapped to "utmhid" parameter</span></li>
+            <li id="startTime"><strong>$startTime</strong>
+                —
+                <a title="DateTime" href="../classes/DateTime.xhtml">DateTime</a><br/><span class="indent">Timestamp of the start of this new session, will be part of the "__utmb" cookie parameter</span></li>
+            <li id="trackCount"><strong>$trackCount</strong>
+                —
+                int<br/><span class="indent">The amount of pageviews that were tracked within this session so far, will be part of the "__utmb" cookie parameter.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="generateSessionId">
+              <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/generateSessionId.xhtml">generateSessionId()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="fromUtmb"><a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/fromUtmb.xhtml">fromUtmb()</a>
+                — Will extract information for the "trackCount" and "startTime" properties from the given "__utmb" cookie value.</li>
+            <li id="getSessionId">
+              <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/getSessionId.xhtml">getSessionId()</a>
+            </li>
+            <li id="getStartTime">
+              <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/getStartTime.xhtml">getStartTime()</a>
+            </li>
+            <li id="getTrackCount">
+              <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/getTrackCount.xhtml">getTrackCount()</a>
+            </li>
+            <li id="increaseTrackCount">
+              <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/increaseTrackCount.xhtml">increaseTrackCount()</a>
+            </li>
+            <li id="setSessionId">
+              <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/setSessionId.xhtml">setSessionId()</a>
+            </li>
+            <li id="setStartTime">
+              <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/setStartTime.xhtml">setStartTime()</a>
+            </li>
+            <li id="setTrackCount">
+              <a title="UnitedPrototype\GoogleAnalytics\Session" href="../classes/UnitedPrototype_GoogleAnalytics_Session/setTrackCount.xhtml">setTrackCount()</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2012-03-20T08:08:59+00:00 (commit #<span title="00b8fcd0a6688004add56ada85b2b81ba80145bf">00b8fcd</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Fixed Session::fromUtmb() (issue #14)</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2012-02-21T18:07:31+00:00 (commit #<span title="f818e0213eb8282f7d5247105e3a1651feda0b63">f818e02</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Added Session::fromUtmb()</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-10-31T22:02:03+00:00 (commit #<span title="d479189243e04acf6336347349edd15b8713e53f">d479189</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Updated to client version 4.9.2: Implemented "utms" parameter and HTTP POST support for large requests</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2010-10-07T17:56:52+00:00 (commit #<span title="dc0ce2ab16f50cf77663c991e5494c454758421f">dc0ce2a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Initial codebase import</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

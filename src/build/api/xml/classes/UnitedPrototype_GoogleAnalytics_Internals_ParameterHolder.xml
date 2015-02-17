@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Internals\ParameterHolder" namespace="UnitedPrototype\GoogleAnalytics\Internals" name="ParameterHolder" abstract="false" final="false" start="39" end="534">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Internals" file="ParameterHolder.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Internals/ParameterHolder.php" size="14383" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="893ca664b74f565899ef89bce9fad80ca2d411fb" relative="GoogleAnalytics/Internals/ParameterHolder.php"/>
+  <docblock>
+    <description compact="This simple class is mainly meant to be a well-documented overview of all possible GA tracking parameters."/>
+    <link value="http://code.google.com/apis/analytics/docs/tracking/gaTrackingTroubleshooting.html#gifParameters"/>
+  </docblock>
+  <member name="utmwv" type="{unknown}" default="Tracker::VERSION" visibility="public" line="47">
+    <docblock>
+      <description compact="Google Analytics client version, e.g. &quot;4.7.2&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmac" type="{unknown}" visibility="public" line="53">
+    <docblock>
+      <description compact="Google Analytics account ID, e.g. &quot;UA-1234567-8&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmhn" type="{unknown}" visibility="public" line="59">
+    <docblock>
+      <description compact="Host Name, e.g. &quot;www.example.com&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmt" type="{unknown}" visibility="public" line="67">
+    <docblock>
+      <description compact="Indicates the type of request, which is one of null (for page), &quot;event&quot;, &quot;tran&quot;, &quot;item&quot;, &quot;social&quot;, &quot;var&quot; (deprecated) or &quot;error&quot; (used by ga.js for internal client error logging)."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utms" type="{unknown}" visibility="public" line="73">
+    <docblock>
+      <description compact="Contains the amount of requests done in this session. Added in ga.js v4.9.2."/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="utmn" type="{unknown}" visibility="public" line="79">
+    <docblock>
+      <description compact="Unique ID (random number) generated for each GIF request"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="utmcc" type="{unknown}" visibility="public" line="85">
+    <docblock>
+      <description compact="Contains all cookie values, see below"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utme" type="{unknown}" visibility="public" line="91">
+    <docblock>
+      <description compact="Extensible Parameter, used for events and custom variables"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmni" type="{unknown}" visibility="public" line="99">
+    <docblock>
+      <description compact="Event &quot;non-interaction&quot; parameter. By default, the event hit will impact a visitor's bounce rate.">By setting this parameter to 1, this event hit will not be used in bounce rate calculations.</description>
+      <link value="http://code.google.com/apis/analytics/docs/gaJS/gaJSApiEventTracking.html"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="aip" type="{unknown}" visibility="public" line="106">
+    <docblock>
+      <description compact="Whether to anonymize IP addresses within Google Analytics by stripping the last IP address block, either null or 1"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="utmu" type="{unknown}" visibility="public" line="114">
+    <docblock>
+      <description compact="Used for GA-internal statistical client function usage and error tracking, not implemented in php-ga as of now, but here for documentation completeness."/>
+      <link value="http://glucik.blogspot.com/2011/02/utmu-google-analytics-request-parameter.html"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmp" type="{unknown}" visibility="public" line="123">
+    <docblock>
+      <description compact="Page request URI, e.g. &quot;/path/page.html&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmdt" type="{unknown}" visibility="public" line="129">
+    <docblock>
+      <description compact="Page title"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmcs" type="string" default="'-'" visibility="public" line="135">
+    <docblock>
+      <description compact="Charset encoding (e.g. &quot;UTF-8&quot;) or &quot;-&quot; as default"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmr" type="string" default="'-'" visibility="public" line="142">
+    <docblock>
+      <description compact="Referer URL, e.g. &quot;http://www.example.com/path/page.html&quot;, &quot;-&quot; as default or &quot;0&quot; for internal referers"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmip" type="{unknown}" visibility="public" line="154">
+    <docblock>
+      <description compact="IP Address of the end user, e.g. &quot;123.123.123.123&quot;, found in GA for Mobile examples, but sadly seems to be ignored in normal GA use"/>
+      <link value="http://github.com/mptre/php-ga/blob/master/ga.php"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmul" type="{unknown}" visibility="public" line="160">
+    <docblock>
+      <description compact="Visitor's locale string (all lower-case, country part optional), e.g. &quot;de-de&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmfl" type="string" default="'-'" visibility="public" line="166">
+    <docblock>
+      <description compact="Visitor's Flash version, e.g. &quot;9.0 r28&quot; or &quot;-&quot; as default"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmje" type="string" default="'-'" visibility="public" line="172">
+    <docblock>
+      <description compact="Visitor's Java support, either 0 or 1 or &quot;-&quot; as default"/>
+      <var type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\Internals\int|string" namespace="UnitedPrototype\GoogleAnalytics\Internals" name="int|string"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="utmsc" type="{unknown}" visibility="public" line="178">
+    <docblock>
+      <description compact="Visitor's screen color depth, e.g. &quot;32-bit&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmsr" type="{unknown}" visibility="public" line="184">
+    <docblock>
+      <description compact="Visitor's screen resolution, e.g. &quot;1024x768&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="__utma" type="{unknown}" visibility="public" line="206">
+    <docblock>
+      <description compact="Visitor tracking cookie parameter.">This cookie is typically written to the browser upon the first visit to your site from that web browser.
+If the cookie has been deleted by the browser operator, and the browser subsequently visits your site,
+a new __utma cookie is written with a different unique ID.
+
+This cookie is used to determine unique visitors to your site and it is updated with each page view.
+Additionally, this cookie is provided with a unique ID that Google Analytics uses to ensure both the
+validity and accessibility of the cookie as an extra security measure.
+
+Expiration:
+2 years from set/update.
+
+Format:
+__utma=&lt;domainHash&gt;.&lt;uniqueId&gt;.&lt;firstTime&gt;.&lt;lastTime&gt;.&lt;currentTime&gt;.&lt;sessionCount&gt;</description>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/data/UTMA.as"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="utmhid" type="{unknown}" visibility="public" line="217">
+    <docblock>
+      <description compact="Hit id for revenue per page tracking for AdSense, a random per-session ID"/>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/core/DocumentInfo.as#117"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="__utmb" type="{unknown}" visibility="public" line="242">
+    <docblock>
+      <description compact="Session timeout cookie parameter.">Will never be sent with requests, but stays here for documentation completeness.
+
+This cookie is used to establish and continue a user session with your site.
+When a user views a page on your site, the Google Analytics code attempts to update this cookie.
+If it does not find the cookie, a new one is written and a new session is established.
+
+Each time a user visits a different page on your site, this cookie is updated to expire in 30 minutes,
+thus continuing a single session for as long as user activity continues within 30-minute intervals.
+
+This cookie expires when a user pauses on a page on your site for longer than 30 minutes.
+You can modify the default length of a user session with the setSessionTimeout() method.
+
+Expiration:
+30 minutes from set/update.
+
+Format:
+__utmb=&lt;domainHash&gt;.&lt;trackCount&gt;.&lt;token&gt;.&lt;lastTime&gt;</description>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/data/UTMB.as"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="__utmc" type="{unknown}" visibility="public" line="266">
+    <docblock>
+      <description compact="Session tracking cookie parameter.">Will never be sent with requests, but stays here for documentation completeness.
+
+This cookie operates in conjunction with the __utmb cookie to determine whether or not
+to establish a new session for the user.
+In particular, this cookie is not provided with an expiration date,
+so it expires when the user exits the browser.
+
+Should a user visit your site, exit the browser and then return to your website within 30 minutes,
+the absence of the __utmc cookie indicates that a new session needs to be established,
+despite the fact that the __utmb cookie has not yet expired.
+
+Expiration:
+Not set.
+
+Format:
+__utmc=&lt;domainHash&gt;</description>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/data/UTMC.as"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmipc" type="{unknown}" visibility="public" line="275">
+    <docblock>
+      <description compact="Product Code. This is the sku code for a given product, e.g. &quot;989898ajssi&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmipn" type="{unknown}" visibility="public" line="281">
+    <docblock>
+      <description compact="Product Name, e.g. &quot;T-Shirt&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmipr" type="{unknown}" visibility="public" line="287">
+    <docblock>
+      <description compact="Unit Price. Value is set to numbers only, e.g. 19.95"/>
+      <var type="float"/>
+    </docblock>
+  </member>
+  <member name="utmiqt" type="{unknown}" visibility="public" line="293">
+    <docblock>
+      <description compact="Unit Quantity, e.g. 4"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="utmiva" type="{unknown}" visibility="public" line="299">
+    <docblock>
+      <description compact="Variations on an item, e.g. &quot;white&quot;, &quot;black&quot;, &quot;green&quot; etc."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmtid" type="{unknown}" visibility="public" line="305">
+    <docblock>
+      <description compact="Order ID, e.g. &quot;a2343898&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmtst" type="{unknown}" visibility="public" line="311">
+    <docblock>
+      <description compact="Affiliation"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmtto" type="{unknown}" visibility="public" line="317">
+    <docblock>
+      <description compact="Total Cost, e.g. 20.00"/>
+      <var type="float"/>
+    </docblock>
+  </member>
+  <member name="utmttx" type="{unknown}" visibility="public" line="323">
+    <docblock>
+      <description compact="Tax Cost, e.g. 4.23"/>
+      <var type="float"/>
+    </docblock>
+  </member>
+  <member name="utmtsp" type="{unknown}" visibility="public" line="329">
+    <docblock>
+      <description compact="Shipping Cost, e.g. 3.95"/>
+      <var type="float"/>
+    </docblock>
+  </member>
+  <member name="utmtci" type="{unknown}" visibility="public" line="335">
+    <docblock>
+      <description compact="Billing City, e.g. &quot;Cologne&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmtrg" type="{unknown}" visibility="public" line="341">
+    <docblock>
+      <description compact="Billing Region, e.g. &quot;North Rhine-Westphalia&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmtco" type="{unknown}" visibility="public" line="347">
+    <docblock>
+      <description compact="Billing Country, e.g. &quot;Germany&quot;"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmcn" type="{unknown}" visibility="public" line="363">
+    <docblock>
+      <description compact="Starts a new campaign session. Either utmcn or utmcr is present on any given request, but never both at the same time. Changes the campaign tracking data; but does not start a new session. Either 1 or not set.">Found in gaforflash but not in ga.js, so we do not use it, but it will stay here for
+documentation completeness.</description>
+      <deprecated/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="utmcr" type="{unknown}" visibility="public" line="376">
+    <docblock>
+      <description compact="Indicates a repeat campaign visit. This is set when any subsequent clicks occur on the same link. Either utmcn or utmcr is present on any given request, but never both at the same time. Either 1 or not set.">Found in gaforflash but not in ga.js, so we do not use it, but it will stay here for
+documentation completeness.</description>
+      <deprecated/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="utmcid" type="{unknown}" visibility="public" line="382">
+    <docblock>
+      <description compact="Campaign ID, a.k.a. &quot;utm_id&quot; query parameter for ga.js"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmcsr" type="{unknown}" visibility="public" line="388">
+    <docblock>
+      <description compact="Source, a.k.a. &quot;utm_source&quot; query parameter for ga.js"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmgclid" type="{unknown}" visibility="public" line="394">
+    <docblock>
+      <description compact="Google AdWords Click ID, a.k.a. &quot;gclid&quot; query parameter for ga.js"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmdclid" type="{unknown}" visibility="public" line="400">
+    <docblock>
+      <description compact="Not known for sure, but expected to be a DoubleClick Ad Click ID."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmccn" type="{unknown}" visibility="public" line="406">
+    <docblock>
+      <description compact="Name, a.k.a. &quot;utm_campaign&quot; query parameter for ga.js"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmcmd" type="{unknown}" visibility="public" line="412">
+    <docblock>
+      <description compact="Medium, a.k.a. &quot;utm_medium&quot; query parameter for ga.js"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmctr" type="{unknown}" visibility="public" line="418">
+    <docblock>
+      <description compact="Terms/Keywords, a.k.a. &quot;utm_term&quot; query parameter for ga.js"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmcct" type="{unknown}" visibility="public" line="424">
+    <docblock>
+      <description compact="Ad Content Description, a.k.a. &quot;utm_content&quot; query parameter for ga.js"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmcvr" type="{unknown}" visibility="public" line="430">
+    <docblock>
+      <description compact="Unknown so far. Found in ga.js."/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="__utmz" type="{unknown}" visibility="public" line="450">
+    <docblock>
+      <description compact="Campaign tracking cookie parameter.">This cookie stores the type of referral used by the visitor to reach your site,
+whether via a direct method, a referring link, a website search, or a campaign such as an ad or an email link.
+
+It is used to calculate search engine traffic, ad campaigns and page navigation within your own site.
+The cookie is updated with each page view to your site.
+
+Expiration:
+6 months from set/update.
+
+Format:
+__utmz=&lt;domainHash&gt;.&lt;campaignCreation&gt;.&lt;campaignSessions&gt;.&lt;responseCount&gt;.&lt;campaignTracking&gt;</description>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/data/UTMZ.as"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmsn" type="{unknown}" visibility="public" line="459">
+    <docblock>
+      <description compact="The network on which the action occurs (e.g. Facebook, Twitter)."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmsa" type="{unknown}" visibility="public" line="465">
+    <docblock>
+      <description compact="The type of action that happens (e.g. Like, Send, Tweet)."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="utmsid" type="{unknown}" visibility="public" line="471">
+    <docblock>
+      <description compact="The page URL from which the action occurred."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="__utmx" type="{unknown}" visibility="public" line="489">
+    <docblock>
+      <description compact="Website Optimizer cookie parameter.">This cookie is used by Website Optimizer and only set when Website Optimizer is used in combination
+with GA. See the Google Website Optimizer Help Center for details.
+
+Expiration:
+2 years from set/update.</description>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/data/UTMX.as"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="__utmv" type="{unknown}" visibility="public" line="515">
+    <docblock>
+      <description compact="Deprecated custom variables cookie parameter.">This cookie parameter is no longer relevant as of migration from setVar() to
+setCustomVar() and hence not supported by this library, but will stay here for
+documentation completeness.
+
+The __utmv cookie passes the information provided via the setVar() method,
+which you use to create a custom user segment.
+
+Expiration:
+2 years from set/update.
+
+Format:
+__utmv=&lt;domainHash&gt;.&lt;value&gt;</description>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/data/UTMV.as"/>
+      <deprecated/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <method name="toArray" start="524" end="532" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Converts this parameter holder to a pure PHP array, filtering out all properties prefixed with an underscore (&quot;_&quot;)."/>
+      <return type="array"/>
+    </docblock>
+  </method>
+</class>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - UnitedPrototype\GoogleAnalytics\Internals\Request\PageviewRequest</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#UnitedPrototype_GoogleAnalytics_Internals_Request">UnitedPrototype\GoogleAnalytics\Internals\Request</a>
+          </li>
+          <li class="separator">PageviewRequest</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/GoogleAnalytics/Internals/Request/PageviewRequest.php.xhtml#line35">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>UnitedPrototype\GoogleAnalytics\Internals\Request\</small>PageviewRequest</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class PageviewRequest
+                extends <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request.xhtml">Request</a>
+            {<br/><ul class="none"><li>// constants</li><li>const X10_SITESPEED_PROJECT_ID = 14;</li></ul><ul class="none"><li>// Inherited constants from <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request.xhtml">Request</a></li><li>const <a href="#TYPE_PAGE">TYPE_PAGE</a> = ;</li><li>const <a href="#TYPE_EVENT">TYPE_EVENT</a> = 'event';</li><li>const <a href="#TYPE_TRANSACTION">TYPE_TRANSACTION</a> = 'tran';</li><li>const <a href="#TYPE_ITEM">TYPE_ITEM</a> = 'item';</li><li>const <a href="#TYPE_SOCIAL">TYPE_SOCIAL</a> = 'social';</li><li>const <a href="#TYPE_CUSTOMVARIABLE">TYPE_CUSTOMVARIABLE</a> = 'var';</li><li>const <a href="#X10_CUSTOMVAR_NAME_PROJECT_ID">X10_CUSTOMVAR_NAME_PROJECT_ID</a> = 8;</li><li>const <a href="#X10_CUSTOMVAR_VALUE_PROJECT_ID">X10_CUSTOMVAR_VALUE_PROJECT_ID</a> = 9;</li><li>const <a href="#X10_CUSTOMVAR_SCOPE_PROJECT_ID">X10_CUSTOMVAR_SCOPE_PROJECT_ID</a> = 11;</li><li>const <a href="#CAMPAIGN_DELIMITER">CAMPAIGN_DELIMITER</a> = '|';</li></ul><ul class="none"><li>// members</li><li>protected <span title="\UnitedPrototype\GoogleAnalytics\Page">Page</span> <a href="#members">$page</a>;
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request">Request</span></li><li>protected <span title="\UnitedPrototype\GoogleAnalytics\Tracker">Tracker</span> <a href="#members">$tracker</a>;
+                        </li><li>protected <span title="\UnitedPrototype\GoogleAnalytics\Visitor">Visitor</span> <a href="#members">$visitor</a>;
+                        </li><li>protected <span title="\UnitedPrototype\GoogleAnalytics\Session">Session</span> <a href="#members">$session</a>;
+                        </li></ul><ul class="none"><li>// Inherited members from <span title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest">HttpRequest</span></li><li>protected string <a href="#members">$type</a>;
+                        </li><li>protected <span title="\UnitedPrototype\GoogleAnalytics\Config">Config</span> <a href="#members">$config</a>;
+                        </li><li>protected string <a href="#members">$xForwardedFor</a>;
+                        </li><li>protected string <a href="#members">$userAgent</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>protected string <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\PageviewRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_PageviewRequest/getType.xhtml">getType</a>()
+                    </li><li>protected ParameterHolder <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\PageviewRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_PageviewRequest/buildParameters.xhtml">buildParameters</a>()
+                    </li><li>public Page <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\PageviewRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_PageviewRequest/getPage.xhtml">getPage</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\PageviewRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_PageviewRequest/setPage.xhtml">setPage</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request">Request</span></li><li>protected abstract string <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/getType.xhtml">getType</a>()
+                        </li><li>protected string <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/buildHttpRequest.xhtml">buildHttpRequest</a>()
+                        </li><li>protected ParameterHolder <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/buildParameters.xhtml">buildParameters</a>()
+                        </li><li>protected ParameterHolder <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/buildVisitorParameters.xhtml">buildVisitorParameters</a>()
+                        </li><li>protected ParameterHolder <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/buildCustomVariablesParameter.xhtml">buildCustomVariablesParameter</a>()
+                        </li><li>protected ParameterHolder <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/buildCookieParameters.xhtml">buildCookieParameters</a>()
+                        </li><li>protected ParameterHolder <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/buildCampaignParameters.xhtml">buildCampaignParameters</a>()
+                        </li><li>protected string <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/generateDomainHash.xhtml">generateDomainHash</a>()
+                        </li><li>public Tracker <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/getTracker.xhtml">getTracker</a>()
+                        </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/setTracker.xhtml">setTracker</a>()
+                        </li><li>public Visitor <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/getVisitor.xhtml">getVisitor</a>()
+                        </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/setVisitor.xhtml">setVisitor</a>()
+                        </li><li>public Session <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/getSession.xhtml">getSession</a>()
+                        </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/setSession.xhtml">setSession</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest">HttpRequest</span></li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/__construct.xhtml">__construct</a>()
+                        </li><li>public Config <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/getConfig.xhtml">getConfig</a>()
+                        </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/setConfig.xhtml">setConfig</a>()
+                        </li><li>protected void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/setXForwardedFor.xhtml">setXForwardedFor</a>()
+                        </li><li>protected void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/setUserAgent.xhtml">setUserAgent</a>()
+                        </li><li>protected string <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/buildHttpRequest.xhtml">buildHttpRequest</a>()
+                        </li><li>protected abstract ParameterHolder <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/buildParameters.xhtml">buildParameters</a>()
+                        </li><li>public null|string|bool <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/_send.xhtml">_send</a>()
+                        </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/fire.xhtml">fire</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request.xhtml">UnitedPrototype\GoogleAnalytics\Internals\Request\Request</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="X10_SITESPEED_PROJECT_ID">X10_SITESPEED_PROJECT_ID</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td id="TYPE_PAGE">TYPE_PAGE</td>
+              <td/>
+            </tr>
+            <tr>
+              <td id="TYPE_EVENT">TYPE_EVENT</td>
+              <td>'event'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_TRANSACTION">TYPE_TRANSACTION</td>
+              <td>'tran'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_ITEM">TYPE_ITEM</td>
+              <td>'item'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_SOCIAL">TYPE_SOCIAL</td>
+              <td>'social'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_CUSTOMVARIABLE">TYPE_CUSTOMVARIABLE</td>
+              <td>'var'</td>
+            </tr>
+            <tr>
+              <td id="X10_CUSTOMVAR_NAME_PROJECT_ID">X10_CUSTOMVAR_NAME_PROJECT_ID</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td id="X10_CUSTOMVAR_VALUE_PROJECT_ID">X10_CUSTOMVAR_VALUE_PROJECT_ID</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td id="X10_CUSTOMVAR_SCOPE_PROJECT_ID">X10_CUSTOMVAR_SCOPE_PROJECT_ID</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td id="CAMPAIGN_DELIMITER">CAMPAIGN_DELIMITER</td>
+              <td>'|'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="config"><strong>$config</strong>
+                —
+                <a title="\UnitedPrototype\GoogleAnalytics\Config" href="../classes/_UnitedPrototype_GoogleAnalytics_Config.xhtml">\UnitedPrototype\GoogleAnalytics\Config</a></li>
+            <li id="page"><strong>$page</strong>
+                —
+                <a title="\UnitedPrototype\GoogleAnalytics\Page" href="../classes/_UnitedPrototype_GoogleAnalytics_Page.xhtml">\UnitedPrototype\GoogleAnalytics\Page</a></li>
+            <li id="session"><strong>$session</strong>
+                —
+                <a title="\UnitedPrototype\GoogleAnalytics\Session" href="../classes/_UnitedPrototype_GoogleAnalytics_Session.xhtml">\UnitedPrototype\GoogleAnalytics\Session</a></li>
+            <li id="tracker"><strong>$tracker</strong>
+                —
+                <a title="\UnitedPrototype\GoogleAnalytics\Tracker" href="../classes/_UnitedPrototype_GoogleAnalytics_Tracker.xhtml">\UnitedPrototype\GoogleAnalytics\Tracker</a></li>
+            <li id="type"><strong>$type</strong>
+                —
+                string<br/><span class="indent">Indicates the type of request, will be mapped to "utmt" parameter</span></li>
+            <li id="userAgent"><strong>$userAgent</strong>
+                —
+                string</li>
+            <li id="visitor"><strong>$visitor</strong>
+                —
+                <a title="\UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/_UnitedPrototype_GoogleAnalytics_Visitor.xhtml">\UnitedPrototype\GoogleAnalytics\Visitor</a></li>
+            <li id="xForwardedFor"><strong>$xForwardedFor</strong>
+                —
+                string</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="buildParameters">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\PageviewRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_PageviewRequest/buildParameters.xhtml">buildParameters()</a>
+            </li>
+            <li id="getType">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\PageviewRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_PageviewRequest/getType.xhtml">getType()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getPage">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\PageviewRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_PageviewRequest/getPage.xhtml">getPage()</a>
+            </li>
+            <li id="setPage">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\PageviewRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_PageviewRequest/setPage.xhtml">setPage()</a>
+            </li>
+          </ul>
+          <h3>Inherited from <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request.xhtml">UnitedPrototype\GoogleAnalytics\Internals\Request\Request</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="buildCampaignParameters">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/buildCampaignParameters.xhtml">buildCampaignParameters()</a>
+            </li>
+            <li id="buildCookieParameters">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/buildCookieParameters.xhtml">buildCookieParameters()</a>
+            </li>
+            <li id="buildCustomVariablesParameter">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/buildCustomVariablesParameter.xhtml">buildCustomVariablesParameter()</a>
+            </li>
+            <li id="buildHttpRequest">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/buildHttpRequest.xhtml">buildHttpRequest()</a>
+            </li>
+            <li id="buildParameters">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/buildParameters.xhtml">buildParameters()</a>
+            </li>
+            <li id="buildVisitorParameters">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/buildVisitorParameters.xhtml">buildVisitorParameters()</a>
+            </li>
+            <li id="generateDomainHash">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/generateDomainHash.xhtml">generateDomainHash()</a>
+            </li>
+            <li id="getType"><a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/getType.xhtml">getType()</a>
+                — Indicates the type of request, will be mapped to "utmt" parameter</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getSession">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/getSession.xhtml">getSession()</a>
+            </li>
+            <li id="getTracker">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/getTracker.xhtml">getTracker()</a>
+            </li>
+            <li id="getVisitor">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/getVisitor.xhtml">getVisitor()</a>
+            </li>
+            <li id="setSession">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/setSession.xhtml">setSession()</a>
+            </li>
+            <li id="setTracker">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/setTracker.xhtml">setTracker()</a>
+            </li>
+            <li id="setVisitor">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\Request" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_Request/setVisitor.xhtml">setVisitor()</a>
+            </li>
+          </ul>
+          <h3>Inherited from <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest.xhtml">UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="buildHttpRequest">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/buildHttpRequest.xhtml">buildHttpRequest()</a>
+            </li>
+            <li id="buildParameters">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/buildParameters.xhtml">buildParameters()</a>
+            </li>
+            <li id="setUserAgent">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/setUserAgent.xhtml">setUserAgent()</a>
+            </li>
+            <li id="setXForwardedFor">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/setXForwardedFor.xhtml">setXForwardedFor()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="_send"><a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/_send.xhtml">_send()</a>
+                — This method should only be called directly or indirectly by fire(), but must remain public as it can be called by a closure function.</li>
+            <li id="fire"><a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/fire.xhtml">fire()</a>
+                — Simply delegates to send() if config option "sendOnShutdown" is disabled or enqueues the request by registering a PHP shutdown function.</li>
+            <li id="getConfig">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/getConfig.xhtml">getConfig()</a>
+            </li>
+            <li id="setConfig">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/setConfig.xhtml">setConfig()</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2011-11-27T04:08:26+00:00 (commit #<span title="5fca7d38d105bd6be4f6cc6cbc0d69c730e975a7">5fca7d3</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented site speed tracking</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-04-05T19:05:31+00:00 (commit #<span title="652546e5393f17785ce129a792542e9c23c99755">652546e</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Many minor docblock and documentation fixes and improvements</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2010-10-07T17:56:52+00:00 (commit #<span title="dc0ce2ab16f50cf77663c991e5494c454758421f">dc0ce2a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Initial codebase import</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

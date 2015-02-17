@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Internals\X10" namespace="UnitedPrototype\GoogleAnalytics\Internals" name="X10" abstract="false" final="false" start="36" end="329">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Internals" file="X10.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Internals/X10.php" size="7700" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="64ba17fc341063ff55773115edea21049023d964" relative="GoogleAnalytics/Internals/X10.php"/>
+  <docblock>
+    <description compact="This is nearly a 1:1 PHP port of the gaforflash X10 class code."/>
+    <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/data/X10.as"/>
+  </docblock>
+  <member name="projectData" type="array" visibility="protected" line="41">
+    <docblock>
+      <description/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="KEY" type="string" default="'k'" visibility="protected" line="47">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="VALUE" type="string" default="'v'" visibility="protected" line="52">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="SET" type="array" visibility="protected" line="57">
+    <docblock>
+      <description/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="DELIM_BEGIN" type="string" default="'('" visibility="protected" line="63">
+    <docblock>
+      <description compact="Opening delimiter for wrapping a set of values belonging to the same type."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="DELIM_END" type="string" default="')'" visibility="protected" line="69">
+    <docblock>
+      <description compact="Closing delimiter for wrapping a set of values belonging to the same type."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="DELIM_SET" type="string" default="'*'" visibility="protected" line="75">
+    <docblock>
+      <description compact="Delimiter between two consecutive num/value pairs."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="DELIM_NUM_VALUE" type="string" default="'!'" visibility="protected" line="81">
+    <docblock>
+      <description compact="Delimiter between a num and its corresponding value."/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="ESCAPE_CHAR_MAP" type="array" visibility="protected" line="88">
+    <docblock>
+      <description compact="Mapping of escapable characters to their escaped forms."/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="MINIMUM" type="integer" default="1" visibility="protected" line="98">
+    <docblock>
+      <description/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <constant name="OBJECT_KEY_NUM" value="1">
+    <docblock>
+      <description/>
+      <const value="int"/>
+    </docblock>
+  </constant>
+  <constant name="TYPE_KEY_NUM" value="2">
+    <docblock>
+      <description/>
+      <const value="int"/>
+    </docblock>
+  </constant>
+  <constant name="LABEL_KEY_NUM" value="3">
+    <docblock>
+      <description/>
+      <const value="int"/>
+    </docblock>
+  </constant>
+  <constant name="VALUE_VALUE_NUM" value="1">
+    <docblock>
+      <description/>
+      <const value="int"/>
+    </docblock>
+  </constant>
+  <method name="hasProject" start="123" end="125" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <param type="int" variable="$projectId"/>
+      <return type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\Internals\bool" namespace="UnitedPrototype\GoogleAnalytics\Internals" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="projectId" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setKey" start="132" end="134" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$projectId"/>
+      <param type="int" variable="$num"/>
+      <param type="mixed" variable="$value"/>
+    </docblock>
+    <parameter name="projectId" byreference="false" type="{unknown}"/>
+    <parameter name="num" byreference="false" type="{unknown}"/>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getKey" start="141" end="143" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$projectId"/>
+      <param type="int" variable="$num"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="projectId" byreference="false" type="{unknown}"/>
+    <parameter name="num" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="clearKey" start="148" end="150" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$projectId"/>
+    </docblock>
+    <parameter name="projectId" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setValue" start="157" end="159" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$projectId"/>
+      <param type="int" variable="$num"/>
+      <param type="mixed" variable="$value"/>
+    </docblock>
+    <parameter name="projectId" byreference="false" type="{unknown}"/>
+    <parameter name="num" byreference="false" type="{unknown}"/>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getValue" start="166" end="168" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$projectId"/>
+      <param type="int" variable="$num"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="projectId" byreference="false" type="{unknown}"/>
+    <parameter name="num" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="clearValue" start="173" end="175" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$projectId"/>
+    </docblock>
+    <parameter name="projectId" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setInternal" start="185" end="194" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Shared internal implementation for setting an X10 data type."/>
+      <param type="int" variable="$projectId"/>
+      <param type="string" variable="$type"/>
+      <param type="int" variable="$num"/>
+      <param type="mixed" variable="$value"/>
+    </docblock>
+    <parameter name="projectId" byreference="false" type="{unknown}"/>
+    <parameter name="type" byreference="false" type="{unknown}"/>
+    <parameter name="num" byreference="false" type="{unknown}"/>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getInternal" start="204" end="210" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Shared internal implementation for getting an X10 data type."/>
+      <param type="int" variable="$projectId"/>
+      <param type="string" variable="$type"/>
+      <param type="int" variable="$num"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="projectId" byreference="false" type="{unknown}"/>
+    <parameter name="type" byreference="false" type="{unknown}"/>
+    <parameter name="num" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="clearInternal" start="219" end="223" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Shared internal implementation for clearing all X10 data of a type from a certain project."/>
+      <param type="int" variable="$projectId"/>
+      <param type="string" variable="$type"/>
+    </docblock>
+    <parameter name="projectId" byreference="false" type="{unknown}"/>
+    <parameter name="type" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="escapeExtensibleValue" start="232" end="248" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Escape X10 string values to remove ambiguity for special characters."/>
+      <see value="X10::$escapeCharMap"/>
+      <param type="string" variable="$value"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="renderDataType" start="256" end="280" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Given a data array for a certain type, render its string encoding."/>
+      <param type="array" variable="$data"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="data" byreference="false" type="array"/>
+    <inline>
+      <comment value="Check if we need to append the number. If the last number was" line="265"/>
+      <comment value="outputted, or if this is the assumed minimum, then we don't." line="266"/>
+    </inline>
+  </method>
+  <method name="renderProject" start="288" end="312" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Given a project array, render its string encoding."/>
+      <param type="array" variable="$project"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="project" byreference="false" type="array"/>
+    <inline>
+      <comment value="Do we need to output the type string? As an optimization we do not" line="291"/>
+      <comment value="output the type string if it's the first type, or if the previous" line="292"/>
+      <comment value="type was present." line="293"/>
+    </inline>
+  </method>
+  <method name="renderUrlString" start="319" end="327" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Generates the URL parameter string for the current internal extensible data state."/>
+      <return type="string"/>
+    </docblock>
+  </method>
+</class>

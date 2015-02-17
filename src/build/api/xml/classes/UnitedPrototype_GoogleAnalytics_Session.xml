@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Session" namespace="UnitedPrototype\GoogleAnalytics" name="Session" abstract="false" final="false" start="40" end="159">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics" file="Session.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Session.php" size="4128" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="5b02bc9df57df9ae9f7a466b3511e6302c0a2521" relative="GoogleAnalytics/Session.php"/>
+  <docblock>
+    <description compact="You should serialize this object and store it in the user session to keep it persistent between requests (similar to the &quot;__umtb&quot; cookie of the GA Javascript client)."/>
+  </docblock>
+  <member name="sessionId" type="{unknown}" visibility="protected" line="48">
+    <docblock>
+      <description compact="A unique per-session ID, will be mapped to &quot;utmhid&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmhid"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="trackCount" type="{unknown}" visibility="protected" line="60">
+    <docblock>
+      <description compact="The amount of pageviews that were tracked within this session so far, will be part of the &quot;__utmb&quot; cookie parameter.">Will get incremented automatically upon each request.</description>
+      <see value="Internals\ParameterHolder::$__utmb"/>
+      <see value="Internals\Request\Request::buildHttpRequest()"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="startTime" type="{unknown}" visibility="protected" line="69">
+    <docblock>
+      <description compact="Timestamp of the start of this new session, will be part of the &quot;__utmb&quot; cookie parameter"/>
+      <see value="Internals\ParameterHolder::$__utmb"/>
+      <var type="object">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </var>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="72" end="76" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="fromUtmb" start="87" end="99" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Will extract information for the &quot;trackCount&quot; and &quot;startTime&quot; properties from the given &quot;__utmb&quot; cookie value."/>
+      <see value="Internals\ParameterHolder::$__utmb"/>
+      <see value="Internals\Request\Request::buildCookieParameters()"/>
+      <param type="string" variable="$value"/>
+      <return type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\$this" namespace="UnitedPrototype\GoogleAnalytics" name="$this"/>
+      </return>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Allow chaining" line="97"/>
+    </inline>
+  </method>
+  <method name="generateSessionId" start="105" end="108" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/core/DocumentInfo.as#52"/>
+      <return type="int"/>
+    </docblock>
+    <inline>
+      <todo value="Integrate AdSense support" line="106"/>
+    </inline>
+  </method>
+  <method name="getSessionId" start="113" end="115" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setSessionId" start="120" end="122" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$sessionId"/>
+    </docblock>
+    <parameter name="sessionId" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTrackCount" start="127" end="129" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setTrackCount" start="134" end="136" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$trackCount"/>
+    </docblock>
+    <parameter name="trackCount" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="increaseTrackCount" start="141" end="143" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$byAmount"/>
+    </docblock>
+    <parameter name="byAmount" byreference="false" type="integer" default="1"/>
+  </method>
+  <method name="getStartTime" start="148" end="150" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setStartTime" start="155" end="157" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$startTime">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </param>
+    </docblock>
+    <parameter name="startTime" byreference="false" type="object">
+      <type full="DateTime" namespace="" name="DateTime"/>
+    </parameter>
+  </method>
+</class>

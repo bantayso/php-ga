@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Transaction" namespace="UnitedPrototype\GoogleAnalytics" name="Transaction" abstract="false" final="false" start="34" end="250">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics" file="Transaction.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Transaction.php" size="5364" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="91d5c8e27893b8aa205ec825da55bc300c2fcd5e" relative="GoogleAnalytics/Transaction.php"/>
+  <docblock>
+    <description/>
+    <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/ecommerce/Transaction.as"/>
+  </docblock>
+  <member name="orderId" type="{unknown}" visibility="protected" line="42">
+    <docblock>
+      <description compact="Order ID, e.g. &quot;a2343898&quot;, will be mapped to &quot;utmtid&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmtid"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="affiliation" type="{unknown}" visibility="protected" line="50">
+    <docblock>
+      <description compact="Affiliation, Will be mapped to &quot;utmtst&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmtst"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="total" type="{unknown}" visibility="protected" line="58">
+    <docblock>
+      <description compact="Total Cost, will be mapped to &quot;utmtto&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmtto"/>
+      <var type="float"/>
+    </docblock>
+  </member>
+  <member name="tax" type="{unknown}" visibility="protected" line="66">
+    <docblock>
+      <description compact="Tax Cost, will be mapped to &quot;utmttx&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmttx"/>
+      <var type="float"/>
+    </docblock>
+  </member>
+  <member name="shipping" type="{unknown}" visibility="protected" line="75">
+    <docblock>
+      <description compact="Shipping Cost, values as for unit and price, e.g. 3.95, will be mapped to &quot;utmtsp&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmtsp"/>
+      <var type="float"/>
+    </docblock>
+  </member>
+  <member name="city" type="{unknown}" visibility="protected" line="83">
+    <docblock>
+      <description compact="Billing City, e.g. &quot;Cologne&quot;, will be mapped to &quot;utmtci&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmtci"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="region" type="{unknown}" visibility="protected" line="91">
+    <docblock>
+      <description compact="Billing Region, e.g. &quot;North Rhine-Westphalia&quot;, will be mapped to &quot;utmtrg&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmtrg"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="country" type="{unknown}" visibility="protected" line="99">
+    <docblock>
+      <description compact="Billing Country, e.g. &quot;Germany&quot;, will be mapped to &quot;utmtco&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmtco"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="items" type="array" visibility="protected" line="105">
+    <docblock>
+      <description/>
+      <see value="Transaction::addItem()"/>
+      <var type="array" of="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Item" namespace="\UnitedPrototype\GoogleAnalytics" name="Item"/>
+      </var>
+    </docblock>
+  </member>
+  <method name="validate" start="108" end="112" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="addItem" start="118" end="124" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <link value="http://code.google.com/apis/analytics/docs/gaJS/gaJSApiEcommerce.html#_gat.GA_Tracker_._addItem"/>
+      <param type="object" variable="$item">
+        <type full="\UnitedPrototype\GoogleAnalytics\Item" namespace="\UnitedPrototype\GoogleAnalytics" name="Item"/>
+      </param>
+    </docblock>
+    <parameter name="item" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Item" namespace="UnitedPrototype\GoogleAnalytics" name="Item"/>
+    </parameter>
+    <inline>
+      <comment value="Associated items inherit the transaction's order ID" line="119"/>
+    </inline>
+  </method>
+  <method name="getItems" start="129" end="131" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array" of="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Item" namespace="\UnitedPrototype\GoogleAnalytics" name="Item"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="getOrderId" start="136" end="138" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setOrderId" start="143" end="150" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$orderId"/>
+    </docblock>
+    <parameter name="orderId" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Update order IDs of all associated items too" line="146"/>
+    </inline>
+  </method>
+  <method name="getAffiliation" start="155" end="157" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setAffiliation" start="162" end="164" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$affiliation"/>
+    </docblock>
+    <parameter name="affiliation" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTotal" start="169" end="171" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="float"/>
+    </docblock>
+  </method>
+  <method name="setTotal" start="176" end="178" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="float" variable="$total"/>
+    </docblock>
+    <parameter name="total" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTax" start="183" end="185" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="float"/>
+    </docblock>
+  </method>
+  <method name="setTax" start="190" end="192" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="float" variable="$tax"/>
+    </docblock>
+    <parameter name="tax" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getShipping" start="197" end="199" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="float"/>
+    </docblock>
+  </method>
+  <method name="setShipping" start="204" end="206" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="float" variable="$shipping"/>
+    </docblock>
+    <parameter name="shipping" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCity" start="211" end="213" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setCity" start="218" end="220" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$city"/>
+    </docblock>
+    <parameter name="city" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getRegion" start="225" end="227" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setRegion" start="232" end="234" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$region"/>
+    </docblock>
+    <parameter name="region" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCountry" start="239" end="241" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setCountry" start="246" end="248" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$country"/>
+    </docblock>
+    <parameter name="country" byreference="false" type="{unknown}"/>
+  </method>
+</class>

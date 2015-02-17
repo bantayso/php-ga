@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Page" namespace="UnitedPrototype\GoogleAnalytics" name="Page" abstract="false" final="false" start="31" end="170">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics" file="Page.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Page.php" size="3750" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="2848f4011ad2d625f031bc7c9c590d11c1effb0e" relative="GoogleAnalytics/Page.php"/>
+  <member name="path" type="{unknown}" visibility="protected" line="40">
+    <docblock>
+      <description compact="Page request URI, e.g. &quot;/path/page.html&quot;, will be mapped to &quot;utmp&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmp"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="title" type="{unknown}" visibility="protected" line="48">
+    <docblock>
+      <description compact="Page title, will be mapped to &quot;utmdt&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmdt"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="charset" type="{unknown}" visibility="protected" line="56">
+    <docblock>
+      <description compact="Charset encoding (e.g. &quot;UTF-8&quot;), will be mapped to &quot;utmcs&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmcs"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="referrer" type="{unknown}" visibility="protected" line="65">
+    <docblock>
+      <description compact="Referer URL, e.g. &quot;http://www.example.com/path/page.html&quot;,  will be mapped to &quot;utmr&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmr"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="loadTime" type="{unknown}" visibility="protected" line="73">
+    <docblock>
+      <description compact="Page load time in milliseconds, will be encoded into &quot;utme&quot; parameter."/>
+      <see value="Internals\ParameterHolder::$utme"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <constant name="REFERRER_INTERNAL" value="'0'">
+    <docblock>
+      <description compact="Constant to mark referrer as a site-internal one."/>
+      <see value="Page::$referrer"/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <constructor name="__construct" start="88" end="90" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$path"/>
+    </docblock>
+    <parameter name="path" byreference="false" type="{unknown}"/>
+  </constructor>
+  <method name="setPath" start="95" end="101" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$path"/>
+    </docblock>
+    <parameter name="path" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getPath" start="106" end="108" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setTitle" start="113" end="115" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$title"/>
+    </docblock>
+    <parameter name="title" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTitle" start="120" end="122" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setCharset" start="127" end="129" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$charset"/>
+    </docblock>
+    <parameter name="encoding" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCharset" start="134" end="136" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setReferrer" start="141" end="143" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$referrer"/>
+    </docblock>
+    <parameter name="referrer" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getReferrer" start="148" end="150" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setLoadTime" start="155" end="161" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$loadTime"/>
+    </docblock>
+    <parameter name="loadTime" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getLoadTime" start="166" end="168" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+</class>

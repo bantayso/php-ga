@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="C:/Development/Personal/github/php-ga.git/src">
+    <file name="autoload.php" size="453" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="694704393f24166ff804b63ec9bce52b0cb0348a" xml="tokens/autoload.php.xml"/>
+    <dir name="GoogleAnalytics">
+      <file name="Campaign.php" size="10265" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="4c9eaeb91d7835e8b01f44758c7c73e9ed350d87" xml="tokens/GoogleAnalytics/Campaign.php.xml"/>
+      <file name="Config.php" size="8050" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="e555141862453f0c696cb2b761381adc7efe374f" xml="tokens/GoogleAnalytics/Config.php.xml"/>
+      <file name="CustomVariable.php" size="5079" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="f89cdfec32f6869e45208e54154c9dc7512520f9" xml="tokens/GoogleAnalytics/CustomVariable.php.xml"/>
+      <file name="Event.php" size="4163" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="a5206ccd0981b5ac93f193200ff0a8154c52f645" xml="tokens/GoogleAnalytics/Event.php.xml"/>
+      <file name="Exception.php" size="1316" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="f28e46d70fc7a6017085fe4bdad93af0a223c43f" xml="tokens/GoogleAnalytics/Exception.php.xml"/>
+      <dir name="Internals">
+        <file name="ParameterHolder.php" size="14383" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="893ca664b74f565899ef89bce9fad80ca2d411fb" xml="tokens/GoogleAnalytics/Internals/ParameterHolder.php.xml"/>
+        <dir name="Request">
+          <file name="EventRequest.php" size="3611" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="fb55a57d0eb45978b555df279155c477e3344ca5" xml="tokens/GoogleAnalytics/Internals/Request/EventRequest.php.xml"/>
+          <file name="HttpRequest.php" size="7392" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="e94ee655fc21513f1f4bfeeab492dee75b8795d3" xml="tokens/GoogleAnalytics/Internals/Request/HttpRequest.php.xml"/>
+          <file name="ItemRequest.php" size="3122" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="87fe11781588d2a9f2c8c5dbc9baa3c948dafacd" xml="tokens/GoogleAnalytics/Internals/Request/ItemRequest.php.xml"/>
+          <file name="PageviewRequest.php" size="2987" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="5b58a6e03fba9e1fa93f18836827b68c842ba694" xml="tokens/GoogleAnalytics/Internals/Request/PageviewRequest.php.xml"/>
+          <file name="Request.php" size="11502" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="a84c6e5fca1b19235ddea0abbf4cffaf682b7e85" xml="tokens/GoogleAnalytics/Internals/Request/Request.php.xml"/>
+          <file name="SocialInteractionRequest.php" size="2510" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="2ef46208ee36e1a598c9064f5d45a3add8485e35" xml="tokens/GoogleAnalytics/Internals/Request/SocialInteractionRequest.php.xml"/>
+          <file name="TransactionRequest.php" size="3374" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="94ec5c00707c9002b1e349d10223588d91e93991" xml="tokens/GoogleAnalytics/Internals/Request/TransactionRequest.php.xml"/>
+        </dir>
+        <file name="Util.php" size="3332" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="14c3eba5061e1f8af65465c5a4f7556527a2c2d3" xml="tokens/GoogleAnalytics/Internals/Util.php.xml"/>
+        <file name="X10.php" size="7700" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="64ba17fc341063ff55773115edea21049023d964" xml="tokens/GoogleAnalytics/Internals/X10.php.xml"/>
+      </dir>
+      <file name="Item.php" size="4216" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="fc40e0d67e289331d02016f7fd50e8378088c2cc" xml="tokens/GoogleAnalytics/Item.php.xml"/>
+      <file name="Page.php" size="3750" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="2848f4011ad2d625f031bc7c9c590d11c1effb0e" xml="tokens/GoogleAnalytics/Page.php.xml"/>
+      <file name="Session.php" size="4128" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="5b02bc9df57df9ae9f7a466b3511e6302c0a2521" xml="tokens/GoogleAnalytics/Session.php.xml"/>
+      <file name="SocialInteraction.php" size="3459" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="64c63ad6e2882113182912095790e2ef0fb51605" xml="tokens/GoogleAnalytics/SocialInteraction.php.xml"/>
+      <file name="Tracker.php" size="10811" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="1862202a482b5bc8250ee455d9ce40b1959e5f02" xml="tokens/GoogleAnalytics/Tracker.php.xml"/>
+      <file name="Transaction.php" size="5364" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="91d5c8e27893b8aa205ec825da55bc300c2fcd5e" xml="tokens/GoogleAnalytics/Transaction.php.xml"/>
+      <file name="Visitor.php" size="11770" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="3a4ca35312c74a487bd11aba8ba164fdc9add04f" xml="tokens/GoogleAnalytics/Visitor.php.xml"/>
+    </dir>
+    <file name="Test01.php" size="857" time="2015-02-17T19:19:55+00:00" unixtime="1424200795" sha1="2c542ea68530b1dbc3b239fb86d291782e5500c5" xml="tokens/Test01.php.xml"/>
+    <file name="Test02.php" size="767" time="2015-02-17T19:22:04+00:00" unixtime="1424200924" sha1="8a503b9cb525297c8f2b39d6c1d50a3a57edd2af" xml="tokens/Test02.php.xml"/>
+  </dir>
+</source>

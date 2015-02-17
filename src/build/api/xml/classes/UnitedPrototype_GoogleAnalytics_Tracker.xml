@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Tracker" namespace="UnitedPrototype\GoogleAnalytics" name="Tracker" abstract="false" final="false" start="38" end="346">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics" file="Tracker.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Tracker.php" size="10811" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="1862202a482b5bc8250ee455d9ce40b1959e5f02" relative="GoogleAnalytics/Tracker.php"/>
+  <constant name="VERSION" value="'5.2.5'">
+    <docblock>
+      <description compact="Google Analytics client version on which this library is built upon, will be mapped to &quot;utmwv&quot; parameter.">This doesn't necessarily mean that all features of the corresponding
+ga.js version are implemented but rather that the requests comply
+with these of ga.js.</description>
+      <link value="http://code.google.com/apis/analytics/docs/gaJS/changelog.html"/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <member name="config" type="{unknown}" visibility="protected" line="59">
+    <docblock>
+      <description compact="The configuration to use for all tracker instances."/>
+      <var type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="accountId" type="{unknown}" visibility="protected" line="68">
+    <docblock>
+      <description compact="Google Analytics account ID, e.g. &quot;UA-1234567-8&quot;, will be mapped to &quot;utmac&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmac"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="domainName" type="{unknown}" visibility="protected" line="76">
+    <docblock>
+      <description compact="Host Name, e.g. &quot;www.example.com&quot;, will be mapped to &quot;utmhn&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmhn"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="allowHash" type="{unknown}" default="true" visibility="protected" line="86">
+    <docblock>
+      <description compact="Whether to generate a unique domain hash, default is true to be consistent with the GA Javascript Client"/>
+      <link value="http://code.google.com/apis/analytics/docs/tracking/gaTrackingSite.html#setAllowHash"/>
+      <see value="Internals\Request\Request::generateDomainHash()"/>
+      <var type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\bool" namespace="UnitedPrototype\GoogleAnalytics" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="customVariables" type="array" visibility="protected" line="91">
+    <docblock>
+      <description/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="campaign" type="{unknown}" visibility="protected" line="96">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Campaign" namespace="\UnitedPrototype\GoogleAnalytics" name="Campaign"/>
+      </var>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="104" end="109" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$accountId"/>
+      <param type="string" variable="$domainName"/>
+      <param type="object" variable="$config">
+        <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </param>
+    </docblock>
+    <parameter name="accountId" byreference="false" type="{unknown}"/>
+    <parameter name="domainName" byreference="false" type="{unknown}"/>
+    <parameter name="config" byreference="false" type="object" default="null">
+      <type full="UnitedPrototype\GoogleAnalytics\Config" namespace="UnitedPrototype\GoogleAnalytics" name="Config"/>
+    </parameter>
+  </constructor>
+  <method name="getConfig" start="114" end="116" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setConfig" start="121" end="123" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$value">
+        <type full="\UnitedPrototype\GoogleAnalytics\Config" namespace="\UnitedPrototype\GoogleAnalytics" name="Config"/>
+      </param>
+    </docblock>
+    <parameter name="value" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Config" namespace="UnitedPrototype\GoogleAnalytics" name="Config"/>
+    </parameter>
+  </method>
+  <method name="setAccountId" start="128" end="134" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getAccountId" start="139" end="141" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setDomainName" start="146" end="148" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getDomainName" start="153" end="155" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setAllowHash" start="160" end="162" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$value">
+        <type full="UnitedPrototype\GoogleAnalytics\bool" namespace="UnitedPrototype\GoogleAnalytics" name="bool"/>
+      </param>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getAllowHash" start="167" end="169" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\bool" namespace="UnitedPrototype\GoogleAnalytics" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="addCustomVariable" start="177" end="183" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Equivalent of _setCustomVar() in GA Javascript client."/>
+      <link value="http://code.google.com/apis/analytics/docs/tracking/gaTrackingCustomVariables.html"/>
+      <param type="object" variable="$customVariable">
+        <type full="\UnitedPrototype\GoogleAnalytics\CustomVariable" namespace="\UnitedPrototype\GoogleAnalytics" name="CustomVariable"/>
+      </param>
+    </docblock>
+    <parameter name="customVariable" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\CustomVariable" namespace="UnitedPrototype\GoogleAnalytics" name="CustomVariable"/>
+    </parameter>
+    <inline>
+      <comment value="Ensure that all required parameters are set" line="178"/>
+    </inline>
+  </method>
+  <method name="getCustomVariables" start="188" end="190" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array" of="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\CustomVariable" namespace="\UnitedPrototype\GoogleAnalytics" name="CustomVariable"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="removeCustomVariable" start="197" end="199" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Equivalent of _deleteCustomVar() in GA Javascript client."/>
+      <param type="int" variable="$index"/>
+    </docblock>
+    <parameter name="index" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setCampaign" start="204" end="211" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param description="Isn't really optional, but can be set to null" type="object" variable="$campaign">
+        <type full="\UnitedPrototype\GoogleAnalytics\Campaign" namespace="\UnitedPrototype\GoogleAnalytics" name="Campaign"/>
+      </param>
+    </docblock>
+    <parameter name="campaign" byreference="false" type="object" default="null">
+      <type full="UnitedPrototype\GoogleAnalytics\Campaign" namespace="UnitedPrototype\GoogleAnalytics" name="Campaign"/>
+    </parameter>
+    <inline>
+      <comment value="Ensure that all required parameters are set" line="206"/>
+    </inline>
+  </method>
+  <method name="getCampaign" start="216" end="218" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Campaign|null" namespace="\UnitedPrototype\GoogleAnalytics" name="Campaign|null"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="trackPageview" start="228" end="235" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Equivalent of _trackPageview() in GA Javascript client."/>
+      <link value="http://code.google.com/apis/analytics/docs/gaJS/gaJSApiBasicConfiguration.html#_gat.GA_Tracker_._trackPageview"/>
+      <param type="object" variable="$page">
+        <type full="\UnitedPrototype\GoogleAnalytics\Page" namespace="\UnitedPrototype\GoogleAnalytics" name="Page"/>
+      </param>
+      <param type="object" variable="$session">
+        <type full="\UnitedPrototype\GoogleAnalytics\Session" namespace="\UnitedPrototype\GoogleAnalytics" name="Session"/>
+      </param>
+      <param type="object" variable="$visitor">
+        <type full="\UnitedPrototype\GoogleAnalytics\Visitor" namespace="\UnitedPrototype\GoogleAnalytics" name="Visitor"/>
+      </param>
+    </docblock>
+    <parameter name="page" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Page" namespace="UnitedPrototype\GoogleAnalytics" name="Page"/>
+    </parameter>
+    <parameter name="session" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Session" namespace="UnitedPrototype\GoogleAnalytics" name="Session"/>
+    </parameter>
+    <parameter name="visitor" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Visitor" namespace="UnitedPrototype\GoogleAnalytics" name="Visitor"/>
+    </parameter>
+  </method>
+  <method name="trackEvent" start="246" end="259" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Equivalent of _trackEvent() in GA Javascript client."/>
+      <link value="http://code.google.com/apis/analytics/docs/gaJS/gaJSApiEventTracking.html#_gat.GA_EventTracker_._trackEvent"/>
+      <param type="object" variable="$event">
+        <type full="\UnitedPrototype\GoogleAnalytics\Event" namespace="\UnitedPrototype\GoogleAnalytics" name="Event"/>
+      </param>
+      <param type="object" variable="$session">
+        <type full="\UnitedPrototype\GoogleAnalytics\Session" namespace="\UnitedPrototype\GoogleAnalytics" name="Session"/>
+      </param>
+      <param type="object" variable="$visitor">
+        <type full="\UnitedPrototype\GoogleAnalytics\Visitor" namespace="\UnitedPrototype\GoogleAnalytics" name="Visitor"/>
+      </param>
+      <param type="object" variable="$page">
+        <type full="\UnitedPrototype\GoogleAnalytics\Page" namespace="\UnitedPrototype\GoogleAnalytics" name="Page"/>
+      </param>
+    </docblock>
+    <parameter name="event" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Event" namespace="UnitedPrototype\GoogleAnalytics" name="Event"/>
+    </parameter>
+    <parameter name="session" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Session" namespace="UnitedPrototype\GoogleAnalytics" name="Session"/>
+    </parameter>
+    <parameter name="visitor" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Visitor" namespace="UnitedPrototype\GoogleAnalytics" name="Visitor"/>
+    </parameter>
+    <parameter name="page" byreference="false" type="object" default="null">
+      <type full="UnitedPrototype\GoogleAnalytics\Page" namespace="UnitedPrototype\GoogleAnalytics" name="Page"/>
+    </parameter>
+    <inline>
+      <comment value="Ensure that all required parameters are set" line="247"/>
+    </inline>
+  </method>
+  <method name="trackTransaction" start="274" end="298" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Combines _addTrans(), _addItem() (indirectly) and _trackTrans() of GA Javascript client.">Although the naming of "_addTrans()" would suggest multiple possible transactions
+per request, there is just one allowed actually.</description>
+      <link value="http://code.google.com/apis/analytics/docs/gaJS/gaJSApiEcommerce.html#_gat.GA_Tracker_._addTrans"/>
+      <link value="http://code.google.com/apis/analytics/docs/gaJS/gaJSApiEcommerce.html#_gat.GA_Tracker_._addItem"/>
+      <link value="http://code.google.com/apis/analytics/docs/gaJS/gaJSApiEcommerce.html#_gat.GA_Tracker_._trackTrans"/>
+      <param type="object" variable="$transaction">
+        <type full="\UnitedPrototype\GoogleAnalytics\Transaction" namespace="\UnitedPrototype\GoogleAnalytics" name="Transaction"/>
+      </param>
+      <param type="object" variable="$session">
+        <type full="\UnitedPrototype\GoogleAnalytics\Session" namespace="\UnitedPrototype\GoogleAnalytics" name="Session"/>
+      </param>
+      <param type="object" variable="$visitor">
+        <type full="\UnitedPrototype\GoogleAnalytics\Visitor" namespace="\UnitedPrototype\GoogleAnalytics" name="Visitor"/>
+      </param>
+    </docblock>
+    <parameter name="transaction" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Transaction" namespace="UnitedPrototype\GoogleAnalytics" name="Transaction"/>
+    </parameter>
+    <parameter name="session" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Session" namespace="UnitedPrototype\GoogleAnalytics" name="Session"/>
+    </parameter>
+    <parameter name="visitor" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Visitor" namespace="UnitedPrototype\GoogleAnalytics" name="Visitor"/>
+    </parameter>
+    <inline>
+      <comment value="Ensure that all required parameters are set" line="275"/>
+      <comment value="Every item gets a separate request," line="285"/>
+      <comment value="see http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/v4/Tracker.as#312" line="286"/>
+      <comment value="Ensure that all required parameters are set" line="288"/>
+    </inline>
+  </method>
+  <method name="trackSocial" start="309" end="317" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Equivalent of _trackSocial() in GA Javascript client."/>
+      <link value="http://code.google.com/apis/analytics/docs/tracking/gaTrackingSocial.html#settingUp"/>
+      <param type="object" variable="$socialInteraction">
+        <type full="\UnitedPrototype\GoogleAnalytics\SocialInteraction" namespace="\UnitedPrototype\GoogleAnalytics" name="SocialInteraction"/>
+      </param>
+      <param type="object" variable="$page">
+        <type full="\UnitedPrototype\GoogleAnalytics\Page" namespace="\UnitedPrototype\GoogleAnalytics" name="Page"/>
+      </param>
+      <param type="object" variable="$session">
+        <type full="\UnitedPrototype\GoogleAnalytics\Session" namespace="\UnitedPrototype\GoogleAnalytics" name="Session"/>
+      </param>
+      <param type="object" variable="$visitor">
+        <type full="\UnitedPrototype\GoogleAnalytics\Visitor" namespace="\UnitedPrototype\GoogleAnalytics" name="Visitor"/>
+      </param>
+    </docblock>
+    <parameter name="socialInteraction" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\SocialInteraction" namespace="UnitedPrototype\GoogleAnalytics" name="SocialInteraction"/>
+    </parameter>
+    <parameter name="page" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Page" namespace="UnitedPrototype\GoogleAnalytics" name="Page"/>
+    </parameter>
+    <parameter name="session" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Session" namespace="UnitedPrototype\GoogleAnalytics" name="Session"/>
+    </parameter>
+    <parameter name="visitor" byreference="false" type="object">
+      <type full="UnitedPrototype\GoogleAnalytics\Visitor" namespace="UnitedPrototype\GoogleAnalytics" name="Visitor"/>
+    </parameter>
+  </method>
+  <method name="_raiseError" start="327" end="344" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="For internal use only. Will trigger an error according to the current Config::$errorSeverity setting."/>
+      <see value="Config::$errorSeverity"/>
+      <param type="string" variable="$message"/>
+      <param type="string" variable="$method"/>
+    </docblock>
+    <parameter name="message" byreference="false" type="{unknown}"/>
+    <parameter name="method" byreference="false" type="{unknown}"/>
+  </method>
+</class>

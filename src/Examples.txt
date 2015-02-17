@@ -1,0 +1,7 @@
+Test 1 - AWS
+
+http://ec2-54-200-20-54.us-west-2.compute.amazonaws.com/tests/php-ga/Test01.php
+
+Test 2 - AWS
+
+http://ec2-54-200-20-54.us-west-2.compute.amazonaws.com/tests/php-ga/Test02.php

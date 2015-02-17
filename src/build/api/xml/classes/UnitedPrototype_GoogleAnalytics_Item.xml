@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Item" namespace="UnitedPrototype\GoogleAnalytics" name="Item" abstract="false" final="false" start="34" end="194">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics" file="Item.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Item.php" size="4216" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="fc40e0d67e289331d02016f7fd50e8378088c2cc" relative="GoogleAnalytics/Item.php"/>
+  <docblock>
+    <description/>
+    <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/ecommerce/Item.as"/>
+  </docblock>
+  <member name="orderId" type="{unknown}" visibility="protected" line="42">
+    <docblock>
+      <description compact="Order ID, e.g. &quot;a2343898&quot;, will be mapped to &quot;utmtid&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmtid"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="sku" type="{unknown}" visibility="protected" line="51">
+    <docblock>
+      <description compact="Product Code. This is the sku code for a given product, e.g. &quot;989898ajssi&quot;, will be mapped to &quot;utmipc&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmipc"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="name" type="{unknown}" visibility="protected" line="59">
+    <docblock>
+      <description compact="Product Name, e.g. &quot;T-Shirt&quot;, will be mapped to &quot;utmipn&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmipn"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="category" type="{unknown}" visibility="protected" line="68">
+    <docblock>
+      <description compact="Variations on an item, e.g. &quot;white&quot;, &quot;black&quot;, &quot;green&quot; etc., will be mapped to &quot;utmiva&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmiva"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="price" type="{unknown}" visibility="protected" line="77">
+    <docblock>
+      <description compact="Unit Price. Value is set to numbers only (e.g. 19.95), will be mapped to &quot;utmipr&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmipr"/>
+      <var type="float"/>
+    </docblock>
+  </member>
+  <member name="quantity" type="integer" default="1" visibility="protected" line="85">
+    <docblock>
+      <description compact="Unit Quantity, e.g. 4, will be mapped to &quot;utmiqt&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmiqt"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <method name="validate" start="88" end="92" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="getOrderId" start="97" end="99" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setOrderId" start="104" end="106" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$orderId"/>
+    </docblock>
+    <parameter name="orderId" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getSku" start="111" end="113" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setSku" start="118" end="120" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$sku"/>
+    </docblock>
+    <parameter name="sku" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getName" start="125" end="127" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setName" start="132" end="134" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$name"/>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getVariation" start="140" end="142" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <deprecated value="See getCategory()"/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setVariation" start="148" end="150" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <deprecated value="See setCategory()"/>
+      <param type="string" variable="$variation"/>
+    </docblock>
+    <parameter name="variation" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCategory" start="155" end="157" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setCategory" start="162" end="164" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$category"/>
+    </docblock>
+    <parameter name="category" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getPrice" start="169" end="171" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="float"/>
+    </docblock>
+  </method>
+  <method name="setPrice" start="176" end="178" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="float" variable="$price"/>
+    </docblock>
+    <parameter name="price" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getQuantity" start="183" end="185" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setQuantity" start="190" end="192" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$quantity"/>
+    </docblock>
+    <parameter name="quantity" byreference="false" type="{unknown}"/>
+  </method>
+</class>

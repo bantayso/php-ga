@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\SocialInteraction" namespace="UnitedPrototype\GoogleAnalytics" name="SocialInteraction" abstract="false" final="false" start="31" end="121">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics" file="SocialInteraction.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/SocialInteraction.php" size="3459" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="64c63ad6e2882113182912095790e2ef0fb51605" relative="GoogleAnalytics/SocialInteraction.php"/>
+  <member name="network" type="{unknown}" visibility="protected" line="40">
+    <docblock>
+      <description compact="Required. A string representing the social network being tracked (e.g. &quot;Facebook&quot;, &quot;Twitter&quot;, &quot;LinkedIn&quot;, ...), will be mapped to &quot;utmsn&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmsn"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="action" type="{unknown}" visibility="protected" line="49">
+    <docblock>
+      <description compact="Required. A string representing the social action being tracked (e.g. &quot;Like&quot;, &quot;Share&quot;, &quot;Tweet&quot;, ...), will be mapped to &quot;utmsa&quot; parameter"/>
+      <see value="Internals\ParameterHolder::$utmsa"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="target" type="{unknown}" visibility="protected" line="61">
+    <docblock>
+      <description compact="Optional. A string representing the URL (or resource) which receives the action. For example, if a user clicks the Like button on a page on a site, the the target might be set to the title of the page, or an ID used to identify the page in a content management system. In many cases, the page you Like is the same page you are on. So if this parameter is not given, we will default to using the path of the corresponding Page object."/>
+      <see value="Internals\ParameterHolder::$utmsid"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="67" end="71" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$path"/>
+    </docblock>
+    <parameter name="network" byreference="false" type="{unknown}" default="null"/>
+    <parameter name="action" byreference="false" type="{unknown}" default="null"/>
+    <parameter name="target" byreference="false" type="{unknown}" default="null"/>
+  </constructor>
+  <method name="validate" start="73" end="77" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="setNetwork" start="82" end="84" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$network"/>
+    </docblock>
+    <parameter name="network" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getNetwork" start="89" end="91" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setAction" start="96" end="98" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$action"/>
+    </docblock>
+    <parameter name="action" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getAction" start="103" end="105" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setTarget" start="110" end="112" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$target"/>
+    </docblock>
+    <parameter name="target" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTarget" start="117" end="119" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+</class>

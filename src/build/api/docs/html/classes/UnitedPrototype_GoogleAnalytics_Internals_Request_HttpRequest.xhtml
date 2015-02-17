@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#UnitedPrototype_GoogleAnalytics_Internals_Request">UnitedPrototype\GoogleAnalytics\Internals\Request</a>
+          </li>
+          <li class="separator">HttpRequest</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/GoogleAnalytics/Internals/Request/HttpRequest.php.xhtml#line38">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>UnitedPrototype\GoogleAnalytics\Internals\Request\</small>HttpRequest</h1>
+        <h4/>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class HttpRequest
+            {<br/><ul class="none"><li>// members</li><li>protected string <a href="#members">$type</a>;
+                    </li><li>protected <span title="\UnitedPrototype\GoogleAnalytics\Config">Config</span> <a href="#members">$config</a>;
+                    </li><li>protected string <a href="#members">$xForwardedFor</a>;
+                    </li><li>protected string <a href="#members">$userAgent</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/__construct.xhtml">__construct</a>()
+                    </li><li>public Config <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/getConfig.xhtml">getConfig</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/setConfig.xhtml">setConfig</a>()
+                    </li><li>protected void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/setXForwardedFor.xhtml">setXForwardedFor</a>()
+                    </li><li>protected void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/setUserAgent.xhtml">setUserAgent</a>()
+                    </li><li>protected string <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/buildHttpRequest.xhtml">buildHttpRequest</a>()
+                    </li><li>protected abstract ParameterHolder <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/buildParameters.xhtml">buildParameters</a>()
+                    </li><li>public null|string|bool <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/_send.xhtml">_send</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/fire.xhtml">fire</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="config"><strong>$config</strong>
+                —
+                <a title="\UnitedPrototype\GoogleAnalytics\Config" href="../classes/_UnitedPrototype_GoogleAnalytics_Config.xhtml">\UnitedPrototype\GoogleAnalytics\Config</a></li>
+            <li id="type"><strong>$type</strong>
+                —
+                string<br/><span class="indent">Indicates the type of request, will be mapped to "utmt" parameter</span></li>
+            <li id="userAgent"><strong>$userAgent</strong>
+                —
+                string</li>
+            <li id="xForwardedFor"><strong>$xForwardedFor</strong>
+                —
+                string</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="buildHttpRequest">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/buildHttpRequest.xhtml">buildHttpRequest()</a>
+            </li>
+            <li id="buildParameters">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/buildParameters.xhtml">buildParameters()</a>
+            </li>
+            <li id="setUserAgent">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/setUserAgent.xhtml">setUserAgent()</a>
+            </li>
+            <li id="setXForwardedFor">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/setXForwardedFor.xhtml">setXForwardedFor()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="_send"><a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/_send.xhtml">_send()</a>
+                — This method should only be called directly or indirectly by fire(), but must remain public as it can be called by a closure function.</li>
+            <li id="fire"><a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/fire.xhtml">fire()</a>
+                — Simply delegates to send() if config option "sendOnShutdown" is disabled or enqueues the request by registering a PHP shutdown function.</li>
+            <li id="getConfig">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/getConfig.xhtml">getConfig()</a>
+            </li>
+            <li id="setConfig">
+              <a title="UnitedPrototype\GoogleAnalytics\Internals\Request\HttpRequest" href="../classes/UnitedPrototype_GoogleAnalytics_Internals_Request_HttpRequest/setConfig.xhtml">setConfig()</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2012-02-21T17:53:01+00:00 (commit #<span title="38aad1ef551338b1d05025aed46f9a263f0d7532">38aad1e</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Fixed HttpRequest::_send() in "fireAndForget" mode to ensure the full request is always sent, fixes issue #11</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-15T17:01:11+00:00 (commit #<span title="9043581fa8ca2a29907c4b3a34c662500679aed7">9043581</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Improved HttpRequest::buildHttpRequest() to skip empty userAgent and xForwardedFor values</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-10-31T22:02:03+00:00 (commit #<span title="d479189243e04acf6336347349edd15b8713e53f">d479189</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Updated to client version 4.9.2: Implemented "utms" parameter and HTTP POST support for large requests</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-10-31T21:56:00+00:00 (commit #<span title="f1e2b83b258bd059275615db6deb256de9c61486">f1e2b83</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Improved Config::$sendOnShutdown functionality to assemble the final HTTP request just before sending it, so custom variables that were set later on will be included automatically</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-10-31T21:50:36+00:00 (commit #<span title="9fe53fba2c7cc4f375c982cac03be8cecda95aae">9fe53fb</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented Config::$loggingCallback and ability to set the GA endpoint to null to simulate requests without actually sending them</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-10-31T21:41:42+00:00 (commit #<span title="88eb9569080374130bc1f492a6828955e65abdef">88eb956</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Added proper escaping for "User-Agent" and "X-Forwarded-For" headers in HttpRequest::buildHttpRequest()</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-04-05T19:05:31+00:00 (commit #<span title="652546e5393f17785ce129a792542e9c23c99755">652546e</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Many minor docblock and documentation fixes and improvements</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-04-05T18:46:46+00:00 (commit #<span title="e8ec1433c43bff26e2231b1a83e9fef63793ca7f">e8ec143</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Fixed encoding of spaces in HttpRequest::buildHttpRequest(), fixes issue #3</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2010-10-07T17:56:52+00:00 (commit #<span title="dc0ce2ab16f50cf77663c991e5494c454758421f">dc0ce2a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Initial codebase import</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

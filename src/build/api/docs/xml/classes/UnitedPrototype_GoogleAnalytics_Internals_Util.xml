@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Internals\Util" namespace="UnitedPrototype\GoogleAnalytics\Internals" name="Util" abstract="false" final="false" start="34" end="103">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Internals" file="Util.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Internals/Util.php" size="3332" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="14c3eba5061e1f8af65465c5a4f7556527a2c2d3" relative="GoogleAnalytics/Internals/Util.php"/>
+  <docblock>
+    <description/>
+    <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/core/Utils.as"/>
+  </docblock>
+  <constructor name="__construct" start="39" end="39" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="This class does only have public static methods, no instantiation necessary"/>
+    </docblock>
+  </constructor>
+  <method name="encodeUriComponent" start="48" end="50" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Mimics Javascript's encodeURIComponent() function for consistency with the GA Javascript client."/>
+      <param type="mixed" variable="$value"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="convertToUriComponentEncoding" start="61" end="63" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Here as a separate method so it can also be applied to e.g. a http_build_query() result."/>
+      <link value="http://stackoverflow.com/questions/1734250/what-is-the-equivalent-of-javascripts-encodeuricomponent-in-php/1734255#1734255"/>
+      <link value="http://devpro.it/examples/php_js_escaping.php"/>
+      <param type="string" variable="$encodedValue"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="encodedValue" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="generate32bitRandom" start="71" end="73" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Generates a 32bit random number."/>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/core/Utils.as#33"/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="generateHash" start="82" end="101" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Generates a hash for input string."/>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/core/Utils.as#44"/>
+      <param type="string" variable="$string"/>
+      <return type="int"/>
+    </docblock>
+    <parameter name="string" byreference="false" type="{unknown}"/>
+  </method>
+<enrichments><enrichment type="build"><date unix="1424206050" date="17-02-2015" time="20:47:30" iso="2015-02-17T20:47:30+00:00" rfc="Tue, 17 Feb 2015 20:47:30 +0000"/><phpdox xmlns="http://xml.phpdox.net/src" version="" info="phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts" generated="Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts" phar="no"><enricher type="build"/><enricher type="git"/></phpdox><php xmlns="http://xml.phpdox.net/src" version="5.6.5" os="WINNT"><extension name="Core"/><extension name="bcmath"/><extension name="calendar"/><extension name="ctype"/><extension name="date"/><extension name="ereg"/><extension name="filter"/><extension name="ftp"/><extension name="hash"/><extension name="iconv"/><extension name="json"/><extension name="mcrypt"/><extension name="SPL"/><extension name="odbc"/><extension name="pcre"/><extension name="Reflection"/><extension name="session"/><extension name="standard"/><extension name="mysqlnd"/><extension name="tokenizer"/><extension name="zip"/><extension name="zlib"/><extension name="libxml"/><extension name="dom"/><extension name="PDO"/><extension name="openssl"/><extension name="SimpleXML"/><extension name="wddx"/><extension name="xml"/><extension name="xmlreader"/><extension name="xmlwriter"/><extension name="fileinfo"/><extension name="mbstring"/><extension name="Phar"/><extension name="xsl"/><extension name="mhash"/></php></enrichment><enrichment type="git"><commit xmlns="http://xml.phpdox.net/gitlog" sha1="dc0ce2ab16f50cf77663c991e5494c454758421f"><author email="mail@thomasbachem.com" name="Thomas Bachem" time="2010-10-07T17:56:52+00:00" unixtime="1286474212"/><commiter email="mail@thomasbachem.com" name="Thomas Bachem" time="2010-10-07T17:56:52+00:00" unixtime="1286474212"/><message>Initial codebase import</message></commit></enrichment></enrichments></class>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="UnitedPrototype\GoogleAnalytics\Campaign" namespace="UnitedPrototype\GoogleAnalytics" name="Campaign" abstract="false" final="false" start="41" end="425">
+  <file path="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics" file="Campaign.php" realpath="C:/Development/Personal/github/php-ga.git/src/GoogleAnalytics/Campaign.php" size="10265" time="2015-02-17T16:51:23+00:00" unixtime="1424191883" sha1="4c9eaeb91d7835e8b01f44758c7c73e9ed350d87" relative="GoogleAnalytics/Campaign.php"/>
+  <docblock>
+    <description compact="You should serialize this object and store it in e.g. the user database to keep it persistent for the same user permanently (similar to the &quot;__umtz&quot; cookie of the GA Javascript client)."/>
+  </docblock>
+  <member name="type" type="{unknown}" visibility="protected" line="49">
+    <docblock>
+      <description compact="See self::TYPE_* constants, will be mapped to &quot;__utmz&quot; parameter."/>
+      <see value="Internals\ParameterHolder::$__utmz"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="creationTime" type="{unknown}" visibility="protected" line="57">
+    <docblock>
+      <description compact="Time of the creation of this campaign, will be mapped to &quot;__utmz&quot; parameter."/>
+      <see value="Internals\ParameterHolder::$__utmz"/>
+      <var type="object">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="responseCount" type="integer" default="0" visibility="protected" line="70">
+    <docblock>
+      <description compact="Response Count, will be mapped to &quot;__utmz&quot; parameter.">Is also used to determine whether the campaign is new or repeated,
+which will be mapped to "utmcn" and "utmcr" parameters.</description>
+      <see value="Internals\ParameterHolder::$__utmz"/>
+      <see value="Internals\ParameterHolder::$utmcn"/>
+      <see value="Internals\ParameterHolder::$utmcr"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="id" type="{unknown}" visibility="protected" line="79">
+    <docblock>
+      <description compact="Campaign ID, a.k.a. &quot;utm_id&quot; query parameter for ga.js Will be mapped to &quot;__utmz&quot; parameter."/>
+      <see value="Internals\ParameterHolder::$__utmz"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="source" type="{unknown}" visibility="protected" line="88">
+    <docblock>
+      <description compact="Source, a.k.a. &quot;utm_source&quot; query parameter for ga.js.">Will be mapped to "utmcsr" key in "__utmz" parameter.</description>
+      <see value="Internals\ParameterHolder::$__utmz"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="gClickId" type="{unknown}" visibility="protected" line="97">
+    <docblock>
+      <description compact="Google AdWords Click ID, a.k.a. &quot;gclid&quot; query parameter for ga.js.">Will be mapped to "utmgclid" key in "__utmz" parameter.</description>
+      <see value="Internals\ParameterHolder::$__utmz"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="dClickId" type="{unknown}" visibility="protected" line="105">
+    <docblock>
+      <description compact="DoubleClick (?) Click ID. Will be mapped to &quot;utmdclid&quot; key in &quot;__utmz&quot; parameter."/>
+      <see value="Internals\ParameterHolder::$__utmz"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="name" type="{unknown}" visibility="protected" line="114">
+    <docblock>
+      <description compact="Name, a.k.a. &quot;utm_campaign&quot; query parameter for ga.js.">Will be mapped to "utmccn" key in "__utmz" parameter.</description>
+      <see value="Internals\ParameterHolder::$__utmz"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="medium" type="{unknown}" visibility="protected" line="123">
+    <docblock>
+      <description compact="Medium, a.k.a. &quot;utm_medium&quot; query parameter for ga.js.">Will be mapped to "utmcmd" key in "__utmz" parameter.</description>
+      <see value="Internals\ParameterHolder::$__utmz"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="term" type="{unknown}" visibility="protected" line="132">
+    <docblock>
+      <description compact="Terms/Keywords, a.k.a. &quot;utm_term&quot; query parameter for ga.js.">Will be mapped to "utmctr" key in "__utmz" parameter.</description>
+      <see value="Internals\ParameterHolder::$__utmz"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="content" type="{unknown}" visibility="protected" line="141">
+    <docblock>
+      <description compact="Ad Content Description, a.k.a. &quot;utm_content&quot; query parameter for ga.js.">Will be mapped to "utmcct" key in "__utmz" parameter.</description>
+      <see value="Internals\ParameterHolder::$__utmz"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <constant name="TYPE_DIRECT" value="'direct'">
+    <docblock>
+      <description/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <constant name="TYPE_ORGANIC" value="'organic'">
+    <docblock>
+      <description/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <constant name="TYPE_REFERRAL" value="'referral'">
+    <docblock>
+      <description/>
+      <const value="string"/>
+    </docblock>
+  </constant>
+  <constructor name="__construct" start="162" end="191" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <see value="createFromReferrer"/>
+      <param description="See TYPE_* constants" type="string" variable="$type"/>
+    </docblock>
+    <parameter name="type" byreference="false" type="{unknown}" default="null"/>
+  </constructor>
+  <method name="fromUtmz" start="202" end="237" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Will extract information for the &quot;trackCount&quot; and &quot;startTime&quot; properties from the given &quot;__utmz&quot; cookie value."/>
+      <see value="Internals\ParameterHolder::$__utmz"/>
+      <see value="Internals\Request\Request::buildCampaignParameters()"/>
+      <param type="string" variable="$value"/>
+      <return type="object">
+        <type full="UnitedPrototype\GoogleAnalytics\$this" namespace="UnitedPrototype\GoogleAnalytics" name="$this"/>
+      </return>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="See http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/campaign/CampaignTracker.as#236" line="217"/>
+      <comment value="Allow chaining" line="235"/>
+    </inline>
+  </method>
+  <method name="createFromReferrer" start="244" end="251" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/campaign/CampaignManager.as#333"/>
+      <param type="string" variable="$url"/>
+      <return type="object">
+        <type full="\UnitedPrototype\GoogleAnalytics\Campaign" namespace="\UnitedPrototype\GoogleAnalytics" name="Campaign"/>
+      </return>
+    </docblock>
+    <parameter name="url" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="validate" start="256" end="262" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <link value="http://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/campaign/CampaignTracker.as#153"/>
+    </docblock>
+    <inline>
+      <comment value="NOTE: gaforflash states that id and gClickId must also be specified," line="257"/>
+      <comment value="but that doesn't seem to be correct" line="258"/>
+    </inline>
+  </method>
+  <method name="setType" start="267" end="269" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$type"/>
+    </docblock>
+    <parameter name="type" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getType" start="274" end="276" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setCreationTime" start="281" end="283" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$creationTime">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </param>
+    </docblock>
+    <parameter name="creationTime" byreference="false" type="object">
+      <type full="DateTime" namespace="" name="DateTime"/>
+    </parameter>
+  </method>
+  <method name="getCreationTime" start="288" end="290" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="DateTime" namespace="" name="DateTime"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setResponseCount" start="295" end="297" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$esponseCount"/>
+    </docblock>
+    <parameter name="responseCount" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getResponseCount" start="302" end="304" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="increaseResponseCount" start="309" end="311" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$byAmount"/>
+    </docblock>
+    <parameter name="byAmount" byreference="false" type="integer" default="1"/>
+  </method>
+  <method name="setId" start="316" end="318" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$id"/>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getId" start="323" end="325" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setSource" start="330" end="332" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$source"/>
+    </docblock>
+    <parameter name="source" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getSource" start="337" end="339" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setGClickId" start="344" end="346" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$gClickId"/>
+    </docblock>
+    <parameter name="gClickId" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getGClickId" start="351" end="353" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setDClickId" start="358" end="360" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$dClickId"/>
+    </docblock>
+    <parameter name="dClickId" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getDClickId" start="365" end="367" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setName" start="372" end="374" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$name"/>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getName" start="379" end="381" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setMedium" start="386" end="388" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$medium"/>
+    </docblock>
+    <parameter name="medium" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getMedium" start="393" end="395" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setTerm" start="400" end="402" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$term"/>
+    </docblock>
+    <parameter name="term" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTerm" start="407" end="409" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setContent" start="414" end="416" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$content"/>
+    </docblock>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getContent" start="421" end="423" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+</class>

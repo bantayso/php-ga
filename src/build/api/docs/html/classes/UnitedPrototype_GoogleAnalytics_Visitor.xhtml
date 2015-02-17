@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - UnitedPrototype\GoogleAnalytics\Visitor</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#UnitedPrototype_GoogleAnalytics">UnitedPrototype\GoogleAnalytics</a>
+          </li>
+          <li class="separator">Visitor</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/GoogleAnalytics/Visitor.php.xhtml#line40">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>UnitedPrototype\GoogleAnalytics\</small>Visitor</h1>
+        <h4>You should serialize this object and store it in the user database to keep it persistent for the same user permanently (similar to the "__umta" cookie of the GA Javascript client).</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Visitor
+            {<br/><ul class="none"><li>// members</li><li>protected int <a href="#members">$uniqueId</a>;
+                    </li><li>protected <span title="DateTime">DateTime</span> <a href="#members">$firstVisitTime</a>;
+                    </li><li>protected <span title="DateTime">DateTime</span> <a href="#members">$previousVisitTime</a>;
+                    </li><li>protected <span title="DateTime">DateTime</span> <a href="#members">$currentVisitTime</a>;
+                    </li><li>protected int <a href="#members">$visitCount</a>;
+                    </li><li>protected string <a href="#members">$ipAddress</a>;
+                    </li><li>protected string <a href="#members">$userAgent</a>;
+                    </li><li>protected string <a href="#members">$locale</a>;
+                    </li><li>protected string <a href="#members">$flashVersion</a>;
+                    </li><li>protected <span title="UnitedPrototype\GoogleAnalytics\bool">bool</span> <a href="#members">$javaEnabled</a>;
+                    </li><li>protected string <a href="#members">$screenColorDepth</a>;
+                    </li><li>protected string <a href="#members">$screenResolution</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/__construct.xhtml">__construct</a>()
+                    </li><li>public $this <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/fromUtma.xhtml">fromUtma</a>()
+                    </li><li>public $this <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/fromServerVar.xhtml">fromServerVar</a>()
+                    </li><li>protected int <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/generateHash.xhtml">generateHash</a>()
+                    </li><li>protected int <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/generateUniqueId.xhtml">generateUniqueId</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setUniqueId.xhtml">setUniqueId</a>()
+                    </li><li>public int <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getUniqueId.xhtml">getUniqueId</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/addSession.xhtml">addSession</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setFirstVisitTime.xhtml">setFirstVisitTime</a>()
+                    </li><li>public DateTime <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getFirstVisitTime.xhtml">getFirstVisitTime</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setPreviousVisitTime.xhtml">setPreviousVisitTime</a>()
+                    </li><li>public DateTime <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getPreviousVisitTime.xhtml">getPreviousVisitTime</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setCurrentVisitTime.xhtml">setCurrentVisitTime</a>()
+                    </li><li>public DateTime <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getCurrentVisitTime.xhtml">getCurrentVisitTime</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setVisitCount.xhtml">setVisitCount</a>()
+                    </li><li>public int <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getVisitCount.xhtml">getVisitCount</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setIpAddress.xhtml">setIpAddress</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getIpAddress.xhtml">getIpAddress</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setUserAgent.xhtml">setUserAgent</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getUserAgent.xhtml">getUserAgent</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setLocale.xhtml">setLocale</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getLocale.xhtml">getLocale</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setFlashVersion.xhtml">setFlashVersion</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getFlashVersion.xhtml">getFlashVersion</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setJavaEnabled.xhtml">setJavaEnabled</a>()
+                    </li><li>public bool <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getJavaEnabled.xhtml">getJavaEnabled</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setScreenColorDepth.xhtml">setScreenColorDepth</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getScreenColorDepth.xhtml">getScreenColorDepth</a>()
+                    </li><li>public void <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setScreenResolution.xhtml">setScreenResolution</a>()
+                    </li><li>public string <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getScreenResolution.xhtml">getScreenResolution</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">250</td>
+            <td>Emulate orginal Google Analytics client library generation more closely</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="currentVisitTime"><strong>$currentVisitTime</strong>
+                —
+                <a title="DateTime" href="../classes/DateTime.xhtml">DateTime</a><br/><span class="indent">Time of the current visit of this user, will be part of the "__utma" cookie parameter</span></li>
+            <li id="firstVisitTime"><strong>$firstVisitTime</strong>
+                —
+                <a title="DateTime" href="../classes/DateTime.xhtml">DateTime</a><br/><span class="indent">Time of the very first visit of this user, will be part of the "__utma" cookie parameter</span></li>
+            <li id="flashVersion"><strong>$flashVersion</strong>
+                —
+                string<br/><span class="indent">Visitor's Flash version, e.g. "9.0 r28", will be maped to "utmfl" parameter</span></li>
+            <li id="ipAddress"><strong>$ipAddress</strong>
+                —
+                string<br/><span class="indent">IP Address of the end user, e.g. "123.123.123.123", will be mapped to "utmip" parameter and "X-Forwarded-For" request header</span></li>
+            <li id="javaEnabled"><strong>$javaEnabled</strong>
+                —
+                <a title="UnitedPrototype\GoogleAnalytics\bool" href="../classes/UnitedPrototype_GoogleAnalytics_bool.xhtml">UnitedPrototype\GoogleAnalytics\bool</a><br/><span class="indent">Visitor's Java support, will be mapped to "utmje" parameter</span></li>
+            <li id="locale"><strong>$locale</strong>
+                —
+                string<br/><span class="indent">Locale string (country part optional), e.g. "de-DE", will be mapped to "utmul" parameter</span></li>
+            <li id="previousVisitTime"><strong>$previousVisitTime</strong>
+                —
+                <a title="DateTime" href="../classes/DateTime.xhtml">DateTime</a><br/><span class="indent">Time of the previous visit of this user, will be part of the "__utma" cookie parameter</span></li>
+            <li id="screenColorDepth"><strong>$screenColorDepth</strong>
+                —
+                string<br/><span class="indent">Visitor's screen color depth, e.g. 32, will be mapped to "utmsc" parameter</span></li>
+            <li id="screenResolution"><strong>$screenResolution</strong>
+                —
+                string<br/><span class="indent">Visitor's screen resolution, e.g. "1024x768", will be mapped to "utmsr" parameter</span></li>
+            <li id="uniqueId"><strong>$uniqueId</strong>
+                —
+                int<br/><span class="indent">Unique user ID, will be part of the "__utma" cookie parameter</span></li>
+            <li id="userAgent"><strong>$userAgent</strong>
+                —
+                string<br/><span class="indent">User agent string of the end user, will be mapped to "User-Agent" request header</span></li>
+            <li id="visitCount"><strong>$visitCount</strong>
+                —
+                int<br/><span class="indent">Amount of total visits by this user, will be part of the "__utma" cookie parameter</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="generateHash"><a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/generateHash.xhtml">generateHash()</a>
+                — Generates a hashed value from user-specific properties.</li>
+            <li id="generateUniqueId"><a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/generateUniqueId.xhtml">generateUniqueId()</a>
+                — Generates a unique user ID from the current user-specific properties.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/__construct.xhtml">__construct()</a>
+                — Creates a new visitor without any previous visit information.</li>
+            <li id="addSession"><a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/addSession.xhtml">addSession()</a>
+                — Updates the "previousVisitTime", "currentVisitTime" and "visitCount" fields based on the given session object.</li>
+            <li id="fromServerVar"><a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/fromServerVar.xhtml">fromServerVar()</a>
+                — Will extract information for the "ipAddress", "userAgent" and "locale" properties from the given $_SERVER variable.</li>
+            <li id="fromUtma"><a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/fromUtma.xhtml">fromUtma()</a>
+                — Will extract information for the "uniqueId", "firstVisitTime", "previousVisitTime", "currentVisitTime" and "visitCount" properties from the given "__utma" cookie value.</li>
+            <li id="getCurrentVisitTime">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getCurrentVisitTime.xhtml">getCurrentVisitTime()</a>
+            </li>
+            <li id="getFirstVisitTime">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getFirstVisitTime.xhtml">getFirstVisitTime()</a>
+            </li>
+            <li id="getFlashVersion">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getFlashVersion.xhtml">getFlashVersion()</a>
+            </li>
+            <li id="getIpAddress">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getIpAddress.xhtml">getIpAddress()</a>
+            </li>
+            <li id="getJavaEnabled">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getJavaEnabled.xhtml">getJavaEnabled()</a>
+            </li>
+            <li id="getLocale">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getLocale.xhtml">getLocale()</a>
+            </li>
+            <li id="getPreviousVisitTime">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getPreviousVisitTime.xhtml">getPreviousVisitTime()</a>
+            </li>
+            <li id="getScreenColorDepth">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getScreenColorDepth.xhtml">getScreenColorDepth()</a>
+            </li>
+            <li id="getScreenResolution">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getScreenResolution.xhtml">getScreenResolution()</a>
+            </li>
+            <li id="getUniqueId"><a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getUniqueId.xhtml">getUniqueId()</a>
+                — Will be generated on first call (if not set already) to include as much user-specific information as possible.</li>
+            <li id="getUserAgent">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getUserAgent.xhtml">getUserAgent()</a>
+            </li>
+            <li id="getVisitCount">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/getVisitCount.xhtml">getVisitCount()</a>
+            </li>
+            <li id="setCurrentVisitTime">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setCurrentVisitTime.xhtml">setCurrentVisitTime()</a>
+            </li>
+            <li id="setFirstVisitTime">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setFirstVisitTime.xhtml">setFirstVisitTime()</a>
+            </li>
+            <li id="setFlashVersion">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setFlashVersion.xhtml">setFlashVersion()</a>
+            </li>
+            <li id="setIpAddress">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setIpAddress.xhtml">setIpAddress()</a>
+            </li>
+            <li id="setJavaEnabled">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setJavaEnabled.xhtml">setJavaEnabled()</a>
+            </li>
+            <li id="setLocale">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setLocale.xhtml">setLocale()</a>
+            </li>
+            <li id="setPreviousVisitTime">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setPreviousVisitTime.xhtml">setPreviousVisitTime()</a>
+            </li>
+            <li id="setScreenColorDepth">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setScreenColorDepth.xhtml">setScreenColorDepth()</a>
+            </li>
+            <li id="setScreenResolution">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setScreenResolution.xhtml">setScreenResolution()</a>
+            </li>
+            <li id="setUniqueId">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setUniqueId.xhtml">setUniqueId()</a>
+            </li>
+            <li id="setUserAgent">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setUserAgent.xhtml">setUserAgent()</a>
+            </li>
+            <li id="setVisitCount">
+              <a title="UnitedPrototype\GoogleAnalytics\Visitor" href="../classes/UnitedPrototype_GoogleAnalytics_Visitor/setVisitCount.xhtml">setVisitCount()</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2013-10-06T08:37:24+00:00 (commit #<span title="ae2b702f80e40039476f72955547a8717c433b37">ae2b702</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Fixed proxy support in Visitor::fromServerVar()
+
+Thanks to sylph.lin
+(https://code.google.com/p/php-ga/issues/detail?id=38)</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2012-04-25T16:22:58+00:00 (commit #<span title="e7c58b91a0838437219329fe273680eaf0329558">e7c58b9</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Fixed Visitor::fromServerVar() to parse "X_FORWARDED_FOR" with multiple IP addresses correctly, fixes issue #15</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-15T15:46:56+00:00 (commit #<span title="8d0c05ede1817be68475124ed6c8334f557d55bd">8d0c05e</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Added Visitor::fromUtma() and ::fromServerVar() methods for convenient visitor data propagation</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-03T16:25:40+00:00 (commit #<span title="8a9744ac4b6493b5175804360a9965c3808016aa">8a9744a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented error severity levels (silence, warnings, exceptions), had to make config static across all tracker instances for that</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-11-01T07:35:52+00:00 (commit #<span title="f56117d9b3530f70d0c04b6c297fd96d6db17cd1">f56117d</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Implemented Visitor::$currentVisitTime together with ::addSession() method for easier visitor/session handling</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2011-04-05T19:05:31+00:00 (commit #<span title="652546e5393f17785ce129a792542e9c23c99755">652546e</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Many minor docblock and documentation fixes and improvements</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2010-10-07T17:56:52+00:00 (commit #<span title="dc0ce2ab16f50cf77663c991e5494c454758421f">dc0ce2a</span>)</h3>
+            <div>
+              <p>
+                        Author: Thomas Bachem (mail@thomasbachem.com) /
+                        Commiter: Thomas Bachem (mail@thomasbachem.com)
+                    </p>
+              <pre class="wrapped">Initial codebase import</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox  - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>
